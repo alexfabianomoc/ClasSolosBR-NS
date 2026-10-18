@@ -1,0 +1,235 @@
+# Stack local do ClasSolosBR-NS6 — arquitetura medallion (Bronze/Prata/Ouro).
+#
+# PADRÃO ENXUTO (4 serviços):  docker compose up -d
+#   postgres · minio · airflow-webserver · airflow-scheduler
+#   O Spark roda em local mode DENTRO do Airflow. Para 34.108 linhas isso é
+#   mais rápido que um cluster — não há shuffle de rede nem coordenação.
+#
+# OPCIONAIS (só quando quiser demonstrar a arquitetura distribuída):
+#   docker compose --profile spark up -d        # + spark-master, spark-worker
+#   docker compose --profile monitoring up -d   # + prometheus, grafana
+#   docker compose --profile spark --profile monitoring up -d
+#
+# A chave "version:" foi removida de propósito — é obsoleta no Compose v2.
+#
+# O nome do projeto é FIXADO abaixo, e não derivado da pasta, para não voltar a
+# depender do nome do diretório. Ele prefixa os quatro volumes nomeados
+# (postgres-dados, minio-dados, prometheus-dados, grafana-dados).
+#
+# Renomeado em 2026-10-11 de "classolosbr-ns6" para "classolosbr-ns", junto
+# com o diretório e com o banco (classolosbr_ns6 -> classolosbr_ns).
+#
+# ✅ Conferido no mesmo dia: esta stack NUNCA foi provisionada — não há volume
+# antigo a migrar. O registro é explícito (wiki/log.md, 2026-08-24: "Não
+# executado no Airflow — exige a stack Docker de pé") e o disco de dados do
+# Docker Desktop não é escrito desde 28/05/2026, antes de este projeto existir.
+# Na primeira subida os quatro volumes nascem como classolosbr-ns_<nome>, o
+# init-db roda em volume vazio e cria o banco classolosbr_ns, que é o valor de
+# GOLD_DB no .env.example. Nada a fazer antes de "docker compose up -d".
+
+name: classolosbr-ns
+
+x-airflow-comum: &airflow-comum
+  build:
+    context: .
+    dockerfile: Dockerfile
+  image: classolosbr-ns/airflow:0.1.0
+  environment: &airflow-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: "30"
+    AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "true"
+    # --- Acesso ao MinIO (lido pelos DAGs) ---
+    S3_ENDPOINT: ${S3_ENDPOINT}
+    S3_ACCESS_KEY: ${MINIO_ROOT_USER}
+    S3_SECRET_KEY: ${MINIO_ROOT_PASSWORD}
+    S3_BUCKET_BRONZE: ${S3_BUCKET_BRONZE}
+    S3_BUCKET_SILVER: ${S3_BUCKET_SILVER}
+    S3_BUCKET_GOLD: ${S3_BUCKET_GOLD}
+    # --- Camada Ouro ---
+    GOLD_DB_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${GOLD_DB}
+    # --- Fonte BDSolos e valores esperados ---
+    BDSOLOS_CSV: ${BDSOLOS_CSV}
+    BDSOLOS_HORIZONTES_ESPERADOS: ${BDSOLOS_HORIZONTES_ESPERADOS}
+    BDSOLOS_PERFIS_ESPERADOS: ${BDSOLOS_PERFIS_ESPERADOS}
+    BDSOLOS_COLUNAS_ESPERADAS: ${BDSOLOS_COLUNAS_ESPERADAS}
+    # Endereço do cluster Spark quando o profile "spark" estiver ativo.
+    # Vazio = local mode (padrão).
+    SPARK_MASTER_URL: ""
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./plugins:/opt/airflow/plugins
+    - ./jobs:/opt/airflow/jobs
+    # raw/ do wiki montado SOMENTE-LEITURA — é fonte imutável (CLAUDE.md §1).
+    - ../../raw:/opt/airflow/raw:ro
+  user: "${AIRFLOW_UID:-50000}:0"
+  depends_on:
+    postgres:
+      condition: service_healthy
+    minio:
+      condition: service_healthy
+
+services:
+  # ------------------------------------------------------------------
+  # PostgreSQL — metadados do Airflow + schema da camada Ouro
+  # ------------------------------------------------------------------
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      GOLD_DB: ${GOLD_DB}
+    volumes:
+      - postgres-dados:/var/lib/postgresql/data
+      - ./init-db:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+  # ------------------------------------------------------------------
+  # MinIO — S3 local para Bronze e Prata
+  # ------------------------------------------------------------------
+  minio:
+    image: minio/minio:RELEASE.2024-06-13T22-53-53Z
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+    volumes:
+      - minio-dados:/data
+    ports:
+      - "9000:9000"   # API S3
+      - "9001:9001"   # Console web
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+  # Cria os buckets das três camadas e encerra (roda uma vez).
+  minio-init:
+    image: minio/mc:RELEASE.2024-06-12T14-34-03Z
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      mc alias set local http://minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD};
+      mc mb --ignore-existing local/${S3_BUCKET_BRONZE};
+      mc mb --ignore-existing local/${S3_BUCKET_SILVER};
+      mc mb --ignore-existing local/${S3_BUCKET_GOLD};
+      mc version enable local/${S3_BUCKET_BRONZE};
+      echo 'Buckets prontos: ${S3_BUCKET_BRONZE} ${S3_BUCKET_SILVER} ${S3_BUCKET_GOLD}';
+      "
+
+  # ------------------------------------------------------------------
+  # Airflow — migração do banco e criação do usuário admin (roda uma vez)
+  # ------------------------------------------------------------------
+  airflow-init:
+    <<: *airflow-comum
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+          --username "${AIRFLOW_ADMIN_USER}" \
+          --password "${AIRFLOW_ADMIN_PASSWORD}" \
+          --firstname ClaSSolos --lastname NS \
+          --role Admin --email admin@example.local || true
+        echo "Airflow inicializado."
+    restart: on-failure
+
+  airflow-webserver:
+    <<: *airflow-comum
+    command: webserver
+    ports:
+      - "8080:8080"
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    restart: unless-stopped
+
+  airflow-scheduler:
+    <<: *airflow-comum
+    command: scheduler
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  # ------------------------------------------------------------------
+  # PROFILE "spark" — cluster standalone (opcional, demonstrativo)
+  # ------------------------------------------------------------------
+  spark-master:
+    profiles: ["spark"]
+    image: bitnami/spark:3.5.1
+    environment:
+      SPARK_MODE: master
+    ports:
+      - "7077:7077"
+      - "8081:8080"   # UI do master (8080 já é do Airflow)
+    restart: unless-stopped
+
+  spark-worker:
+    profiles: ["spark"]
+    image: bitnami/spark:3.5.1
+    depends_on:
+      - spark-master
+    environment:
+      SPARK_MODE: worker
+      SPARK_MASTER_URL: spark://spark-master:7077
+      SPARK_WORKER_CORES: "2"
+      SPARK_WORKER_MEMORY: 2G
+    restart: unless-stopped
+
+  # ------------------------------------------------------------------
+  # PROFILE "monitoring" — observabilidade (opcional)
+  # ------------------------------------------------------------------
+  prometheus:
+    profiles: ["monitoring"]
+    image: prom/prometheus:v2.53.0
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-dados:/prometheus
+    ports:
+      - "9090:9090"
+    restart: unless-stopped
+
+  grafana:
+    profiles: ["monitoring"]
+    image: grafana/grafana:11.1.0
+    depends_on:
+      - prometheus
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    volumes:
+      - grafana-dados:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+volumes:
+  postgres-dados:
+  minio-dados:
+  prometheus-dados:
+  grafana-dados:

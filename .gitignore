@@ -1,0 +1,10 @@
+# Dados de terceiros (Embrapa, CC BY-NC 4.0): baixar à parte, ver raw/README.md
+raw/*
+!raw/README.md
+# Locais
+.env
+__pycache__/
+*.pyc
+work/classolosbr-ns/resultados/
+# Texto da norma (SiBCS 5ª ed., © Embrapa, todos os direitos reservados): gerar localmente, ver README
+work/classolosbr-ns/nucleo/dados/subgrupos5.json

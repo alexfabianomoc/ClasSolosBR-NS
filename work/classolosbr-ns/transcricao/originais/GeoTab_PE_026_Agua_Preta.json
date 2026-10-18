@@ -1,0 +1,117 @@
+{
+ "items": [
+  {
+   "ID_PONTO": "GeoTab_PE_026_Agua_Preta",
+   "ORDEM": "GLEISSOLO",
+   "SUBORDEM": "HÁPLICO",
+   "GDE_GRUPO": "Tb Eutrófico",
+   "SUBGRUPO": "solódico",
+   "CURADORIA": "Nenhuma alteração. Atenção: perfil de tradagem, horizontes não contínuos.",
+   "AUTOR_CURADORIA": "Luís de França da Silva Neto, Glauber José Vaz e Adalberto Francisco da Silva Junior",
+   "HORIZONTES": [
+    {
+     "AREIA_GROS": 20,
+     "ARGILA": 660,
+     "AREIA_FINA": 40,
+     "SILTE": 280,
+     "LIMITE_SUP": 0,
+     "SIMB_HORIZ": "Ap",
+     "LIMITE_INF": 5,
+     "COR_UMIDA_MATIZ": "10YR",
+     "COR_UMIDA_VALOR": 6,
+     "COR_UMIDA_CROMA": 1,
+     "PH_AGUA": 5.3,
+     "PH_KCL": 4.1,
+     "CA_TROC": 4.5,
+     "MG_TROC": 0.9,
+     "K_TROC": 0.48,
+     "NA_TROC": 0.17,
+     "AL_TROC": 0.3,
+     "H_TROC": 6.3,
+     "P_ASSIM": 22,
+     "C_ORG": 16.6
+    },
+    {
+     "AREIA_GROS": 10,
+     "ARGILA": 760,
+     "AREIA_FINA": 10,
+     "SILTE": 220,
+     "SIMB_HORIZ": "Cg",
+     "LIMITE_SUP": 20,
+     "LIMITE_INF": 40,
+     "PH_AGUA": 5.8,
+     "PH_KCL": 4.6,
+     "CA_TROC": 3.8,
+     "MG_TROC": 2.3,
+     "K_TROC": 0.09,
+     "NA_TROC": 0.29,
+     "AL_TROC": 0,
+     "H_TROC": 3.1,
+     "P_ASSIM": 4,
+     "C_ORG": 8.3
+    },
+    {
+     "AREIA_GROS": 10,
+     "ARGILA": 780,
+     "AREIA_FINA": 30,
+     "SILTE": 180,
+     "SIMB_HORIZ": "Cgn",
+     "LIMITE_SUP": 60,
+     "PH_AGUA": 5.8,
+     "PH_KCL": 4.2,
+     "CA_TROC": 1.5,
+     "MG_TROC": 3.6,
+     "K_TROC": 0.05,
+     "NA_TROC": 0.67,
+     "AL_TROC": 0,
+     "H_TROC": 2.2,
+     "P_ASSIM": 1,
+     "C_ORG": 7.8,
+     "LIMITE_INF": 80
+    }
+   ],
+   "_ALTERACOES": [
+    {
+     "horizonte": 1,
+     "simbolo_json": "Cg",
+     "campo": "COR_UMIDA_MATIZ",
+     "original": null,
+     "curado": "N",
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "Cg",
+     "campo": "COR_UMIDA_VALOR",
+     "original": null,
+     "curado": 7,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "Cgn",
+     "campo": "COR_UMIDA_MATIZ",
+     "original": null,
+     "curado": "N",
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "Cgn",
+     "campo": "COR_UMIDA_VALOR",
+     "original": null,
+     "curado": 7,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    }
+   ],
+   "_AVISOS": [],
+   "_TEM_FICHA_ATUALIZADA": false,
+   "_CLASSIFICACAO_FICHA_ORIGINAL": "Gleissolo Háplico Tb Eutrófico solódico A moderado textura muito argilosa fase campo de várzea relevo plano",
+   "_CLASSIFICACAO_FICHA_FINAL": "Gleissolo Háplico Tb Eutrófico solódico A moderado textura muito argilosa fase campo de várzea relevo plano"
+  }
+ ]
+}

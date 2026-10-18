@@ -1,0 +1,117 @@
+{
+ "_descricao": "Registros do BDSolos que repetem perfis do conjunto curado PYKKA7 (36 perfis, 40 registros: RN_007, RN_015 e RN_038 têm dois registros cada, e um registro duplica outro do próprio BDSolos). Critério: mesma UF, mesmos limites superiores e mesma argila em todos os horizontes comuns (tolerada uma diferença), no mínimo três. Conferido à mão em RN_042, RN_008 e PE_041: valores analíticos idênticos, notação anterior no BDSolos. Excluídos dos conjuntos de avaliação do BDSolos e do treino do Inferidor (monografia, seção 3.2). Levantado em 2026-10-14.",
+ "pares": {
+  "GeoTab_PE_001_Lagoa_dos_Gatos": [
+   "BDSolos|678|9055|37"
+  ],
+  "GeoTab_PE_013_Orobo": [
+   "BDSolos|678|9019|28"
+  ],
+  "GeoTab_PE_021_Nazare_da_Mata": [
+   "BDSolos|602|5851|1 - XXX CBCS"
+  ],
+  "GeoTab_PE_039_Passira": [
+   "BDSolos|678|9075|49"
+  ],
+  "GeoTab_PE_041_Pombos": [
+   "BDSolos|678|9081|53"
+  ],
+  "GeoTab_RN_001_Ceara_Mirim": [
+   "BDSolos|694|9725|5"
+  ],
+  "GeoTab_RN_002_Eloi_de_Souza": [
+   "BDSolos|694|9733|9"
+  ],
+  "GeoTab_RN_003_Pedra_Grande": [
+   "BDSolos|694|9767|15"
+  ],
+  "GeoTab_RN_004_Parazinho": [
+   "BDSolos|694|9769|17"
+  ],
+  "GeoTab_RN_005_Macau": [
+   "BDSolos|694|9774|19"
+  ],
+  "GeoTab_RN_006_Grossos": [
+   "BDSolos|694|9780|24"
+  ],
+  "GeoTab_RN_007_Acu": [
+   "BDSolos|608|6022|04 V RCC",
+   "BDSolos|654|7434|04 V RCC"
+  ],
+  "GeoTab_RN_008_Acu": [
+   "BDSolos|694|9731|8"
+  ],
+  "GeoTab_RN_010_Jandaira": [
+   "BDSolos|694|9806|36"
+  ],
+  "GeoTab_RN_012_Joao_Camara": [
+   "BDSolos|694|9809|39"
+  ],
+  "GeoTab_RN_013_Jandaira": [
+   "BDSolos|694|9856|59"
+  ],
+  "GeoTab_RN_014_Mossoro": [
+   "BDSolos|608|6024|05 V RCC"
+  ],
+  "GeoTab_RN_015_Mossoro": [
+   "BDSolos|608|6026|06 V RCC",
+   "BDSolos|654|7441|06 V RCC"
+  ],
+  "GeoTab_RN_016_Mossoro": [
+   "BDSolos|608|6028|07 V RCC"
+  ],
+  "GeoTab_RN_019_Apodi": [
+   "BDSolos|608|6030|08 V RCC"
+  ],
+  "GeoTab_RN_021_Ceara_Mirim": [
+   "BDSolos|694|9829|50"
+  ],
+  "GeoTab_RN_024_Mossoro": [
+   "BDSolos|694|9863|66"
+  ],
+  "GeoTab_RN_025_Lajes": [
+   "BDSolos|694|9799|29"
+  ],
+  "GeoTab_RN_026_Taipu": [
+   "BDSolos|694|9800|30"
+  ],
+  "GeoTab_RN_027_Sao_Goncalo": [
+   "BDSolos|694|9831|51"
+  ],
+  "GeoTab_RN_028_Sao_Jose_do_Mipibu": [
+   "BDSolos|694|9843|52"
+  ],
+  "GeoTab_RN_029_Acu": [
+   "BDSolos|694|9844|53"
+  ],
+  "GeoTab_RN_030_Carnaubais": [
+   "BDSolos|694|9846|54"
+  ],
+  "GeoTab_RN_037_Angicos": [
+   "BDSolos|694|9818|45"
+  ],
+  "GeoTab_RN_038_Riachuelo": [
+   "BDSolos|608|6020|Ex - 02 V RCC",
+   "BDSolos|654|7430|Extra 02 V RCC",
+   "BDSolos|694|9802|32"
+  ],
+  "GeoTab_RN_040_Goianinha": [
+   "BDSolos|694|9814|42"
+  ],
+  "GeoTab_RN_041_Bento_Fernandes": [
+   "BDSolos|694|9815|43"
+  ],
+  "GeoTab_RN_042_Santo_Antonio": [
+   "BDSolos|694|9734|10"
+  ],
+  "GeoTab_RN_043_Pedro_Avelino": [
+   "BDSolos|694|9776|21"
+  ],
+  "GeoTab_RN_044_Mossoro": [
+   "BDSolos|694|9777|22"
+  ],
+  "GeoTab_RN_046_Ceara_Mirim": [
+   "BDSolos|694|9808|38"
+  ]
+ }
+}

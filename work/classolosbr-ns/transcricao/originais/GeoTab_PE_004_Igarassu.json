@@ -1,0 +1,136 @@
+{
+ "items": [
+  {
+   "ID_PONTO": "GeoTab_PE_004_Igarassu",
+   "ORDEM": "ARGISSOLO",
+   "SUBORDEM": "AMARELO",
+   "GDE_GRUPO": "Distrófico",
+   "SUBGRUPO": "abrúptico",
+   "CURADORIA": "CA_TROC e MG_TROC não tem valores separados. Foi dada a soma dos dois = 0.4. Usamos 0.2 para CA_TROC e 0.2 para MG_TROC nos horizontes Bt1 e Bt2.",
+   "AUTOR_CURADORIA": "Luís de França da Silva Neto, Glauber José Vaz e Adalberto Francisco da Silva Junior",
+   "HORIZONTES": [
+    {
+     "AREIA_GROS": 680,
+     "ARGILA": 80,
+     "AREIA_FINA": 160,
+     "SILTE": 80,
+     "LIMITE_SUP": 0,
+     "SIMB_HORIZ": "A",
+     "LIMITE_INF": 35,
+     "COR_UMIDA_MATIZ": "10YR",
+     "COR_UMIDA_VALOR": 3,
+     "COR_UMIDA_CROMA": 3,
+     "PH_AGUA": 5.5,
+     "PH_KCL": 50.0,
+     "CA_TROC": 1.4,
+     "MG_TROC": 0.3,
+     "K_TROC": 0.05,
+     "NA_TROC": 0.01,
+     "AL_TROC": 0,
+     "H_TROC": 1.5,
+     "P_ASSIM": 82,
+     "C_ORG": 5.9,
+     "TEOR_FE": 13
+    },
+    {
+     "AREIA_GROS": 530,
+     "ARGILA": 200,
+     "AREIA_FINA": 220,
+     "SILTE": 50,
+     "SIMB_HORIZ": "Bt1",
+     "LIMITE_SUP": 35,
+     "LIMITE_INF": 80,
+     "COR_UMIDA_MATIZ": "10YR",
+     "COR_UMIDA_VALOR": 5,
+     "COR_UMIDA_CROMA": 6,
+     "PH_AGUA": 4.5,
+     "PH_KCL": 4.2,
+     "K_TROC": 0.01,
+     "NA_TROC": 0.01,
+     "AL_TROC": 0.5,
+     "H_TROC": 1.5,
+     "P_ASSIM": 2,
+     "C_ORG": 3.9,
+     "TEOR_FE": 22,
+     "_CA_MG_SOMADOS": 0.4
+    },
+    {
+     "AREIA_GROS": 460,
+     "ARGILA": 320,
+     "AREIA_FINA": 170,
+     "SILTE": 50,
+     "SIMB_HORIZ": "Bt2",
+     "LIMITE_SUP": 80,
+     "LIMITE_INF": 100,
+     "COR_UMIDA_MATIZ": "10YR",
+     "COR_UMIDA_VALOR": 5,
+     "COR_UMIDA_CROMA": 8,
+     "PH_AGUA": 4.3,
+     "PH_KCL": 4.1,
+     "K_TROC": 0.01,
+     "NA_TROC": 0.01,
+     "AL_TROC": 0.6,
+     "H_TROC": 1.5,
+     "P_ASSIM": 1,
+     "C_ORG": 2.9,
+     "TEOR_FE": 36,
+     "_CA_MG_SOMADOS": 0.4
+    }
+   ],
+   "_ALTERACOES": [
+    {
+     "horizonte": 0,
+     "simbolo_json": "A",
+     "campo": "PH_KCL",
+     "original": 50.0,
+     "curado": 5,
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "Bt1",
+     "campo": "CA_TROC",
+     "original": null,
+     "curado": 0.2,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "Bt1",
+     "campo": "MG_TROC",
+     "original": null,
+     "curado": 0.2,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "Bt2",
+     "campo": "CA_TROC",
+     "original": null,
+     "curado": 0.2,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "Bt2",
+     "campo": "MG_TROC",
+     "original": null,
+     "curado": 0.2,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    }
+   ],
+   "_AVISOS": [
+    "Bt1: Ca²⁺ e Mg²⁺ somados numa célula",
+    "Bt2: Ca²⁺ e Mg²⁺ somados numa célula"
+   ],
+   "_TEM_FICHA_ATUALIZADA": false,
+   "_CLASSIFICACAO_FICHA_ORIGINAL": "Argissolo Amarelo Distrófico abrúptico A moderado textura média / argilosa fase floresta subperenefólia, relevo plano",
+   "_CLASSIFICACAO_FICHA_FINAL": "Argissolo Amarelo Distrófico abrúptico A moderado textura média / argilosa fase floresta subperenefólia, relevo plano"
+  }
+ ]
+}

@@ -1,0 +1,301 @@
+{
+ "items": [
+  {
+   "ID_PONTO": "GeoTab_RN_017_Jandaira",
+   "ORDEM": "CAMBISSOLO",
+   "SUBORDEM": "HÁPLICO",
+   "GDE_GRUPO": "Ta Eutrófico",
+   "SUBGRUPO": "lítico",
+   "CURADORIA": "Nenhuma alteração.",
+   "AUTOR_CURADORIA": "Luís de França da Silva Neto, Glauber José Vaz e Adalberto Francisco da Silva Junior",
+   "HORIZONTES": [
+    {
+     "AREIA_GROS": 773.0,
+     "AREIA_FINA": 27.0,
+     "SILTE": 200.0,
+     "LIMITE_SUP": 0,
+     "SIMB_HORIZ": "A",
+     "LIMITE_INF": 13,
+     "COR_UMIDA_MATIZ": "2.5YR",
+     "COR_UMIDA_VALOR": 4,
+     "COR_UMIDA_CROMA": 6,
+     "ESTRUTURA_GRAU": 2,
+     "ESTRUTURA_TAMANHO": 2,
+     "ESTRUTURA_TIPO": 5,
+     "CEROSIDADE_QUANTIDADE": 3,
+     "TRANSICAO_FORMA": 1,
+     "TRANSICAO_GRAU": 2,
+     "PETROPLINTICO": false,
+     "LITOPLINTICO": false,
+     "RETRATIL": false,
+     "COESO": false,
+     "FLUVICO": false,
+     "SOMBRICO": false,
+     "REDOXICO": false,
+     "FRAGMENTARIO": false,
+     "MATERIAIS_PRIMARIOS": false,
+     "ATIVIDADES_HUMANAS": false,
+     "PLACICO_TOPO": false,
+     "PH_AGUA": 7.5,
+     "CA_TROC": 4.7,
+     "MG_TROC": 2.25,
+     "K_TROC": 0.08,
+     "NA_TROC": 0,
+     "AL_TROC": 0,
+     "H_TROC": 1.1,
+     "P_ASSIM": 20,
+     "C_ORG": 6.96
+    },
+    {
+     "AREIA_GROS": 756.0,
+     "AREIA_FINA": 24.0,
+     "SILTE": 220.0,
+     "SIMB_HORIZ": "Bi",
+     "LIMITE_SUP": 13,
+     "LIMITE_INF": 40,
+     "COR_UMIDA_MATIZ": "5YR",
+     "COR_UMIDA_VALOR": 5,
+     "COR_UMIDA_CROMA": 8,
+     "ESTRUTURA_GRAU": 2,
+     "ESTRUTURA_TAMANHO": 2,
+     "ESTRUTURA_TIPO": 5,
+     "CEROSIDADE_QUANTIDADE": 3,
+     "TRANSICAO_FORMA": 2,
+     "TRANSICAO_GRAU": 1,
+     "PETROPLINTICO": false,
+     "LITOPLINTICO": false,
+     "RETRATIL": false,
+     "COESO": false,
+     "FLUVICO": false,
+     "SOMBRICO": false,
+     "REDOXICO": false,
+     "FRAGMENTARIO": false,
+     "MATERIAIS_PRIMARIOS": false,
+     "ATIVIDADES_HUMANAS": false,
+     "PLACICO_TOPO": false,
+     "PH_AGUA": 7.5,
+     "CA_TROC": 4.4,
+     "MG_TROC": 2.6,
+     "K_TROC": 0.12,
+     "NA_TROC": 0,
+     "AL_TROC": 0,
+     "H_TROC": 1.6,
+     "C_ORG": 2.52,
+     "P_ASSIM": 14.0
+    },
+    {
+     "SIMB_HORIZ": "C/R",
+     "LIMITE_SUP": 40,
+     "LIMITE_INF": 50,
+     "PETROPLINTICO": false,
+     "LITOPLINTICO": false,
+     "RETRATIL": false,
+     "COESO": false,
+     "FLUVICO": false,
+     "SOMBRICO": false,
+     "REDOXICO": false,
+     "FRAGMENTARIO": false,
+     "MATERIAIS_PRIMARIOS": false,
+     "ATIVIDADES_HUMANAS": false,
+     "PLACICO_TOPO": false
+    },
+    {
+     "SIMB_HORIZ": "R",
+     "LIMITE_SUP": 50,
+     "LIMITE_INF": 110,
+     "PETROPLINTICO": false,
+     "LITOPLINTICO": false,
+     "RETRATIL": false,
+     "COESO": false,
+     "FLUVICO": false,
+     "SOMBRICO": false,
+     "REDOXICO": false,
+     "FRAGMENTARIO": false,
+     "MATERIAIS_PRIMARIOS": false,
+     "ATIVIDADES_HUMANAS": false,
+     "PLACICO_TOPO": false
+    }
+   ],
+   "_ALTERACOES": [
+    {
+     "horizonte": 0,
+     "simbolo_json": "A",
+     "campo": "AREIA_GROS",
+     "original": 773.0,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 0,
+     "simbolo_json": "A",
+     "campo": "AREIA_FINA",
+     "original": 27.0,
+     "curado": 773,
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 0,
+     "simbolo_json": "A",
+     "campo": "SILTE",
+     "original": 200.0,
+     "curado": 27,
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 0,
+     "simbolo_json": "A",
+     "campo": "ARGILA",
+     "original": null,
+     "curado": 200,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 0,
+     "simbolo_json": "A",
+     "campo": "MG_TROC",
+     "original": 2.25,
+     "curado": 2.3,
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "Bi",
+     "campo": "AREIA_GROS",
+     "original": 756.0,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "Bi",
+     "campo": "AREIA_FINA",
+     "original": 24.0,
+     "curado": 756,
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "Bi",
+     "campo": "SILTE",
+     "original": 220.0,
+     "curado": 24,
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "Bi",
+     "campo": "ARGILA",
+     "original": null,
+     "curado": 220,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "Bi",
+     "campo": "P_ASSIM",
+     "original": 14.0,
+     "curado": null,
+     "origem": "só o JSON alterado",
+     "natureza": "omitido na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "C/R",
+     "campo": "AREIA_GROS",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "C/R",
+     "campo": "AREIA_FINA",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "C/R",
+     "campo": "SILTE",
+     "original": null,
+     "curado": 1000,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "C/R",
+     "campo": "ARGILA",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "C/R",
+     "campo": "P_ASSIM",
+     "original": null,
+     "curado": 14,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 3,
+     "simbolo_json": "R",
+     "campo": "AREIA_GROS",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 3,
+     "simbolo_json": "R",
+     "campo": "AREIA_FINA",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 3,
+     "simbolo_json": "R",
+     "campo": "SILTE",
+     "original": null,
+     "curado": 1000,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 3,
+     "simbolo_json": "R",
+     "campo": "ARGILA",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    }
+   ],
+   "_AVISOS": [
+    "granulometria: linhas sem horizonte ['2,0 -0,05 mm', '< 0,002 mm']",
+    "carbono: casadas pela ordem [('g kg-1', 'C/R')]"
+   ],
+   "_TEM_FICHA_ATUALIZADA": false,
+   "_CLASSIFICACAO_FICHA_ORIGINAL": "CAMBISSOLO HÁPLICO Ta Eutrófico lítico textura média caatinga hipoxerófila",
+   "_CLASSIFICACAO_FICHA_FINAL": "CAMBISSOLO HÁPLICO Ta Eutrófico lítico textura média caatinga hipoxerófila"
+  }
+ ]
+}

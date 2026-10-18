@@ -1,0 +1,124 @@
+{
+ "items": [
+  {
+   "ID_PONTO": "GeoTab_PE_042_Gravata",
+   "ORDEM": "NEOSSOLO",
+   "SUBORDEM": "LITÓLICO",
+   "GDE_GRUPO": "Eutrófico",
+   "SUBGRUPO": "típico",
+   "CURADORIA": "Nenhuma alteração.",
+   "AUTOR_CURADORIA": "Luís de França da Silva Neto, Glauber José Vaz e Adalberto Francisco da Silva Junior",
+   "HORIZONTES": [
+    {
+     "AREIA_GROS": 580,
+     "ARGILA": 60,
+     "AREIA_FINA": 190,
+     "SILTE": 170,
+     "LIMITE_SUP": 0,
+     "SIMB_HORIZ": "A",
+     "LIMITE_INF": 15,
+     "COR_UMIDA_MATIZ": "10YR",
+     "COR_UMIDA_VALOR": 3,
+     "COR_UMIDA_CROMA": 3,
+     "COR_SECA_MATIZ": "10YR",
+     "COR_SECA_VALOR": 5,
+     "COR_SECA_CROMA": 2,
+     "ESTRUTURA_GRAU": 2,
+     "ESTRUTURA_TAMANHO": 2,
+     "ESTRUTURA_TIPO": 5,
+     "TRANSICAO_FORMA": 1,
+     "TRANSICAO_GRAU": 2,
+     "PH_AGUA": 7,
+     "PH_KCL": 6.4,
+     "CA_TROC": 3.8,
+     "MG_TROC": 1.2,
+     "K_TROC": 0.63,
+     "NA_TROC": 0.05,
+     "AL_TROC": 0,
+     "H_TROC": 0,
+     "P_ASSIM": 36,
+     "C_ORG": 10,
+     "TEOR_FE": 1.7,
+     "TEOR_P": 0,
+     "COND_ELETR": 0
+    },
+    {
+     "AREIA_GROS": 580,
+     "ARGILA": 60,
+     "AREIA_FINA": 170,
+     "SILTE": 190,
+     "SIMB_HORIZ": "AC",
+     "LIMITE_SUP": 15,
+     "LIMITE_INF": 35,
+     "COR_UMIDA_MATIZ": "10YR",
+     "COR_UMIDA_VALOR": 4,
+     "COR_UMIDA_CROMA": 3,
+     "ESTRUTURA_GRAU": 2,
+     "ESTRUTURA_TAMANHO": 2,
+     "TRANSICAO_FORMA": 2,
+     "TRANSICAO_GRAU": 2,
+     "PH_AGUA": 7,
+     "PH_KCL": 6.1,
+     "CA_TROC": 1.7,
+     "MG_TROC": 0.6,
+     "K_TROC": 0.86,
+     "NA_TROC": 0.06,
+     "AL_TROC": 0,
+     "H_TROC": 0,
+     "P_ASSIM": 11,
+     "C_ORG": 3.6,
+     "TEOR_FE": 1.8,
+     "TEOR_P": 0,
+     "COND_ELETR": 0
+    },
+    {
+     "SIMB_HORIZ": "R/Cr",
+     "LIMITE_SUP": 35,
+     "LIMITE_INF": 50
+    }
+   ],
+   "_ALTERACOES": [
+    {
+     "horizonte": 2,
+     "simbolo_json": "R/Cr",
+     "campo": "AREIA_GROS",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "R/Cr",
+     "campo": "AREIA_FINA",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "R/Cr",
+     "campo": "SILTE",
+     "original": null,
+     "curado": 1000,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 2,
+     "simbolo_json": "R/Cr",
+     "campo": "ARGILA",
+     "original": null,
+     "curado": 0,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    }
+   ],
+   "_AVISOS": [],
+   "_TEM_FICHA_ATUALIZADA": false,
+   "_CLASSIFICACAO_FICHA_ORIGINAL": "NEOSSOLO LITÓLICO Eutrófico típico A moderado, textura arenosa cascalhenta fase pedregosa e rochosa, caatinga hipoxerófila, relevo forte ondulado",
+   "_CLASSIFICACAO_FICHA_FINAL": "NEOSSOLO LITÓLICO Eutrófico típico A moderado, textura arenosa cascalhenta fase pedregosa e rochosa, caatinga hipoxerófila, relevo forte ondulado"
+  }
+ ]
+}

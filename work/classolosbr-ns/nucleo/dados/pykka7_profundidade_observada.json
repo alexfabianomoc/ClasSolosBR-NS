@@ -1,0 +1,335 @@
+{
+ "_descricao": "Profundidade observada dos horizontes cujo LIMITE_INF o JSON do PYKKA7 grava como 10000 (sentinela de horizonte aberto). Lida nas fichas RTF do próprio conjunto (updated; sem ela, original), casando pelo limite superior. Uso: limite MÍNIMO do horizonte, para o veto do plíntico (espessura >= 15 cm). NÃO substitui LIMITE_INF: o sistema de referência recebe o JSON como está, e a comparação exige a mesma entrada. Levantado em 2026-10-14. 31 de 33 recuperados; PE_046 e RN_015 trazem só 'X cm+' na ficha. RN_034 e RN_046 são FECHADOS na ficha (sem '+'): o JSON inventou o horizonte aberto.",
+ "horizontes": [
+  {
+   "id_ponto": "GeoTab_PE_010_Nazare_da_Mata",
+   "simbolo_json": "Cr",
+   "simbolo_ficha": "Cr",
+   "limite_sup": 100.0,
+   "limite_inf_ficha": 200.0,
+   "aberto_na_ficha": true,
+   "ficha": "PE/updated/GeoTab_PE_010_Nazare_da_Mata.rtf",
+   "trecho": "Cr 100-200+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_PE_011_Palmeirina",
+   "simbolo_json": "Bt2",
+   "simbolo_ficha": "Bt2",
+   "limite_sup": 120.0,
+   "limite_inf_ficha": 200.0,
+   "aberto_na_ficha": true,
+   "ficha": "PE/updated/GeoTab_PE_011_Palmeirina.rtf",
+   "trecho": "Bt2 120-200+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_PE_019_Palmares",
+   "simbolo_json": "2Cg",
+   "simbolo_ficha": "2Cg",
+   "limite_sup": 90.0,
+   "limite_inf_ficha": 120.0,
+   "aberto_na_ficha": true,
+   "ficha": "PE/updated/GeoTab_PE_019_Palmares.rtf",
+   "trecho": "2Cg 90-120+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_PE_020_Macaparana",
+   "simbolo_json": "Cr",
+   "simbolo_ficha": "Cr",
+   "limite_sup": 110.0,
+   "limite_inf_ficha": 123.0,
+   "aberto_na_ficha": true,
+   "ficha": "PE/updated/GeoTab_PE_020_Macaparana.rtf",
+   "trecho": "Cr 110-123 cm+:"
+  },
+  {
+   "id_ponto": "GeoTab_PE_022_Igarassu",
+   "simbolo_json": "Bhsm",
+   "simbolo_ficha": "Bhsm",
+   "limite_sup": 112.0,
+   "limite_inf_ficha": 155.0,
+   "aberto_na_ficha": true,
+   "ficha": "PE/original/GeoTab_PE_022_Igarassu.rtf",
+   "trecho": "Bhsm 112-155+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_PE_023_Tamandare",
+   "simbolo_json": "Bhs",
+   "simbolo_ficha": "Bhs",
+   "limite_sup": 180.0,
+   "limite_inf_ficha": 210.0,
+   "aberto_na_ficha": true,
+   "ficha": "PE/original/GeoTab_PE_023_Tamandare.rtf",
+   "trecho": "Bhs 180-210+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_PE_044_Jurema",
+   "simbolo_json": "Cn2",
+   "simbolo_ficha": "Cn",
+   "limite_sup": 100.0,
+   "limite_inf_ficha": 150.0,
+   "aberto_na_ficha": true,
+   "ficha": "PE/updated/GeoTab_PE_044_Jurema.rtf",
+   "trecho": "Cn 100-150 cm+:"
+  },
+  {
+   "id_ponto": "GeoTab_PE_045_Cabo_de_Santo_Agostinho",
+   "simbolo_json": "Bt3",
+   "simbolo_ficha": "Bt3",
+   "limite_sup": 133.0,
+   "limite_inf_ficha": 158.0,
+   "aberto_na_ficha": true,
+   "ficha": "PE/updated/GeoTab_PE_045_Cabo_de_Santo_Agostinho.rtf",
+   "trecho": "Bt3 133-158+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_PE_046_Bonito",
+   "simbolo_json": "Cr",
+   "simbolo_ficha": "Cr",
+   "limite_sup": 120.0,
+   "limite_inf_ficha": null,
+   "aberto_na_ficha": true,
+   "ficha": "PE/updated/GeoTab_PE_046_Bonito.rtf",
+   "trecho": "Cr 120 cm+:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_001_Ceara_Mirim",
+   "simbolo_json": "Bw",
+   "simbolo_ficha": "Bw",
+   "limite_sup": 100.0,
+   "limite_inf_ficha": 150.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_001_Ceara_Mirim.rtf",
+   "trecho": "Bw 100-150+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_002_Eloi_de_Souza",
+   "simbolo_json": "Bt2",
+   "simbolo_ficha": "Bt2",
+   "limite_sup": 110.0,
+   "limite_inf_ficha": 150.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_002_Eloi_de_Souza.rtf",
+   "trecho": "Bt2 110-150+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_005_Macau",
+   "simbolo_json": "Btf",
+   "simbolo_ficha": "Btf",
+   "limite_sup": 65.0,
+   "limite_inf_ficha": 100.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_005_Macau.rtf",
+   "trecho": "Btf 65-100+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_006_Grossos",
+   "simbolo_json": "Bt3",
+   "simbolo_ficha": "Bt3",
+   "limite_sup": 100.0,
+   "limite_inf_ficha": 130.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_006_Grossos.rtf",
+   "trecho": "Bt3 100-130+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_008_Acu",
+   "simbolo_json": "Bt2",
+   "simbolo_ficha": "Bt2",
+   "limite_sup": 70.0,
+   "limite_inf_ficha": 220.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_008_Acu.rtf",
+   "trecho": "Bt2 70-220+cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_011_Jandaira",
+   "simbolo_json": "R",
+   "simbolo_ficha": "R",
+   "limite_sup": 54.0,
+   "limite_inf_ficha": 60.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_011_Jandaira.rtf",
+   "trecho": "R 54-60+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_012_Joao_Camara",
+   "simbolo_json": "Bi",
+   "simbolo_ficha": "Bi",
+   "limite_sup": 15.0,
+   "limite_inf_ficha": 35.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_012_Joao_Camara.rtf",
+   "trecho": "Bi 15-35+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_013_Jandaira",
+   "simbolo_json": "2Crk",
+   "simbolo_ficha": "2Crk",
+   "limite_sup": 70.0,
+   "limite_inf_ficha": 80.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_013_Jandaira.rtf",
+   "trecho": "2Crk 70-80+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_015_Mossoro",
+   "simbolo_json": "R",
+   "simbolo_ficha": "R",
+   "limite_sup": 120.0,
+   "limite_inf_ficha": null,
+   "aberto_na_ficha": true,
+   "ficha": "RN/original/GeoTab_RN_015_Mossoro.rtf",
+   "trecho": "R 120+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_018_Mossoro",
+   "simbolo_json": "Crk2",
+   "simbolo_ficha": "Crk2",
+   "limite_sup": 65.0,
+   "limite_inf_ficha": 90.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_018_Mossoro.rtf",
+   "trecho": "Crk2 65-90+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_021_Ceara_Mirim",
+   "simbolo_json": "111C2",
+   "simbolo_ficha": "IIIC2",
+   "limite_sup": 45.0,
+   "limite_inf_ficha": 80.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/original/GeoTab_RN_021_Ceara_Mirim.rtf",
+   "trecho": "IIIC2 45-80+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_023_Mossoro",
+   "simbolo_json": "Bw3",
+   "simbolo_ficha": "Bw3",
+   "limite_sup": 180.0,
+   "limite_inf_ficha": 220.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/original/GeoTab_RN_023_Mossoro.rtf",
+   "trecho": "Bw3 180-220+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_024_Mossoro",
+   "simbolo_json": "Bw",
+   "simbolo_ficha": "Bw",
+   "limite_sup": 50.0,
+   "limite_inf_ficha": 150.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_024_Mossoro.rtf",
+   "trecho": "Bw 50-150+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_031_Pendencias",
+   "simbolo_json": "2C",
+   "simbolo_ficha": "2C",
+   "limite_sup": 20.0,
+   "limite_inf_ficha": 40.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_031_Pendencias.rtf",
+   "trecho": "2C 20-40+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_033_Baia_Formosa",
+   "simbolo_json": "C3",
+   "simbolo_ficha": "C3",
+   "limite_sup": 150.0,
+   "limite_inf_ficha": 190.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/original/GeoTab_RN_033_Baia_Formosa.rtf",
+   "trecho": "C3 150-190+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_034_Tibau_do_Sul",
+   "simbolo_json": "C3",
+   "simbolo_ficha": "C3",
+   "limite_sup": 120.0,
+   "limite_inf_ficha": 170.0,
+   "aberto_na_ficha": false,
+   "ficha": "RN/original/GeoTab_RN_034_Tibau_do_Sul.rtf",
+   "trecho": "C3 120-170 cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_035_Acu",
+   "simbolo_json": "C",
+   "simbolo_ficha": "C",
+   "limite_sup": 10.0,
+   "limite_inf_ficha": 150.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_035_Acu.rtf",
+   "trecho": "C 10-150+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_036_Touros",
+   "simbolo_json": "Hod",
+   "simbolo_ficha": "Hod",
+   "limite_sup": 20.0,
+   "limite_inf_ficha": 65.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_036_Touros.rtf",
+   "trecho": "Hod 20-65+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_039_Riachuelo",
+   "simbolo_json": "BCnz",
+   "simbolo_ficha": "BCnz",
+   "limite_sup": 54.0,
+   "limite_inf_ficha": 75.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/original/GeoTab_RN_039_Riachuelo.rtf",
+   "trecho": "BCnz 54-75+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_042_Santo_Antonio",
+   "simbolo_json": "Btf",
+   "simbolo_ficha": "Btf",
+   "limite_sup": 110.0,
+   "limite_inf_ficha": 150.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_042_Santo_Antonio.rtf",
+   "trecho": "Btf 110-150+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_043_Pedro_Avelino",
+   "simbolo_json": "Btfn2",
+   "simbolo_ficha": "Btfn2",
+   "limite_sup": 66.0,
+   "limite_inf_ficha": 105.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_043_Pedro_Avelino.rtf",
+   "trecho": "Btfn2 66-105+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_044_Mossoro",
+   "simbolo_json": "Btf",
+   "simbolo_ficha": "Btf",
+   "limite_sup": 105.0,
+   "limite_inf_ficha": 120.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/updated/GeoTab_RN_044_Mossoro.rtf",
+   "trecho": "Btf 105-120+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_045_Mossoro",
+   "simbolo_json": "Bvk3",
+   "simbolo_ficha": "Bvk3",
+   "limite_sup": 90.0,
+   "limite_inf_ficha": 125.0,
+   "aberto_na_ficha": true,
+   "ficha": "RN/original/GeoTab_RN_045_Mossoro.rtf",
+   "trecho": "Bvk3 90-125+ cm:"
+  },
+  {
+   "id_ponto": "GeoTab_RN_046_Ceara_Mirim",
+   "simbolo_json": "Cvz",
+   "simbolo_ficha": "Cvz",
+   "limite_sup": 70.0,
+   "limite_inf_ficha": 120.0,
+   "aberto_na_ficha": false,
+   "ficha": "RN/updated/GeoTab_RN_046_Ceara_Mirim.rtf",
+   "trecho": "Cvz 70-120 cm:"
+  }
+ ]
+}

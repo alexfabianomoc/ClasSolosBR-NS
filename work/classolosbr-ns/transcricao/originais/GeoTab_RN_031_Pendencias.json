@@ -1,0 +1,108 @@
+{
+ "items": [
+  {
+   "ID_PONTO": "GeoTab_RN_031_Pendencias",
+   "ORDEM": "NEOSSOLO",
+   "SUBORDEM": "FLÚVICO",
+   "GDE_GRUPO": "Sódico",
+   "SUBGRUPO": "típico",
+   "CURADORIA": "Substituição dos símbolos de horizontes A1 e IIC por Apn e 2C respectivamente. Inclusão de FLUVICO = true em todos os horizontes. Segundo o José Coelho, é necessário fazer arredondamento em saturação por sódio. Se não fizer, a classificação é diferente, pois ao invés de considerar 15 (arredondado), dá ~14.7, gerando outra classificação.",
+   "AUTOR_CURADORIA": "Luís de França da Silva Neto, Glauber José Vaz e Adalberto Francisco da Silva Junior, com consulta a José Coelho sobre saturação por sódio.",
+   "HORIZONTES": [
+    {
+     "AREIA_GROS": 10,
+     "ARGILA": 330,
+     "AREIA_FINA": 60,
+     "SILTE": 600,
+     "LIMITE_SUP": 0,
+     "SIMB_HORIZ": "A1",
+     "FLUVICO": true,
+     "LIMITE_INF": 20,
+     "COR_UMIDA_MATIZ": "2.5Y",
+     "COR_UMIDA_VALOR": 4,
+     "COR_UMIDA_CROMA": 2,
+     "COR_SECA_MATIZ": "5Y",
+     "COR_SECA_VALOR": 6,
+     "COR_SECA_CROMA": 3,
+     "TRANSICAO_FORMA": 1,
+     "TRANSICAO_GRAU": 3,
+     "PH_AGUA": 7.1,
+     "PH_KCL": 5.9,
+     "CA_TROC": 10.9,
+     "MG_TROC": 5.7,
+     "K_TROC": 0.61,
+     "NA_TROC": 2.98,
+     "AL_TROC": 0,
+     "H_TROC": 0,
+     "P_ASSIM": 85,
+     "C_ORG": 9.7,
+     "TEOR_FE": 79,
+     "TEOR_P": 1.4,
+     "COND_ELETR": 2.2
+    },
+    {
+     "AREIA_GROS": 60,
+     "ARGILA": 220,
+     "AREIA_FINA": 330,
+     "SILTE": 390,
+     "SIMB_HORIZ": "IIC",
+     "FLUVICO": true,
+     "LIMITE_SUP": 20,
+     "LIMITE_INF": 10000,
+     "COR_UMIDA_MATIZ": "2.5Y",
+     "COR_UMIDA_VALOR": 5,
+     "COR_UMIDA_CROMA": 2,
+     "PH_AGUA": 7.4,
+     "PH_KCL": 6,
+     "CA_TROC": 6.8,
+     "MG_TROC": 4.4,
+     "K_TROC": 0.38,
+     "NA_TROC": 1.14,
+     "AL_TROC": 0,
+     "H_TROC": 0,
+     "P_ASSIM": 60,
+     "C_ORG": 4.3,
+     "TEOR_FE": 48,
+     "TEOR_P": 0.9,
+     "COND_ELETR": 1.7
+    }
+   ],
+   "_ALTERACOES": [
+    {
+     "horizonte": 0,
+     "simbolo_json": "Apn",
+     "campo": "SIMB_HORIZ",
+     "original": "A1",
+     "curado": "Apn",
+     "origem": "ficha alterada",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 0,
+     "simbolo_json": "Apn",
+     "campo": "COR_UMIDA_MATIZ",
+     "original": "2.5Y",
+     "curado": "2.5YR",
+     "origem": "só o JSON alterado",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "2C",
+     "campo": "SIMB_HORIZ",
+     "original": "IIC",
+     "curado": "2C",
+     "origem": "ficha alterada",
+     "natureza": "valor corrigido"
+    }
+   ],
+   "_AVISOS": [
+    "2C: complexo sortivo não fecha S e T na leitura normal; mantida por ser a mais plausível",
+    "original: IIC: complexo sortivo não fecha S e T na leitura normal; mantida por ser a mais plausível"
+   ],
+   "_TEM_FICHA_ATUALIZADA": true,
+   "_CLASSIFICACAO_FICHA_ORIGINAL": "NEOSSOLO FLÚVICO Sódico típico A moderado textura média fase floresta ciliar de carnaúba relevo plano",
+   "_CLASSIFICACAO_FICHA_FINAL": "NEOSSOLO FLÚVICO Sódico típico A moderado textura média fase floresta ciliar de carnaúba relevo plano"
+  }
+ ]
+}

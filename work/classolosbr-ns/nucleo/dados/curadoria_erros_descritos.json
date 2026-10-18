@@ -1,0 +1,1039 @@
+{
+ "_descricao": "Classificação manual do registro de curadoria do conjunto curado (campo CURADORIA), feita em 2026-10-17 para o Acerto@k estrito (monografia, §3.4 e §3.5; item D-2 da auditoria). Para cada perfil com atributo alterável corrigido entre a ficha original e a curada (natureza 'valor corrigido' ou 'omitido na curadoria', campos de explicador.ALTERAVEIS), 'erro' lista os pares (horizonte, campo) que a nota descreve como erro de registro corrigido; 'outra' os que ela descreve com outra natureza; os demais corrigidos não são mencionados na nota. Critério: só conta a menção explícita ao atributo e ao valor; a descrição de outra alteração do mesmo perfil não conta.",
+ "perfis": {
+  "GeoTab_PE_004_Igarassu": {
+   "corrigidos": [
+    [
+     0,
+     "PH_KCL"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "CA_TROC e MG_TROC não tem valores separados. Foi dada a soma dos dois = 0.4. Usamos 0.2 para CA_TROC e 0.2 para MG_TROC nos horizontes Bt1 e Bt2.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_007_Escada": {
+   "corrigidos": [
+    [
+     2,
+     "MG_TROC"
+    ]
+   ],
+   "erro": [
+    [
+     2,
+     "MG_TROC"
+    ]
+   ],
+   "outra": [],
+   "nota": "MG_TROC estava como 17, mas é 1.7. Substituição da classificação em quarto nível endorredóxico -> típico. Não existe endorredóxico.",
+   "leitura": "a nota descreve o valor do Mg do Bt como erro: 'MG_TROC estava como 17, mas é 1.7'"
+  },
+  "GeoTab_PE_009_Sao_Vicente_Ferrer": {
+   "corrigidos": [
+    [
+     0,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "SILTE"
+    ],
+    [
+     2,
+     "SILTE"
+    ],
+    [
+     3,
+     "SILTE"
+    ],
+    [
+     4,
+     "SILTE"
+    ],
+    [
+     5,
+     "SILTE"
+    ],
+    [
+     6,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_011_Palmeirina": {
+   "corrigidos": [
+    [
+     2,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     2,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     3,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     3,
+     "COR_UMIDA_VALOR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A1, A2, B1 e B2 por Ap, A, Bt1 e Bt2, respectivamente. Em L4, ao invés de apenas abrúptico, abrúptico planossólico. Definição de vermelho-amarelo para argissolo no SiBCS: fala sobre outras cores vermelho-amareladas e amarelo-avermelhadas que não se enquadram nas anteriores. Segundo o Coelho, seria apenas: outras cores que não se enquadram nas anteriores.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_017_Barreiros": {
+   "corrigidos": [
+    [
+     2,
+     "COR_SECA_CROMA"
+    ],
+    [
+     2,
+     "COR_SECA_VALOR"
+    ],
+    [
+     3,
+     "COR_SECA_CROMA"
+    ],
+    [
+     3,
+     "COR_SECA_VALOR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição no 4o nível de típico para abrúptico.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_020_Macaparana": {
+   "corrigidos": [
+    [
+     0,
+     "AREIA_GROS"
+    ],
+    [
+     0,
+     "EQUI_CACO3"
+    ],
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "NA_TROC"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "OS DADOS DE COR SECA NÃO ESTAVAM ANOTADOS PARA OA HORIZONTES A2 E A3. ENTÃO REPLICAMOS OS DADOS DE COR SECA PRESENTES EM Ap PARA ESSES DOIS HORIZONTES. O QUARTO HORIZONTE ESTAVA ANOTADO COMO Bt, MAS É Bi",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_022_Igarassu": {
+   "corrigidos": [
+    [
+     4,
+     "C_ORG"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_024_Ipojuca": {
+   "corrigidos": [
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "SILTE"
+    ],
+    [
+     4,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição de classificação no 3o nível: de Alítico para Tb Alumínico. Alítico não existe.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_029_Goiana": {
+   "corrigidos": [
+    [
+     0,
+     "MG_TROC"
+    ],
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "AL_TROC"
+    ],
+    [
+     2,
+     "SILTE"
+    ],
+    [
+     3,
+     "SILTE"
+    ],
+    [
+     4,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_030_Sirinhaem": {
+   "corrigidos": [
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "SILTE"
+    ],
+    [
+     2,
+     "SILTE"
+    ],
+    [
+     3,
+     "SILTE"
+    ],
+    [
+     4,
+     "SILTE"
+    ],
+    [
+     5,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição no 3o nível de Húmico para Hístico. Não existe Húmico.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_033_Sirinhaem": {
+   "corrigidos": [
+    [
+     0,
+     "H_TROC"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "ALTERADO PARA COESO = TRUE NO HORIZONTE BA. ESTAVA FALSE. SEM ISSO DAVA CLASSIFICACAO Distrófico E NÃO Distrocoeso. ACRESCENTADO CAMPO OBSERVACOES COM INFORMAÇÕES FORNECIDAS PELO FLAVIO",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_034_Abreu_e_Lima": {
+   "corrigidos": [
+    [
+     1,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição no 4o nível de úmbrico para típico. Não existe úmbrico.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_039_Passira": {
+   "corrigidos": [
+    [
+     0,
+     "PH_KCL"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_040_Timbauba": {
+   "corrigidos": [
+    [
+     0,
+     "TEOR_FE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_041_Pombos": {
+   "corrigidos": [
+    [
+     3,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     3,
+     "COR_UMIDA_VALOR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizonte A1, A21, A22, 2Bt e 2C por Ap, A1, A2, 2Btn e 2C. Alteração na classificação de LUVISSOLO HÁPLICO Órtico planossólico para PLANOSSOLO HÁPLICO Eutrófico solódico.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_044_Jurema": {
+   "corrigidos": [
+    [
+     0,
+     "COND_ELETR"
+    ],
+    [
+     0,
+     "C_ORG"
+    ],
+    [
+     3,
+     "COND_ELETR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "ALTERADO MATERIAIS_PRIMARIOS = TRUE NO PRIMEIRO HORIZONTE. ESTAVA FALSE. CLASSIFICACAO ANOTADA ESTAVA EM Eutrófico típico, MAS A CLASSIFICACAO CORRETA É MESMO A DO SISTEMA: Psamítico solódico. MUDOU HORIZONTE C2 PARA Cn1 E DE Cn PARA Cn2.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_045_Cabo_de_Santo_Agostinho": {
+   "corrigidos": [
+    [
+     4,
+     "COR_UMIDA_CROMA"
+    ]
+   ],
+   "erro": [],
+   "outra": [
+    [
+     4,
+     "COR_UMIDA_CROMA"
+    ]
+   ],
+   "nota": "Cerosidades estava assim: {'SIMB_HORIZ':'BA','CEROSIDADE_QUANTIDADE':1,'CEROSIDADE_GRAU':1},{'SIMB_HORIZ':'Bt1','CEROSIDADE_QUANTIDADE':1,'CEROSIDADE_GRAU':2},{'SIMB_HORIZ':'Bt2','CEROSIDADE_QUANTIDADE':1,'CEROSIDADE_GRAU':2},{'SIMB_HORIZ':'Bt3','CEROSIDADE_QUANTIDADE':1,'CEROSIDADE_GRAU':1}. Foram alterados todos para 'CEROSIDADE_QUANTIDADE':2,'CEROSIDADE_GRAU':3. COR_UMIDA_CROMA DE Bt2 ALTERADO DE 6 PARA 5 PARA NAO DAR POLICROMIA",
+   "leitura": "a nota descreve a alteração do croma do Bt2 (6 → 5), mas como ajuste deliberado 'para não dar policromia', e não como erro de registro"
+  },
+  "GeoTab_PE_047_Salgadinho": {
+   "corrigidos": [
+    [
+     3,
+     "COND_ELETR"
+    ],
+    [
+     4,
+     "COND_ELETR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição do símbolo 2Bt por 2Btn. Alteração de classificação de PLANOSSOLO NÁTRICO Órtico típico por LUVISSOLO CRÔMICO Órtico solódico planossólico. Nao atende a cor de planico porque o croma deveria ser <= 2 e é 4.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_PE_048_Goiana": {
+   "corrigidos": [
+    [
+     0,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     1,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     2,
+     "COR_SECA_CROMA"
+    ],
+    [
+     2,
+     "COR_SECA_VALOR"
+    ],
+    [
+     4,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     4,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     5,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     5,
+     "COR_UMIDA_VALOR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_002_Eloi_de_Souza": {
+   "corrigidos": [
+    [
+     0,
+     "P_ASSIM"
+    ],
+    [
+     1,
+     "P_ASSIM"
+    ],
+    [
+     2,
+     "P_ASSIM"
+    ],
+    [
+     3,
+     "P_ASSIM"
+    ],
+    [
+     4,
+     "P_ASSIM"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A1, A2, A3, B1t e B2t por Ap, A1, A2, Bt1 e Bt2, respectivamente. A classificação de quarto nível estava errada na ficha: 'arênico abrúptico plintossólico', o que não existe no SiBCS. Mudamos a classificação para 'abrúptico'",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_003_Pedra_Grande": {
+   "corrigidos": [
+    [
+     0,
+     "AREIA_FINA"
+    ],
+    [
+     0,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A1, B21t, B22t, B23t e B3t por Ap, Bt1, Bt2, Btf e Bt/C, respectivamente. Alteração na classificação quarto nível: de apenas abrúptico para abrúptico plintossólico",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_004_Parazinho": {
+   "corrigidos": [
+    [
+     3,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     4,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     4,
+     "COR_UMIDA_VALOR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A1, A3, B11t, B12t, B21t e B22t por Ap, A, BA, Bt1, Bt2 e Bt3, respectivamente. Alteração na classificação quarto nível: de arênico abrúptico para típico",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_005_Macau": {
+   "corrigidos": [
+    [
+     0,
+     "P_ASSIM"
+    ],
+    [
+     1,
+     "P_ASSIM"
+    ],
+    [
+     2,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     2,
+     "P_ASSIM"
+    ],
+    [
+     3,
+     "P_ASSIM"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A1, B1t, B2t e B22t por A, Bt1, Bt2 e Btf, respectivamente",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_007_Acu": {
+   "corrigidos": [
+    [
+     0,
+     "EQUI_CACO3"
+    ],
+    [
+     1,
+     "EQUI_CACO3"
+    ],
+    [
+     2,
+     "AREIA_GROS"
+    ],
+    [
+     2,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição do símbolo de horizonte A por Ap. O SiBCS não cobre esse caso. No horizonte B, 50% tem atividade alta e 50% baixa. Isso não está previsto no sistema. Só se fala em ‘maior parte dos primeiros 100 cm', tanto para Luvissolo quanto para Argissolo. Novas regras são necessárias. Substituição de todas as classes ARGISSOLO VERMELHO-AMARELO Eutrófico luvissólico por unknown",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_009_Barauna": {
+   "corrigidos": [
+    [
+     0,
+     "COND_ELETR"
+    ],
+    [
+     3,
+     "COND_ELETR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A, AB, BA, Bi e Bi/r por Ap, AB, BA, Bi e Bi/R, respectivamente. Alteração na classificação quarto nível: de léptico para típico.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_010_Jandaira": {
+   "corrigidos": [
+    [
+     0,
+     "EQUI_CACO3"
+    ],
+    [
+     1,
+     "EQUI_CACO3"
+    ],
+    [
+     2,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     2,
+     "EQUI_CACO3"
+    ],
+    [
+     3,
+     "COND_ELETR"
+    ],
+    [
+     3,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     4,
+     "COND_ELETR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A1, B1, B21, B22, C e R por Ap, Bi1, Bi2, Bi3, C e R, respectivamente.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_012_Joao_Camara": {
+   "corrigidos": [
+    [
+     1,
+     "PH_KCL"
+    ],
+    [
+     2,
+     "COR_UMIDA_CROMA"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A11, A12 e C por Ap, AB e Bi, respectivamente. Alteração da profundidade dos horizontes. Está na ficha: 0-5; 5-15; 5-15+. Anotamos 0-5; 5-15; 15 - 10000. Alteração na classificação quarto nível: de léptico para típico",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_013_Jandaira": {
+   "corrigidos": [
+    [
+     1,
+     "ARGILA"
+    ],
+    [
+     1,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A1, A3, C1, C2 e C3 por Apk, ABk, Bik, 2Ck e 2Crk, respectivamente.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_014_Mossoro": {
+   "corrigidos": [
+    [
+     2,
+     "EQUI_CACO3"
+    ],
+    [
+     3,
+     "EQUI_CACO3"
+    ],
+    [
+     4,
+     "EQUI_CACO3"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Alteração na classificação de terceiro nível: de Carbonático para Ta Eutrófico.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_015_Mossoro": {
+   "corrigidos": [
+    [
+     0,
+     "EQUI_CACO3"
+    ],
+    [
+     0,
+     "P_ASSIM"
+    ],
+    [
+     1,
+     "EQUI_CACO3"
+    ],
+    [
+     1,
+     "P_ASSIM"
+    ],
+    [
+     2,
+     "EQUI_CACO3"
+    ],
+    [
+     2,
+     "P_ASSIM"
+    ],
+    [
+     3,
+     "H_TROC"
+    ],
+    [
+     3,
+     "P_ASSIM"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_016_Mossoro": {
+   "corrigidos": [
+    [
+     0,
+     "EQUI_CACO3"
+    ],
+    [
+     1,
+     "EQUI_CACO3"
+    ],
+    [
+     2,
+     "EQUI_CACO3"
+    ],
+    [
+     3,
+     "CA_TROC"
+    ],
+    [
+     3,
+     "EQUI_CACO3"
+    ],
+    [
+     4,
+     "EQUI_CACO3"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": ".",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_017_Jandaira": {
+   "corrigidos": [
+    [
+     0,
+     "AREIA_FINA"
+    ],
+    [
+     0,
+     "AREIA_GROS"
+    ],
+    [
+     0,
+     "MG_TROC"
+    ],
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "AREIA_FINA"
+    ],
+    [
+     1,
+     "AREIA_GROS"
+    ],
+    [
+     1,
+     "P_ASSIM"
+    ],
+    [
+     1,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_018_Mossoro": {
+   "corrigidos": [
+    [
+     0,
+     "COND_ELETR"
+    ],
+    [
+     1,
+     "COND_ELETR"
+    ],
+    [
+     2,
+     "COND_ELETR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes AK, ACK, Crk1 e Crk2 por Ak, ACk, Crk1 e Crk2, respectivamente. Inclusão de MATERIAIS_PRIMARIOS = 'true' com base nos horizontes Cr. Substituição da classificação CHERNOSSOLO RÊNDZICO Órtico saprolítico por NEOSSOLO REGOLÍTICO unknown típico. Não é possível determinar o terceiro nível.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_020_Baia_Formosa": {
+   "corrigidos": [
+    [
+     0,
+     "AREIA_FINA"
+    ],
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "AREIA_FINA"
+    ],
+    [
+     1,
+     "SILTE"
+    ],
+    [
+     2,
+     "AREIA_FINA"
+    ],
+    [
+     2,
+     "SILTE"
+    ],
+    [
+     3,
+     "AREIA_FINA"
+    ],
+    [
+     3,
+     "SILTE"
+    ],
+    [
+     4,
+     "AREIA_FINA"
+    ],
+    [
+     4,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_028_Sao_Jose_do_Mipibu": {
+   "corrigidos": [
+    [
+     1,
+     "COND_ELETR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição do símbolo IIC1 por 2C e de IIIC2 por 3Cn. Inclusão de FLUVICO = true em todos os horizontes.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_033_Baia_Formosa": {
+   "corrigidos": [
+    [
+     0,
+     "AREIA_FINA"
+    ],
+    [
+     0,
+     "AREIA_GROS"
+    ],
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "AREIA_FINA"
+    ],
+    [
+     1,
+     "AREIA_GROS"
+    ],
+    [
+     1,
+     "SILTE"
+    ],
+    [
+     2,
+     "AREIA_FINA"
+    ],
+    [
+     2,
+     "AREIA_GROS"
+    ],
+    [
+     2,
+     "SILTE"
+    ],
+    [
+     3,
+     "AREIA_FINA"
+    ],
+    [
+     3,
+     "AREIA_GROS"
+    ],
+    [
+     3,
+     "SILTE"
+    ],
+    [
+     4,
+     "AREIA_FINA"
+    ],
+    [
+     4,
+     "AREIA_GROS"
+    ],
+    [
+     4,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhum alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_034_Tibau_do_Sul": {
+   "corrigidos": [
+    [
+     0,
+     "AREIA_FINA"
+    ],
+    [
+     0,
+     "AREIA_GROS"
+    ],
+    [
+     0,
+     "MG_TROC"
+    ],
+    [
+     0,
+     "SILTE"
+    ],
+    [
+     1,
+     "AREIA_FINA"
+    ],
+    [
+     1,
+     "AREIA_GROS"
+    ],
+    [
+     1,
+     "SILTE"
+    ],
+    [
+     2,
+     "AREIA_FINA"
+    ],
+    [
+     2,
+     "AREIA_GROS"
+    ],
+    [
+     2,
+     "SILTE"
+    ],
+    [
+     3,
+     "AREIA_FINA"
+    ],
+    [
+     3,
+     "AREIA_GROS"
+    ],
+    [
+     3,
+     "SILTE"
+    ],
+    [
+     4,
+     "AREIA_FINA"
+    ],
+    [
+     4,
+     "AREIA_GROS"
+    ],
+    [
+     4,
+     "SILTE"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Nenhuma alteração.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_036_Touros": {
+   "corrigidos": [
+    [
+     0,
+     "H_TROC"
+    ],
+    [
+     1,
+     "C_ORG"
+    ],
+    [
+     1,
+     "H_TROC"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição do símbolo de horizonte H2 por Hod.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_037_Angicos": {
+   "corrigidos": [
+    [
+     0,
+     "EQUI_CACO3"
+    ],
+    [
+     1,
+     "EQUI_CACO3"
+    ],
+    [
+     2,
+     "EQUI_CACO3"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição do símbolo de horizonte A por Ap. Alteração na classificação em todos os níveis: de PLANOSSOLO HÁPLICO Eutrófico solódico por LUVISSOLO CRÔMICO Órtico lítico.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_041_Bento_Fernandes": {
+   "corrigidos": [
+    [
+     1,
+     "NA_TROC"
+    ],
+    [
+     3,
+     "NA_TROC"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Substituição dos símbolos de horizontes A1, Bt, C1 e C2 por Ap, Btn, Cnv1 e Cnv2, respectivamente.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  },
+  "GeoTab_RN_044_Mossoro": {
+   "corrigidos": [
+    [
+     1,
+     "EQUI_CACO3"
+    ],
+    [
+     2,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     2,
+     "COR_UMIDA_VALOR"
+    ],
+    [
+     2,
+     "EQUI_CACO3"
+    ],
+    [
+     3,
+     "COR_UMIDA_CROMA"
+    ],
+    [
+     3,
+     "COR_UMIDA_VALOR"
+    ]
+   ],
+   "erro": [],
+   "outra": [],
+   "nota": "Um dos horizontes não tinha símbolo. Substituição dos símbolos de horizontes A1, A2, -- e B2t por Ap, A1, A2 e Btf, respectivamente.",
+   "leitura": "a nota não menciona nenhum dos atributos corrigidos"
+  }
+ }
+}

@@ -1,0 +1,108 @@
+{
+ "items": [
+  {
+   "ID_PONTO": "GeoTab_RN_035_Acu",
+   "ORDEM": "NEOSSOLO",
+   "SUBORDEM": "REGOLÍTICO",
+   "GDE_GRUPO": "Psamítico",
+   "SUBGRUPO": "típico",
+   "CURADORIA": "Substituição do símbolo de horizontes A1 por A. Inclusão de MATERIAIS_PRIMARIOS = true no horizonte C, baseado nas observações. Alteração na classificação de terceiro e quarto nível: de Distrófico espessarênico para Psamítico típico.",
+   "AUTOR_CURADORIA": "Luís de França da Silva Neto, Glauber José Vaz e Adalberto Francisco da Silva Junior",
+   "HORIZONTES": [
+    {
+     "AREIA_GROS": 810,
+     "ARGILA": 40,
+     "AREIA_FINA": 110,
+     "SILTE": 40,
+     "LIMITE_SUP": 0,
+     "SIMB_HORIZ": "A1",
+     "LIMITE_INF": 10,
+     "COR_UMIDA_MATIZ": "7.5YR",
+     "COR_UMIDA_VALOR": 5,
+     "COR_UMIDA_CROMA": 6,
+     "COR_SECA_MATIZ": "7.5YR",
+     "COR_SECA_VALOR": 6,
+     "COR_SECA_CROMA": 4,
+     "ESTRUTURA_GRAU": 2,
+     "ESTRUTURA_TAMANHO": 2,
+     "ESTRUTURA_TIPO": 6,
+     "TRANSICAO_FORMA": 1,
+     "TRANSICAO_GRAU": 3,
+     "PH_AGUA": 5.5,
+     "PH_KCL": 4.2,
+     "CA_TROC": 0.7,
+     "MG_TROC": 0.6,
+     "K_TROC": 0.26,
+     "NA_TROC": 0.05,
+     "AL_TROC": 0,
+     "H_TROC": 1.7,
+     "P_ASSIM": 3,
+     "C_ORG": 6.1,
+     "TEOR_FE": 6,
+     "TEOR_P": 0.1
+    },
+    {
+     "AREIA_GROS": 710,
+     "ARGILA": 100,
+     "AREIA_FINA": 130,
+     "SILTE": 60,
+     "SIMB_HORIZ": "C",
+     "MATERIAIS_PRIMARIOS": true,
+     "LIMITE_SUP": 10,
+     "LIMITE_INF": 10000,
+     "COR_UMIDA_MATIZ": "5YR",
+     "COR_UMIDA_VALOR": 5,
+     "COR_UMIDA_CROMA": 8,
+     "ESTRUTURA_GRAU": 2,
+     "PH_AGUA": 4.7,
+     "PH_KCL": 3.9,
+     "K_TROC": 0.09,
+     "NA_TROC": 0.03,
+     "AL_TROC": 0.5,
+     "H_TROC": 0.9,
+     "P_ASSIM": 1,
+     "C_ORG": 1.1,
+     "TEOR_FE": 8,
+     "TEOR_P": 0.1,
+     "_CA_MG_SOMADOS": 0.2
+    }
+   ],
+   "_ALTERACOES": [
+    {
+     "horizonte": 0,
+     "simbolo_json": "A",
+     "campo": "SIMB_HORIZ",
+     "original": "A1",
+     "curado": "A",
+     "origem": "ficha alterada",
+     "natureza": "valor corrigido"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "C",
+     "campo": "CA_TROC",
+     "original": null,
+     "curado": 0.2,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    },
+    {
+     "horizonte": 1,
+     "simbolo_json": "C",
+     "campo": "MG_TROC",
+     "original": null,
+     "curado": 0.2,
+     "origem": "só o JSON alterado",
+     "natureza": "acrescentado na curadoria"
+    }
+   ],
+   "_AVISOS": [
+    "C: Ca²⁺ e Mg²⁺ somados numa célula",
+    "original: C: Ca²⁺ e Mg²⁺ somados numa célula"
+   ],
+   "_TEM_FICHA_ATUALIZADA": true,
+   "_CLASSIFICACAO_FICHA_ORIGINAL": "NEOSSOLO REGOLÍTICO Distrófico espessarênico A moderado fase caatinga hiperxerófila relevo plano",
+   "_CLASSIFICACAO_FICHA_FINAL": "NEOSSOLO REGOLÍTICO Psamítico típico A moderado fase caatinga hiperxerófila relevo plano"
+  }
+ ]
+}
