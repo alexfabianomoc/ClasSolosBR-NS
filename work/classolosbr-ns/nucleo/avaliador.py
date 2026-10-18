@@ -145,6 +145,10 @@ def avaliar(condicao, perfil: Perfil) -> Derivacao:
         funcao = PREDICADOS.get(condicao.predicado)
         if funcao is None:
             raise KeyError(f"predicado não registrado: {condicao.predicado}")
+        if CORRECOES_INTEGRACAO:
+            completados = _completamentos_b_sem_tipo(perfil)
+            if completados is not None:
+                return _derivado_supervalorado(condicao, funcao, perfil, completados)
         valor, detalhe = funcao(perfil)
         return Derivacao(condicao.predicado, valor, detalhe=detalhe,
                          fonte=condicao.fonte)
@@ -179,6 +183,22 @@ def _selecionar(seletor: r.Seletor, perfil: Perfil,
             candidatos = b_indeterminados(perfil)
         else:
             candidatos = horizontes_indeterminados_do_tipo(perfil, seletor.tipo)
+    elif seletor.tipo == "B diagnóstico" and CORRECOES_INTEGRACAO:
+        # 🚨 C5 (cópia experimental, auditoria v3, 2026-10-18). O ramo original
+        # (abaixo) julgava cada horizonte num perfil de um horizonte só, fora
+        # do contexto: a espessura do B latossólico soma a sequência de B e a
+        # relação textural do B nítico é do perfil. `A / Bwg1 15-40 / Bw2
+        # 40-80 / C` tem 65 cm de B latossólico válido, mas nenhum dos dois
+        # alcança 50 cm sozinho: "existe B diagnóstico" saía FALSO e o perfil
+        # concluía GLEISSOLO nas duas edições. Agora usa as identificações
+        # afirmadas do perfil inteiro — as mesmas de `tem_b_diagnostico` e,
+        # para os pendentes, de `b_indeterminados`.
+        from .horizontes import identificar
+        tipos_b = {"B textural", "B latossólico", "B incipiente",
+                   "B espódico", "B nítico", "B plânico"}
+        ids = {id(i.horizonte) for i in identificar(perfil)
+               if i.tipo in tipos_b and i.valida}
+        candidatos = [h for h in perfil.horizontes if id(h) in ids]
     elif seletor.tipo == "B diagnóstico":
         candidatos = [
             h for h in perfil.horizontes
@@ -188,7 +208,11 @@ def _selecionar(seletor: r.Seletor, perfil: Perfil,
         candidatos = horizontes_do_tipo(perfil, seletor.tipo)
     else:
         candidatos = list(perfil.horizontes)
+    return _filtrar(seletor, candidatos)
 
+
+def _filtrar(seletor: r.Seletor, candidatos: list[Horizonte]) -> list[Horizonte]:
+    """Filtros de posição e de principal do seletor, sobre candidatos em ordem."""
     if seletor.principal:
         candidatos = [
             h for h in candidatos
@@ -273,8 +297,130 @@ def _acima_ignorando_transicionais(perfil: Perfil, h: Horizonte):
         atual = acima
 
 
+#: C4 — completamentos de cada horizonte B sem sufixo de tipo. O próprio
+#: símbolo sem tipo representa o mundo em que o horizonte não é de nenhum dos
+#: tipos de B (as identificações pendentes ficam fora de `horizontes_do_tipo`).
+COMPLETAMENTOS_B = ("", "t", "w", "i", "h")
+MAX_COMPLETAMENTOS = 125          # até 3 horizontes B sem tipo (5^3)
+
+
+def _completamentos_b_sem_tipo(perfil: Perfil):
+    """None se não há B sem tipo; senão a lista de perfis completados, ou []
+    se o número de combinações excede o orçamento."""
+    from .horizontes import b_sem_sufixo_legivel, gs, leitura_atual, _leituras_discordam
+    alvos = []
+    for i, h in enumerate(perfil.horizontes):
+        if not h.simbolo.strip() or _leituras_discordam(h.simbolo):
+            continue
+        moderno = leitura_atual(h.simbolo)
+        a = gs.analisa(moderno or h.simbolo)
+        if b_sem_sufixo_legivel(a):
+            alvos.append((i, f"{a.litologico or ''}{a.principal}"))
+    if not alvos:
+        return None
+    if len(COMPLETAMENTOS_B) ** len(alvos) > MAX_COMPLETAMENTOS:
+        return []
+    saida = []
+    for combinacao in product(COMPLETAMENTOS_B, repeat=len(alvos)):
+        if not any(combinacao):
+            continue                      # o perfil como está entra à parte
+        hs = list(perfil.horizontes)
+        for (i, base), suf in zip(alvos, combinacao):
+            if suf:
+                hs[i] = replace(hs[i], simbolo=base + suf)
+        saida.append(replace(perfil, horizontes=hs))
+    return saida
+
+
+def _derivado_supervalorado(condicao, funcao, perfil: Perfil, completados) -> Derivacao:
+    """🚨 C4 (cópia experimental, 2026-10-18): predicado derivado num perfil
+    com B sem sufixo de tipo.
+
+    Os predicados derivados consultam só as identificações afirmadas. Com o
+    `B` pendente, `requisitos_argissolos_5ed` tomava como topo do B textural o
+    `Btf` a 130 cm e refutava o Argissolo, que o completamento `Bt` do
+    mesmo perfil concluía (`BDSolos|598|5818|Perfil no 11`, achado na rodada
+    v1 do experimento). Agora o predicado é avaliado no perfil como está e em
+    cada completamento do B sem tipo por `t`, `w`, `i` e `h`, e os valores se
+    combinam por supervalorização. Acima de 3 horizontes sem tipo,
+    indeterminado.
+    """
+    valor, detalhe = funcao(perfil)
+    if not completados:
+        return Derivacao(condicao.predicado, I,
+                         detalhe=(detalhe + " — " if detalhe else "")
+                         + "B sem sufixo de tipo em mais de 3 horizontes; indeterminado",
+                         fonte=condicao.fonte)
+    valores = {valor} | {funcao(q)[0] for q in completados}
+    if len(valores) > 1:
+        valor = I
+        detalhe = ((detalhe + " — ") if detalhe else "") + (
+            "o valor depende do tipo do B sem sufixo (completamentos t, w, i, h divergem) "
+            "— indeterminado")
+    return Derivacao(condicao.predicado, valor, detalhe=detalhe, fonte=condicao.fonte)
+
+
+#: C3 — limite de horizontes pendentes do tipo pedido sobre os quais se
+#: enumeram subconjuntos (2^6 = 64 avaliações); acima dele, indeterminado.
+MAX_PENDENTES_AGREGACAO = 6
+
+
+def _com_pendentes(condicao, perfil: Perfil, avaliar_alvos) -> Derivacao:
+    """🚨 C3 (cópia experimental, 2026-10-18): agregação sobre um tipo de
+    horizonte com identificações **pendentes**.
+
+    `horizontes_do_tipo` devolve só as identificações afirmadas; o horizonte
+    que o símbolo propõe sem poder afirmar (`B` sem sufixo de tipo, veto
+    pendente, leituras discordantes) ficava **fora** de "a maior parte do B
+    textural", "todos os horizontes" etc. — como se se soubesse que ele não é
+    do tipo. Em `RN_007`, trocar `Bt2` por `B` dava LUVISSOLO e tirava
+    ARGISSOLO do conjunto alcançável (contenção violada). Agora a condição é
+    avaliada para cada subconjunto dos pendentes tomado como do tipo, e
+    combinada por supervalorização: V se todos V, F se todos F, I se não.
+    """
+    seletor = condicao.onde
+    validos = _candidatos(seletor, perfil)
+    ids = {id(h) for h in validos}
+    pendentes = [h for h in _candidatos(seletor, perfil, indeterminados=True) if id(h) not in ids]
+    if not pendentes:
+        return avaliar_alvos(_filtrar(seletor, validos))
+    if len(pendentes) > MAX_PENDENTES_AGREGACAO:
+        base = avaliar_alvos(_filtrar(seletor, validos))
+        base.valor = I
+        base.detalhe = ((base.detalhe + " — ") if base.detalhe else "") + (
+            f"{len(pendentes)} horizontes com identificação pendente; indeterminado")
+        return base
+    posicao = {id(h): k for k, h in enumerate(perfil.horizontes)}
+    derivacoes = []
+    for mascara in range(1 << len(pendentes)):
+        extra = [h for b, h in enumerate(pendentes) if mascara >> b & 1]
+        alvos = sorted(validos + extra, key=lambda h: posicao.get(id(h), 0))
+        derivacoes.append(avaliar_alvos(_filtrar(seletor, alvos)))
+    base = derivacoes[0]
+    if len({d.valor for d in derivacoes}) == 1:
+        return base
+    base.valor = I
+    base.distancia = None
+    base.detalhe = ((base.detalhe + " — ") if base.detalhe else "") + (
+        "o valor depende de " + ", ".join(h.simbolo for h in pendentes)
+        + " (identificação pendente) pertencer ao tipo — indeterminado")
+    return base
+
+
+def _candidatos(seletor: r.Seletor, perfil: Perfil, indeterminados: bool = False):
+    """Candidatos do tipo, antes dos filtros (os mesmos de `_selecionar`)."""
+    filtro_nulo = r.Seletor(tipo=seletor.tipo)
+    return _selecionar(filtro_nulo, perfil, indeterminados)
+
+
 def _compara(condicao: r.Compara, perfil: Perfil) -> Derivacao:
-    alvos = _selecionar(condicao.onde, perfil)
+    if CORRECOES_INTEGRACAO and condicao.onde.tipo:
+        return _com_pendentes(condicao, perfil,
+                              lambda alvos: _compara_alvos(condicao, perfil, alvos))
+    return _compara_alvos(condicao, perfil, _selecionar(condicao.onde, perfil))
+
+
+def _compara_alvos(condicao: r.Compara, perfil: Perfil, alvos) -> Derivacao:
     rotulo = (f"{condicao.atributo} {condicao.operador} "
               f"{condicao.limiar:g}{(' ' + condicao.unidade) if condicao.unidade else ''}"
               f" em {condicao.onde.descricao()}")
@@ -394,7 +540,13 @@ def _maior_parte(condicao, rotulo, valores, satisfeitos, faltantes,
 
 
 def _booleano(condicao: r.Booleano, perfil: Perfil) -> Derivacao:
-    alvos = _selecionar(condicao.onde, perfil)
+    if CORRECOES_INTEGRACAO and condicao.onde.tipo:
+        return _com_pendentes(condicao, perfil,
+                              lambda alvos: _booleano_alvos(condicao, perfil, alvos))
+    return _booleano_alvos(condicao, perfil, _selecionar(condicao.onde, perfil))
+
+
+def _booleano_alvos(condicao: r.Booleano, perfil: Perfil, alvos) -> Derivacao:
     rotulo = f"{condicao.atributo} é {condicao.esperado} em {condicao.onde.descricao()}"
     if not alvos:
         return Derivacao(rotulo, I, detalhe="nenhum horizonte selecionado",
@@ -459,6 +611,61 @@ def classificar(perfil: Perfil, chave=None) -> Resultado:
 #: horizonte ambíguo; acima disso, a avaliação por leitura seria cara).
 MAX_VARIANTES = 16
 
+#: 🚨 Correções da cópia experimental (2026-10-18, integração do Inferidor).
+#: Desligadas, o núcleo se comporta exatamente como o original — é assim que
+#: o experimento separa o efeito das correções do efeito da integração
+#: (variante A0 × A1). Ver `experimento_integracao/relatorio/`.
+#:
+#: C1 — símbolo ausente. Um horizonte sem `SIMB_HORIZ` não recebia tipo
+#:      nenhum, e "existe B textural", a adjacência ao A e o gate dos
+#:      Neossolos passavam a **falso**: apagar o símbolo de um Bt1 levava
+#:      `PE_001` de ARGISSOLO a "nenhuma classe do recorte" (99 de 348
+#:      apagamentos de símbolo de B no conjunto curado tiravam a classe do
+#:      conjunto alcançável). Agora o símbolo ausente é avaliado por
+#:      supervalorização sobre o catálogo de leituras
+#:      (`dados/catalogo_simbolo_ausente.json`): V se todas dão V, F se todas
+#:      dão F, I se divergem — sólido relativamente ao catálogo.
+#: C2 — truncamento. Acima de `MAX_VARIANTES`, as combinações excedentes
+#:      eram simplesmente descartadas, e um V (ou F) unânime entre as
+#:      avaliadas era devolvido como se valesse para todas. Agora, com
+#:      truncamento, a regra sai indeterminada. Incidência medida antes da
+#:      correção: 1 perfil do BDSolos, nenhum do conjunto curado.
+#: C3 — horizontes de identificação pendente nas agregações por tipo
+#:      (`_com_pendentes`).
+#: C4 — predicados derivados com B sem sufixo de tipo
+#:      (`_derivado_supervalorado`).
+#: C5 — seletor "B diagnóstico" julgado no contexto do perfil inteiro
+#:      (auditoria v3; ver `_selecionar`).
+CORRECOES_INTEGRACAO = True
+
+#: Orçamento de combinações quando há símbolo ausente (o catálogo tem ~120
+#: leituras; dois horizontes sem símbolo já o excedem, e o perfil sai
+#: indeterminado em toda regra — resposta trivialmente sólida).
+MAX_VARIANTES_AUSENTE = 256
+
+_CATALOGO_AUSENTE: list[str] | None = None
+
+
+def simbolo_ausente(simbolo) -> bool:
+    return not str(simbolo or "").strip()
+
+
+def catalogo_simbolo_ausente() -> list[str]:
+    global _CATALOGO_AUSENTE
+    if _CATALOGO_AUSENTE is None:
+        import json
+        from pathlib import Path
+        caminho = Path(__file__).parent / "dados" / "catalogo_simbolo_ausente.json"
+        _CATALOGO_AUSENTE = json.loads(caminho.read_text(encoding="utf-8"))["leituras"]
+    return _CATALOGO_AUSENTE
+
+
+class _Variantes(list):
+    """Lista de variantes que sabe se foi truncada (C2)."""
+
+    truncado = False
+    total = 0
+
 
 #: Limiares de saturação por bases usados pelas regras (5ª e 6ª ed.): 50%
 #: (eutrófico, saturação alta, caráter alumínico) e 65% (A chernozêmico,
@@ -511,9 +718,14 @@ def _variantes_de_leitura(perfil: Perfil) -> list[Perfil]:
     """
     from .horizontes import _leituras_discordam, gs
     eixos = []                      # (índice, [transformações do horizonte])
+    ausente = False
     for i, h in enumerate(perfil.horizontes):
         opcoes = [lambda x: x]
-        if _leituras_discordam(h.simbolo):
+        if CORRECOES_INTEGRACAO and simbolo_ausente(h.simbolo):
+            # C1: o símbolo ausente pode ser qualquer leitura do catálogo.
+            ausente = True
+            opcoes = [lambda x, s=s: replace(x, simbolo=s) for s in catalogo_simbolo_ausente()]
+        elif _leituras_discordam(h.simbolo):
             opcoes = [lambda x, s=s: replace(x, simbolo=s) for s in gs.leituras(h.simbolo)]
         bol = _v_em_conflito(h)
         if bol is not None:
@@ -521,10 +733,15 @@ def _variantes_de_leitura(perfil: Perfil) -> list[Perfil]:
         if len(opcoes) > 1:
             eixos.append((i, opcoes))
     if not eixos:
-        return [perfil]
-    variantes = []
+        return _Variantes([perfil])
+    limite = MAX_VARIANTES_AUSENTE if ausente else MAX_VARIANTES
+    variantes = _Variantes()
+    variantes.total = 1
+    for _, opcoes in eixos:
+        variantes.total *= len(opcoes)
     for combinacao in product(*(opcoes for _, opcoes in eixos)):
-        if len(variantes) >= MAX_VARIANTES:
+        if len(variantes) >= limite:
+            variantes.truncado = True
             break
         horizontes = list(perfil.horizontes)
         for (i, _), transforma in zip(eixos, combinacao):
@@ -535,15 +752,28 @@ def _variantes_de_leitura(perfil: Perfil) -> list[Perfil]:
 
 def _avaliar_por_leitura(condicao, perfil: Perfil, variantes: list[Perfil]) -> Derivacao:
     """Avalia a condição em cada leitura e combina por supervalorização."""
-    if len(variantes) == 1:
+    truncado = CORRECOES_INTEGRACAO and getattr(variantes, "truncado", False)
+    if len(variantes) == 1 and not truncado:
         return avaliar(condicao, variantes[0])
     derivacoes = [avaliar(condicao, v) for v in variantes]
     valores = {d.valor for d in derivacoes}
     base = derivacoes[0]
+    if truncado:
+        # C2: as combinações não avaliadas poderiam dar outro valor.
+        base.valor = I
+        base.detalhe = ((base.detalhe + " — ") if base.detalhe else "") + (
+            f"{variantes.total} combinações de leitura excedem o orçamento de "
+            f"{len(variantes)}; sem avaliá-las todas, indeterminado")
+        return base
     if len(valores) == 1:
         return base
     from .horizontes import _leituras_discordam, gs
     causas = []
+    sem_simbolo = [str(k) for k, h in enumerate(perfil.horizontes)
+                   if CORRECOES_INTEGRACAO and simbolo_ausente(h.simbolo)]
+    if sem_simbolo:
+        causas.append("do símbolo ausente (horizonte(s) na posição "
+                      + ", ".join(sem_simbolo) + "; leituras do catálogo divergem)")
     ambiguos = [h.simbolo for h in perfil.horizontes if _leituras_discordam(h.simbolo)]
     if ambiguos:
         causas.append("da leitura do símbolo antigo ("
