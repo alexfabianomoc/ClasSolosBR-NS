@@ -1,0 +1,114 @@
+
+correções do núcleo (C1 símbolo ausente, C2 truncamento, C3 pendentes na agregação)
+  ok   C1 regressão: sem a correção, apagar o Bt1 do PE_001 tira ARGISSOLO (nenhuma classe do recorte se aplica)
+  ok   C1: com a correção, ARGISSOLO continua alcançável (indeterminado — alcançáveis: ORGANOSSOLO, ESPODOSSOLO, LATOSSOLO, CAMBISSOLO, PLINTOSSOLO, ARGISSOLO)
+  ok   C3 regressão: sem a correção, Bt2 → B tira ARGISSOLO do RN_007 (LUVISSOLO (não conclusivo — também alcançável: PLANOSSOLO))
+  ok   C3: com a correção, ARGISSOLO continua alcançável (ARGISSOLO (não conclusivo — também alcançável: PLANOSSOLO, LUVISSOLO))
+  ok   C4 regressão: sem a correção, ARGISSOLO refutado (indeterminado — alcançáveis: ESPODOSSOLO, LATOSSOLO, CAMBISSOLO)
+  ok   C4: com a correção, ARGISSOLO alcançável (indeterminado — alcançáveis: ESPODOSSOLO, LATOSSOLO, CAMBISSOLO, ARGISSOLO)
+  ok   C2: 32 combinações > 16 → marcado como truncado
+  ok   C2: regra sob truncamento sai indeterminada, mesmo a residual
+  ok   C2 regressão: sem a correção, as 16 primeiras decidiam pelas 32
+
+acionamento e abstenção do Inferidor
+  ok   B e 2B acionam (sem tipo)
+  ok   símbolo ausente aciona
+  ok   Bt2, Ap e BA não acionam
+  ok   com p_t alto, o candidato 1 é Bt (complementação do B anotado)
+  ok   κ alto: sem abstenção
+  ok   κ abaixo de θ: abstenção com motivo
+  ok   com abstenção em todos os horizontes, nenhum cenário
+  ok   nenhum sufixo de tipo decidido: abstenção ('não informa o tipo')
+  ok   complementação de B sem tipo não acrescenta g, c, f nem v (['B', 'Bht', 'Bt'])
+  ok   perfil com todos os símbolos informativos: Inferidor não acionado
+  ok   símbolo ausente com principal 'outro': abstenção
+
+preservação da entrada, do símbolo anotado e da resposta observacional
+  ok   a entrada não é modificada
+  ok   verificações finais: {'entrada_preservada': True, 'simbolos_anotados_intactos': True, 'condicionais_contidas_no_observacional': True, 'inferidor_nao_emite_classe': True, 'classe_registrada_usada_so_como_referencia': True}
+  ok   resposta observacional idêntica com o Inferidor ligado e desligado
+  ok   Camada de Versão idêntica com e sem Inferidor
+  ok   símbolo anotado preservado no horizonte 3 (inferido Bw só no cenário)
+  ok   o Sentinela (escore de anomalia) não altera a decisão simbólica
+  ok   reprodutibilidade: mesma entrada, mesma saída
+
+rastreabilidade da classe condicional
+  ok   classe condicional ARGISSOLO (ARGISSOLO)
+  ok   a resposta observacional não conclui ARGISSOLO (a classe só existe como condicional)
+  ok   cenário marcado como condicional
+  ok   a árvore de prova marca nós que dependem de símbolo inferido
+  ok   a marca traz modelo, cenário, κ e símbolo inferido (B → Bt)
+  ok   o escore é declarado não calibrado
+
+símbolo inferido incompatível com os dados
+  ok   Bw em B de 15 cm: o núcleo veta o B latossólico e o cenário é incompatível (['Bw: B latossólico vetado pelo dado (B latossólico com 15 cm (sequência de B fechada), abaixo dos 50 cm mínimos)'])
+  ok   cenário incompatível não gera classe condicional
+
+múltiplos candidatos e orçamento de cenários
+  ok   probabilidades próximas: ≥ 2 candidatos por horizonte
+  ok   no máximo 3 candidatos por horizonte
+  ok   no máximo 8 cenários (8 de 27)
+  ok   cenários ordenados pelo escore de ordenação
+  ok   nenhum cenário sai do conjunto alcançável observacional
+
+conflitos encaminhados ao Explicador e hipóteses verificadas pelo núcleo
+  ok   LATOSSOLO registrado fica fora do alcançável
+  ok   o conflito anotado (Bt) × proposto (Bw) é sinalizado
+  ok   hipóteses de anotação geradas
+  ok   hipóteses não verificadas não restabelecem
+  ok   o conflito não altera a classe observacional
+  ok   hipóteses numéricas e de anotação em listas separadas
+  ok   a Camada de Versão nunca exclui defasagem de edições anteriores
+  ok   Bi1 anotado: o núcleo deriva CAMBISSOLO e a ficha (ARGISSOLO) diverge
+  ok   hipótese de anotação verificada no horizonte trocado (Bi1 → Bt)
+  ok   reexecução independente confirma: a hipótese restabelece ARGISSOLO
+  ok   o símbolo anotado (Bi1) não foi sobrescrito
+  ok   variante sem Inferidor: nenhuma hipótese de anotação
+
+divergências entre edições na Camada de Versão
+  ok   PE_025: as saídas das bases diferem (GLEISSOLO × NEOSSOLO (não conclusivo — também alcançável: GLEISSOLO))
+  ok   categoria de diferença entre edições presente (['alteração entre as edições comparadas (5ª × 6ª)', 'insuficiência dos dados em critério em que as bases diferem'])
+
+indisponibilidade do modelo
+  ok   o fluxo segue sem o modelo
+  ok   toda proposta vira abstenção 'modelo indisponível'
+  ok   a resposta observacional permanece disponível e idêntica
+  ok   artefato inexistente: Inferidor marcado indisponível, sem exceção
+  ok   exceção do modelo vira abstenção com motivo
+
+consistência do conjunto alcançável sob preenchimento compatível
+  ok   GeoTab_PE_001_Lagoa_dos_Gatos: todo preenchimento B→Bt/Bw/Bi/Bh/Bs fica no alcançável mascarado 
+  ok   GeoTab_RN_007_Acu: todo preenchimento B→Bt/Bw/Bi/Bh/Bs fica no alcançável mascarado 
+  ok   PE_003, símbolo apagado: preenchimentos ficam no alcançável 
+
+contenção sob ablação de atributos (núcleo corrigido)
+  ok   168 remoções de grupo em perfis conclusivos: contenção 168/168 []
+
+próxima determinação preservada
+  ok   recomendação produzida para perfil não conclusivo
+  ok   a recomendação não depende do Inferidor (calculada sobre os dados observados)
+  ok   nenhum desfecho simulado fora do conjunto alcançável
+
+auditoria v3: C5, escopo da C4 e robustez sob orçamento
+  ok   C5 regressão (5ª): sem a correção, GLEISSOLO apesar de 65 cm de Bw (GLEISSOLO)
+  ok   C5 (5ª): 'existe B diagnóstico' no contexto do perfil — LATOSSOLO (LATOSSOLO)
+  ok   C5 regressão (6ª): sem a correção, GLEISSOLO apesar de 65 cm de Bw (GLEISSOLO)
+  ok   C5 (6ª): 'existe B diagnóstico' no contexto do perfil — LATOSSOLO (LATOSSOLO)
+  ok   Btf sem cor: plíntico com veto pendente
+  ok   requisitos dos Argissolos com plíntico pendente → indeterminado (plíntico Btf (veto pendente))
+  ok   preenchimento compatível da cor (clara + mosqueado claro) fica no alcançável observacional (PLINTOSSOLO ⊆ ['ARGISSOLO', 'LUVISSOLO', 'PLINTOSSOLO'])
+  ok   preenchimento compatível da cor (vermelha sem mosqueado) fica no alcançável observacional (ARGISSOLO (não conclusivo — também alcançável: LUVISSOLO) ⊆ ['ARGISSOLO', 'LUVISSOLO', 'PLINTOSSOLO'])
+  ok   orçamento estourado é declarado (avaliados 8 de 27 cenários — robustez não afirmada)
+  ok   com avaliação incompleta, a robustez não é afirmada
+
+modelos reais (artefatos de experimento_integracao/modelos)
+  ok   rede: 81 atributos, mesma ordem do treino
+  ok   rede: fluxo completo com o modelo real, verificações OK
+  ok   rede: todo candidato tem a boa-formação conferida
+  ok   arvores: 81 atributos, mesma ordem do treino
+  ok   arvores: fluxo completo com o modelo real, verificações OK
+  ok   arvores: todo candidato tem a boa-formação conferida
+  ok   artefato com atributos em outra ordem é recusado (compatibilidade treino × inferência)
+
+83 verificações; 0 falha(s)
+saida 0

@@ -1,0 +1,14 @@
+predicado                                                      lê afirmadas  consulta pendentes
+concrecionário ou litoplíntico em posição de Plintossolo (5ª ed.) True         True
+glei em posição diagnóstica (5ª ed.)                           True         True
+glei em posição diagnóstica (6ª ed.)                           True         True
+horizonte A chernozêmico                                       False        True
+mudança textural abrupta                                       False        False
+plíntico até 200 cm em posição diagnóstica (5ª ed.)            True         True
+plíntico até 200 cm em posição diagnóstica (6ª ed.)            True         True
+plíntico em posição que exclui o Neossolo (5ª ed.)             True         True
+requisitos (a) e (b) da Definição dos Argissolos (5ª ed.)      True         True
+requisitos (a) e (b) da Definição dos Argissolos (6ª ed.)      True         True
+sem horizonte B diagnóstico                                    True         True
+sem textura areia exclusiva até 150 cm (5ª ed.)                False        False
+sem textura areia exclusiva até 200 cm (6ª ed.)                False        False

@@ -1,0 +1,25 @@
+{
+ "horizontes": 24824,
+ "particao": {
+  "treino": 21148,
+  "teste": 3676,
+  "ajuste": 16415,
+  "validacao": 4733
+ },
+ "rede": {
+  "id": "rede-cf6ed8898d4e",
+  "theta": 0.5,
+  "tau": 0.9944370035069524,
+  "principal_acuracia": 0.7701305767138193,
+  "f1_macro_sufixos": 0.27894249445228203,
+  "n_teste": 3676
+ },
+ "arvores": {
+  "id": "arvores-f99b6c1d79cd",
+  "theta": 0.5,
+  "tau": 0.9826002917907225,
+  "principal_acuracia": 0.7967899891186072,
+  "f1_macro_sufixos": 0.32184544533637116,
+  "n_teste": 3676
+ }
+}

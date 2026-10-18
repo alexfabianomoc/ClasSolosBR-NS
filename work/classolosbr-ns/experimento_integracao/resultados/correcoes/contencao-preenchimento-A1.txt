@@ -1,0 +1,2 @@
+correções True | 330s
+{"E1": {"perfis": 373, "completamentos": 7540, "perfis_com_violacao": 0}, "E3": {"perfis": 67, "completamentos": 1432, "perfis_com_violacao": 0}}

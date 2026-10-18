@@ -1,0 +1,1468 @@
+{
+ "E1": {
+  "perfis": 152,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 152,
+  "grupos": 33,
+  "M8_invariancia_observacional": 152,
+  "M8_invariancia_versao": 152,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 4,
+   "C": 2
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 0,
+   "exemplos": []
+  },
+  "M5_ref_no_alcancavel_A": [
+   144,
+   145
+  ],
+  "M5_ref_no_alcancavel_A0": [
+   144,
+   145
+  ],
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 265,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 151,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 144,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 13,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 0.06769605263157895,
+    "tempo_mediano_s": 0.0635,
+    "tempo_p95_s": 0.1121
+   },
+   "B": {
+    "horizontes_acionados": 265,
+    "propostas": 265,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 70,
+     "confiança de tipo": 7,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 7
+    },
+    "horizontes_com_proposta": 181,
+    "candidatos": 795,
+    "candidatos_bem_formados": 697,
+    "cenarios": 521,
+    "cenarios_compativeis": 511,
+    "incompatibilidades": [
+     [
+      "fora do alcançável",
+      10
+     ]
+    ],
+    "violacoes_contencao": 10,
+    "obs_nao_conclusivos": 151,
+    "M3_resolvidos_cond_cenario1": 59,
+    "M3_resolvidos_cond_robusta": 10,
+    "M4_cond_concordantes": 50,
+    "M4_cond_discordantes": 9,
+    "M4_robusta_concordantes": 9,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 131,
+    "conflitos_sinalizados": 33,
+    "divergentes_explicador": 13,
+    "hip_anotacao_geradas": 72,
+    "hip_anotacao_verificadas": 2,
+    "perfis_com_hip_anotacao_verificada": 1,
+    "tempo_medio_s": 0.24362105263157896,
+    "tempo_mediano_s": 0.2014,
+    "tempo_p95_s": 0.5049
+   },
+   "C": {
+    "horizontes_acionados": 265,
+    "propostas": 265,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 113,
+     "confiança de tipo": 6,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 2
+    },
+    "horizontes_com_proposta": 144,
+    "candidatos": 795,
+    "candidatos_bem_formados": 698,
+    "cenarios": 386,
+    "cenarios_compativeis": 383,
+    "incompatibilidades": [
+     [
+      "fora do alcançável",
+      2
+     ],
+     [
+      "Bf",
+      1
+     ]
+    ],
+    "violacoes_contencao": 2,
+    "obs_nao_conclusivos": 151,
+    "M3_resolvidos_cond_cenario1": 55,
+    "M3_resolvidos_cond_robusta": 6,
+    "M4_cond_concordantes": 47,
+    "M4_cond_discordantes": 8,
+    "M4_robusta_concordantes": 6,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 133,
+    "conflitos_sinalizados": 53,
+    "divergentes_explicador": 13,
+    "hip_anotacao_geradas": 66,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 0.5900828947368421,
+    "tempo_mediano_s": 0.5764,
+    "tempo_p95_s": 0.8115
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 145,
+     "B": 51,
+     "A": 1,
+     "diferenca": 50,
+     "diferenca_por_perfil": 0.3448275862068966,
+     "ic95_por_grupo": [
+      0.28421052631578947,
+      0.4198473282442748
+     ],
+     "discordantes": [
+      50,
+      0
+     ],
+     "mcnemar_p": 1.7763568394002505e-15
+    },
+    "errada": {
+     "n": 145,
+     "B": 8,
+     "A": 0,
+     "diferenca": 8,
+     "diferenca_por_perfil": 0.05517241379310345,
+     "ic95_por_grupo": [
+      0.022727272727272728,
+      0.08943089430894309
+     ],
+     "discordantes": [
+      8,
+      0
+     ],
+     "mcnemar_p": 0.0078125
+    },
+    "resolvida": {
+     "n": 145,
+     "B": 59,
+     "A": 1,
+     "diferenca": 58,
+     "diferenca_por_perfil": 0.4,
+     "ic95_por_grupo": [
+      0.33707865168539325,
+      0.48
+     ],
+     "discordantes": [
+      58,
+      0
+     ],
+     "mcnemar_p": 6.938893903907228e-18
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 145,
+     "C": 48,
+     "A": 1,
+     "diferenca": 47,
+     "diferenca_por_perfil": 0.32413793103448274,
+     "ic95_por_grupo": [
+      0.25,
+      0.4
+     ],
+     "discordantes": [
+      47,
+      0
+     ],
+     "mcnemar_p": 1.4210854715202004e-14
+    },
+    "errada": {
+     "n": 145,
+     "C": 7,
+     "A": 0,
+     "diferenca": 7,
+     "diferenca_por_perfil": 0.04827586206896552,
+     "ic95_por_grupo": [
+      0.016853932584269662,
+      0.08333333333333333
+     ],
+     "discordantes": [
+      7,
+      0
+     ],
+     "mcnemar_p": 0.015625
+    },
+    "resolvida": {
+     "n": 145,
+     "C": 55,
+     "A": 1,
+     "diferenca": 54,
+     "diferenca_por_perfil": 0.3724137931034483,
+     "ic95_por_grupo": [
+      0.2929936305732484,
+      0.45132743362831856
+     ],
+     "discordantes": [
+      54,
+      0
+     ],
+     "mcnemar_p": 1.1102230246251565e-16
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 145,
+     "B": 51,
+     "C": 48,
+     "diferenca": 3,
+     "diferenca_por_perfil": 0.020689655172413793,
+     "ic95_por_grupo": [
+      -0.038461538461538464,
+      0.09574468085106383
+     ],
+     "discordantes": [
+      12,
+      9
+     ],
+     "mcnemar_p": 0.6636238098144531
+    },
+    "errada": {
+     "n": 145,
+     "B": 8,
+     "C": 7,
+     "diferenca": 1,
+     "diferenca_por_perfil": 0.006896551724137931,
+     "ic95_por_grupo": [
+      -0.031578947368421054,
+      0.04697986577181208
+     ],
+     "discordantes": [
+      5,
+      4
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 145,
+     "B": 59,
+     "C": 55,
+     "diferenca": 4,
+     "diferenca_por_perfil": 0.027586206896551724,
+     "ic95_por_grupo": [
+      -0.03508771929824561,
+      0.11320754716981132
+     ],
+     "discordantes": [
+      14,
+      10
+     ],
+     "mcnemar_p": 0.5412561893463135
+    }
+   }
+  },
+  "comparacoes_referencia": "classe com os símbolos verdadeiros"
+ },
+ "E2": {
+  "perfis": 67,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 67,
+  "grupos": 13,
+  "M8_invariancia_observacional": 67,
+  "M8_invariancia_versao": 67,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 1,
+   "C": 0
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 0,
+   "exemplos": []
+  },
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 180,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 66,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 63,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 4,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 0.09866268656716419,
+    "tempo_mediano_s": 0.093,
+    "tempo_p95_s": 0.1642
+   },
+   "B": {
+    "horizontes_acionados": 180,
+    "propostas": 180,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 97,
+     "confiança de tipo": 11
+    },
+    "horizontes_com_proposta": 72,
+    "candidatos": 538,
+    "candidatos_bem_formados": 502,
+    "cenarios": 215,
+    "cenarios_compativeis": 210,
+    "incompatibilidades": [
+     [
+      "Btw",
+      4
+     ],
+     [
+      "fora do alcançável",
+      1
+     ]
+    ],
+    "violacoes_contencao": 1,
+    "obs_nao_conclusivos": 66,
+    "M3_resolvidos_cond_cenario1": 12,
+    "M3_resolvidos_cond_robusta": 1,
+    "M4_cond_concordantes": 7,
+    "M4_cond_discordantes": 5,
+    "M4_robusta_concordantes": 1,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 56,
+    "conflitos_sinalizados": 11,
+    "divergentes_explicador": 4,
+    "hip_anotacao_geradas": 9,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 0.2976432835820895,
+    "tempo_mediano_s": 0.2557,
+    "tempo_p95_s": 0.5059
+   },
+   "C": {
+    "horizontes_acionados": 180,
+    "propostas": 180,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 121,
+     "confiança de tipo": 4
+    },
+    "horizontes_com_proposta": 55,
+    "candidatos": 538,
+    "candidatos_bem_formados": 503,
+    "cenarios": 158,
+    "cenarios_compativeis": 157,
+    "incompatibilidades": [
+     [
+      "Btw",
+      1
+     ]
+    ],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 66,
+    "M3_resolvidos_cond_cenario1": 6,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 3,
+    "M4_cond_discordantes": 3,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 59,
+    "conflitos_sinalizados": 10,
+    "divergentes_explicador": 4,
+    "hip_anotacao_geradas": 5,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 1.492323880597015,
+    "tempo_mediano_s": 1.0728,
+    "tempo_p95_s": 3.8093
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 67,
+     "B": 8,
+     "A": 1,
+     "diferenca": 7,
+     "diferenca_por_perfil": 0.1044776119402985,
+     "ic95_por_grupo": [
+      0.05263157894736842,
+      0.15584415584415584
+     ],
+     "discordantes": [
+      7,
+      0
+     ],
+     "mcnemar_p": 0.015625
+    },
+    "errada": {
+     "n": 67,
+     "B": 5,
+     "A": 0,
+     "diferenca": 5,
+     "diferenca_por_perfil": 0.07462686567164178,
+     "ic95_por_grupo": [
+      0.015151515151515152,
+      0.18867924528301888
+     ],
+     "discordantes": [
+      5,
+      0
+     ],
+     "mcnemar_p": 0.0625
+    },
+    "resolvida": {
+     "n": 67,
+     "B": 13,
+     "A": 1,
+     "diferenca": 12,
+     "diferenca_por_perfil": 0.1791044776119403,
+     "ic95_por_grupo": [
+      0.1111111111111111,
+      0.2926829268292683
+     ],
+     "discordantes": [
+      12,
+      0
+     ],
+     "mcnemar_p": 0.00048828125
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 67,
+     "C": 4,
+     "A": 1,
+     "diferenca": 3,
+     "diferenca_por_perfil": 0.04477611940298507,
+     "ic95_por_grupo": [
+      0.0,
+      0.1111111111111111
+     ],
+     "discordantes": [
+      3,
+      0
+     ],
+     "mcnemar_p": 0.25
+    },
+    "errada": {
+     "n": 67,
+     "C": 3,
+     "A": 0,
+     "diferenca": 3,
+     "diferenca_por_perfil": 0.04477611940298507,
+     "ic95_por_grupo": [
+      0.0,
+      0.14583333333333334
+     ],
+     "discordantes": [
+      3,
+      0
+     ],
+     "mcnemar_p": 0.25
+    },
+    "resolvida": {
+     "n": 67,
+     "C": 7,
+     "A": 1,
+     "diferenca": 6,
+     "diferenca_por_perfil": 0.08955223880597014,
+     "ic95_por_grupo": [
+      0.024691358024691357,
+      0.21052631578947367
+     ],
+     "discordantes": [
+      6,
+      0
+     ],
+     "mcnemar_p": 0.03125
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 67,
+     "B": 8,
+     "C": 4,
+     "diferenca": 4,
+     "diferenca_por_perfil": 0.05970149253731343,
+     "ic95_por_grupo": [
+      0.0,
+      0.1
+     ],
+     "discordantes": [
+      5,
+      1
+     ],
+     "mcnemar_p": 0.21875
+    },
+    "errada": {
+     "n": 67,
+     "B": 5,
+     "C": 3,
+     "diferenca": 2,
+     "diferenca_por_perfil": 0.029850746268656716,
+     "ic95_por_grupo": [
+      0.0,
+      0.0847457627118644
+     ],
+     "discordantes": [
+      2,
+      0
+     ],
+     "mcnemar_p": 0.5
+    },
+    "resolvida": {
+     "n": 67,
+     "B": 13,
+     "C": 7,
+     "diferenca": 6,
+     "diferenca_por_perfil": 0.08955223880597014,
+     "ic95_por_grupo": [
+      0.02040816326530612,
+      0.16
+     ],
+     "discordantes": [
+      7,
+      1
+     ],
+     "mcnemar_p": 0.0703125
+    }
+   }
+  },
+  "comparacoes_referencia": "ORDEM registrada (referência fraca)"
+ },
+ "E3": {
+  "perfis": 37,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 37,
+  "grupos": 37,
+  "M8_invariancia_observacional": 37,
+  "M8_invariancia_versao": 37,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 0,
+   "C": 1
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 0,
+   "exemplos": []
+  },
+  "M5_ref_no_alcancavel_A": [
+   36,
+   36
+  ],
+  "M5_ref_no_alcancavel_A0": [
+   36,
+   36
+  ],
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 69,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 37,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 36,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 1.6968486486486487,
+    "tempo_mediano_s": 1.427,
+    "tempo_p95_s": 3.1663
+   },
+   "B": {
+    "horizontes_acionados": 69,
+    "propostas": 69,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 20
+    },
+    "horizontes_com_proposta": 49,
+    "candidatos": 207,
+    "candidatos_bem_formados": 181,
+    "cenarios": 133,
+    "cenarios_compativeis": 132,
+    "incompatibilidades": [
+     [
+      "Bf",
+      1
+     ]
+    ],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 37,
+    "M3_resolvidos_cond_cenario1": 16,
+    "M3_resolvidos_cond_robusta": 3,
+    "M4_cond_concordantes": 14,
+    "M4_cond_discordantes": 2,
+    "M4_robusta_concordantes": 2,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 33,
+    "conflitos_sinalizados": 17,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 0.2987837837837838,
+    "tempo_mediano_s": 0.2441,
+    "tempo_p95_s": 0.6095
+   },
+   "C": {
+    "horizontes_acionados": 69,
+    "propostas": 69,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 13,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 4,
+     "confiança de tipo": 5
+    },
+    "horizontes_com_proposta": 47,
+    "candidatos": 207,
+    "candidatos_bem_formados": 131,
+    "cenarios": 85,
+    "cenarios_compativeis": 84,
+    "incompatibilidades": [
+     [
+      "fora do alcançável",
+      1
+     ]
+    ],
+    "violacoes_contencao": 1,
+    "obs_nao_conclusivos": 37,
+    "M3_resolvidos_cond_cenario1": 12,
+    "M3_resolvidos_cond_robusta": 3,
+    "M4_cond_concordantes": 12,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 3,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 36,
+    "conflitos_sinalizados": 23,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 1.746210810810811,
+    "tempo_mediano_s": 1.2717,
+    "tempo_p95_s": 4.6353
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 36,
+     "B": 14,
+     "A": 0,
+     "diferenca": 14,
+     "diferenca_por_perfil": 0.3888888888888889,
+     "ic95_por_grupo": [
+      0.2222222222222222,
+      0.5555555555555556
+     ],
+     "discordantes": [
+      14,
+      0
+     ],
+     "mcnemar_p": 0.0001220703125
+    },
+    "errada": {
+     "n": 36,
+     "B": 2,
+     "A": 0,
+     "diferenca": 2,
+     "diferenca_por_perfil": 0.05555555555555555,
+     "ic95_por_grupo": [
+      0.0,
+      0.1388888888888889
+     ],
+     "discordantes": [
+      2,
+      0
+     ],
+     "mcnemar_p": 0.5
+    },
+    "resolvida": {
+     "n": 36,
+     "B": 16,
+     "A": 0,
+     "diferenca": 16,
+     "diferenca_por_perfil": 0.4444444444444444,
+     "ic95_por_grupo": [
+      0.2777777777777778,
+      0.6111111111111112
+     ],
+     "discordantes": [
+      16,
+      0
+     ],
+     "mcnemar_p": 3.0517578125e-05
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 36,
+     "C": 12,
+     "A": 0,
+     "diferenca": 12,
+     "diferenca_por_perfil": 0.3333333333333333,
+     "ic95_por_grupo": [
+      0.19444444444444445,
+      0.4722222222222222
+     ],
+     "discordantes": [
+      12,
+      0
+     ],
+     "mcnemar_p": 0.00048828125
+    },
+    "errada": {
+     "n": 36,
+     "C": 0,
+     "A": 0,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 36,
+     "C": 12,
+     "A": 0,
+     "diferenca": 12,
+     "diferenca_por_perfil": 0.3333333333333333,
+     "ic95_por_grupo": [
+      0.19444444444444445,
+      0.4722222222222222
+     ],
+     "discordantes": [
+      12,
+      0
+     ],
+     "mcnemar_p": 0.00048828125
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 36,
+     "B": 14,
+     "C": 12,
+     "diferenca": 2,
+     "diferenca_por_perfil": 0.05555555555555555,
+     "ic95_por_grupo": [
+      -0.08333333333333333,
+      0.19444444444444445
+     ],
+     "discordantes": [
+      4,
+      2
+     ],
+     "mcnemar_p": 0.6875
+    },
+    "errada": {
+     "n": 36,
+     "B": 2,
+     "C": 0,
+     "diferenca": 2,
+     "diferenca_por_perfil": 0.05555555555555555,
+     "ic95_por_grupo": [
+      0.0,
+      0.1388888888888889
+     ],
+     "discordantes": [
+      2,
+      0
+     ],
+     "mcnemar_p": 0.5
+    },
+    "resolvida": {
+     "n": 36,
+     "B": 16,
+     "C": 12,
+     "diferenca": 4,
+     "diferenca_por_perfil": 0.1111111111111111,
+     "ic95_por_grupo": [
+      0.0,
+      0.25
+     ],
+     "discordantes": [
+      5,
+      1
+     ],
+     "mcnemar_p": 0.21875
+    }
+   }
+  },
+  "comparacoes_referencia": "classe com os símbolos verdadeiros"
+ },
+ "E3b": {
+  "perfis": 1,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 1,
+  "grupos": 1,
+  "M8_invariancia_observacional": 1,
+  "M8_invariancia_versao": 1,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 1,
+   "exemplos": [
+    [
+     "GeoTab_PE_001_Lagoa_dos_Gatos",
+     null,
+     [],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "ORGANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ]
+   ]
+  },
+  "M5_ref_no_alcancavel_A": [
+   1,
+   1
+  ],
+  "M5_ref_no_alcancavel_A0": [
+   0,
+   1
+  ],
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 1,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 1,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 1,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 10.7955,
+    "tempo_mediano_s": 10.7955,
+    "tempo_p95_s": 10.7955
+   },
+   "B": {
+    "horizontes_acionados": 1,
+    "propostas": 1,
+    "abstencoes": {},
+    "horizontes_com_proposta": 1,
+    "candidatos": 3,
+    "candidatos_bem_formados": 3,
+    "cenarios": 3,
+    "cenarios_compativeis": 3,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 1,
+    "M3_resolvidos_cond_cenario1": 1,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 1,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 1,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 13.5489,
+    "tempo_mediano_s": 13.5489,
+    "tempo_p95_s": 13.5489
+   },
+   "C": {
+    "horizontes_acionados": 1,
+    "propostas": 1,
+    "abstencoes": {},
+    "horizontes_com_proposta": 1,
+    "candidatos": 3,
+    "candidatos_bem_formados": 1,
+    "cenarios": 1,
+    "cenarios_compativeis": 1,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 1,
+    "M3_resolvidos_cond_cenario1": 1,
+    "M3_resolvidos_cond_robusta": 1,
+    "M4_cond_concordantes": 1,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 1,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 1,
+    "conflitos_sinalizados": 1,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 16.0834,
+    "tempo_mediano_s": 16.0834,
+    "tempo_p95_s": 16.0834
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 1,
+     "B": 1,
+     "A": 0,
+     "diferenca": 1,
+     "diferenca_por_perfil": 1.0,
+     "ic95_por_grupo": [
+      1.0,
+      1.0
+     ],
+     "discordantes": [
+      1,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 1,
+     "B": 0,
+     "A": 0,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 1,
+     "B": 1,
+     "A": 0,
+     "diferenca": 1,
+     "diferenca_por_perfil": 1.0,
+     "ic95_por_grupo": [
+      1.0,
+      1.0
+     ],
+     "discordantes": [
+      1,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 1,
+     "C": 1,
+     "A": 0,
+     "diferenca": 1,
+     "diferenca_por_perfil": 1.0,
+     "ic95_por_grupo": [
+      1.0,
+      1.0
+     ],
+     "discordantes": [
+      1,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 1,
+     "C": 0,
+     "A": 0,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 1,
+     "C": 1,
+     "A": 0,
+     "diferenca": 1,
+     "diferenca_por_perfil": 1.0,
+     "ic95_por_grupo": [
+      1.0,
+      1.0
+     ],
+     "discordantes": [
+      1,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 1,
+     "B": 1,
+     "C": 1,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 1,
+     "B": 0,
+     "C": 0,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 1,
+     "B": 1,
+     "C": 1,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   }
+  },
+  "comparacoes_referencia": "classe com os símbolos verdadeiros"
+ },
+ "E4": {
+  "perfis": 47,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 47,
+  "grupos": 47,
+  "M8_invariancia_observacional": 47,
+  "M8_invariancia_versao": 47,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 0,
+   "exemplos": []
+  },
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 5,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 20,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 46,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 1,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 1.4986893617021277,
+    "tempo_mediano_s": 0.1965,
+    "tempo_p95_s": 6.495
+   },
+   "B": {
+    "horizontes_acionados": 5,
+    "propostas": 5,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 2
+    },
+    "horizontes_com_proposta": 3,
+    "candidatos": 15,
+    "candidatos_bem_formados": 13,
+    "cenarios": 8,
+    "cenarios_compativeis": 8,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 20,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 46,
+    "conflitos_sinalizados": 28,
+    "divergentes_explicador": 1,
+    "hip_anotacao_geradas": 4,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 0.4213787234042553,
+    "tempo_mediano_s": 0.1341,
+    "tempo_p95_s": 0.3698
+   },
+   "C": {
+    "horizontes_acionados": 5,
+    "propostas": 5,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 2
+    },
+    "horizontes_com_proposta": 3,
+    "candidatos": 15,
+    "candidatos_bem_formados": 10,
+    "cenarios": 7,
+    "cenarios_compativeis": 7,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 20,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 46,
+    "conflitos_sinalizados": 37,
+    "divergentes_explicador": 1,
+    "hip_anotacao_geradas": 1,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 1.5452446808510636,
+    "tempo_mediano_s": 0.7691,
+    "tempo_p95_s": 2.6632
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 47,
+     "B": 26,
+     "A": 26,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 47,
+     "B": 1,
+     "A": 1,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 47,
+     "B": 27,
+     "A": 27,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 47,
+     "C": 26,
+     "A": 26,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 47,
+     "C": 1,
+     "A": 1,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 47,
+     "C": 27,
+     "A": 27,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 47,
+     "B": 26,
+     "C": 26,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 47,
+     "B": 1,
+     "C": 1,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 47,
+     "B": 27,
+     "C": 27,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   }
+  },
+  "comparacoes_referencia": "ORDEM registrada (referência fraca)",
+  "E4": {
+   "B": {
+    "conflito_tp": [
+     0,
+     5
+    ],
+    "conflito_falso_alerta": [
+     20,
+     223
+    ],
+    "falso_alerta_wilson": [
+     0.08968609865470852,
+     0.05880786149737174,
+     0.13446130124129863
+    ],
+    "propostas_em_horizontes_acionados_com_troca": {
+     "n": 5,
+     "abstencoes": 2,
+     "assinatura_igual_a_curada": 1
+    },
+    "acerto_at_k": {
+     "casos_de_referencia": 0,
+     "horizonte_e_assinatura": {
+      "1": 0,
+      "3": 0
+     },
+     "so_horizonte": {
+      "1": 0,
+      "3": 0
+     }
+    }
+   },
+   "C": {
+    "conflito_tp": [
+     0,
+     5
+    ],
+    "conflito_falso_alerta": [
+     29,
+     223
+    ],
+    "falso_alerta_wilson": [
+     0.13004484304932734,
+     0.0920932373688246,
+     0.18052649952669783
+    ],
+    "propostas_em_horizontes_acionados_com_troca": {
+     "n": 5,
+     "abstencoes": 2,
+     "assinatura_igual_a_curada": 1
+    },
+    "acerto_at_k": {
+     "casos_de_referencia": 0,
+     "horizonte_e_assinatura": {
+      "1": 0,
+      "3": 0
+     },
+     "so_horizonte": {
+      "1": 0,
+      "3": 0
+     }
+    }
+   },
+   "numericas_identicas_entre_variantes": 47
+  }
+ }
+}

@@ -1,0 +1,62 @@
+Inferidor — seleção na validação interna e avaliação final (§4.2.5)
+==============================================================================
+ajuste: 16415 horizontes (133 lev.); validação: 4733 (34 lev.); teste: 3676 (42 lev.)
+
+Seleção — rede
+   rede neural (MLP (64,), α=0.0001)                    validação: 1.1707
+   rede neural (MLP (64,), α=0.001)                     validação: 1.1438
+   rede neural (MLP (64,), α=0.01)                      validação: 1.1403
+   rede neural (MLP (128, 64), α=0.0001)                validação: 1.2035
+   rede neural (MLP (128, 64), α=0.001)                 validação: 1.1805
+   rede neural (MLP (128, 64), α=0.01)                  validação: 1.2052
+   rede neural (MLP (256, 128), α=0.0001)               validação: 1.2191
+   rede neural (MLP (256, 128), α=0.001)                validação: 1.2002
+   rede neural (MLP (256, 128), α=0.01)                 validação: 1.2085
+Seleção — árvores
+   não neural (árvores de gradiente, taxa 0.05)         validação: 1.2351
+   não neural (árvores de gradiente, taxa 0.1)          validação: 1.0359
+   não neural (árvores de gradiente, taxa 0.2)          validação: 0.9697
+
+limiar do conflito (sinaliza 10% da validação): 1 − P(símbolo) ≥ 0.994
+
+Inferência — partição de teste (usada uma vez)
+  rede neural (MLP (256, 128), α=0.0001)           principal 2831/3676 77,0% [75,6%–78,3%] [lev.: 72,7%–81,0%]   F1 macro (17 sufixos) 0.279 [lev.: 0.176–0.329]
+  não neural (árvores de gradiente, taxa 0.05)     principal 2929/3676 79,7% [78,3%–80,9%] [lev.: 75,2%–83,8%]   F1 macro (17 sufixos) 0.322 [lev.: 0.168–0.407]
+  mais frequente (sufixo por tipo de horizonte)    principal 1692/3676 46,0% [44,4%–47,6%] [lev.: 37,4%–53,6%]   F1 macro (17 sufixos) 0.052 [lev.: 0.046–0.060]
+
+F1 por sufixo no teste (rede | árvores) e positivos:
+   c  0.408 | 0.331   (58)
+   d  0.429 | 0.286   (7)
+   f  0.218 | 0.340   (57)
+   g  0.561 | 0.677   (221)
+   h  0.593 | 0.457   (19)
+   i  0.368 | 0.317   (174)
+   j  0.000 | 0.000   (7)
+   k  0.222 | 0.056   (5)
+   m  0.154 | 0.667   (1)
+   n  0.272 | 0.244   (71)
+   o  0.000 | 0.222   (5)
+   r  0.083 | 0.105   (16)
+   s  0.080 | 0.333   (7)
+   t  0.662 | 0.710   (439)
+   v  0.182 | 0.000   (9)
+   w  0.510 | 0.589   (109)
+   x  0.000 | 0.138   (22)
+
+Por ordem de solo (200+ horizontes de teste): principal / F1 macro — rede | árvores
+   ARGISSOLO       1122   80,0% / 0.130  |  81,0% / 0.180
+   LATOSSOLO        569   83,3% / 0.076  |  84,9% / 0.081
+   NEOSSOLO         494   77,9% / 0.006  |  83,6% / 0.032
+   CAMBISSOLO       418   70,3% / 0.099  |  74,6% / 0.109
+   PLINTOSSOLO      232   77,6% / 0.136  |  77,6% / 0.127
+
+Uso efetivo — fichas originais do conjunto curado (usadas uma vez)
+   horizontes: 430; trocas substantivas: 68
+   AUC do sinal contra as trocas: 0.643
+   sinalizadas: 20/68 29,4% [19,9%–41,1%]
+   falso alarme: 54/362 14,9% [11,6%–19,0%]
+   precisão do sinal: 20/74 27,0% [18,2%–38,1%]
+
+real	7m31.367s
+user	0m0.015s
+sys	0m0.046s

@@ -1,0 +1,6 @@
+correções False | 175s
+{"E1": {"perfis": 373, "completamentos": 7540, "perfis_com_violacao": 4}, "E3": {"perfis": 67, "completamentos": 1432, "perfis_com_violacao": 0}}
+   ('E1', 'BDSolos|598|5818|Perfil no 11', ['CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO'], [('tt', ['ARGISSOLO']), ('tw', ['ARGISSOLO']), ('ti', ['ARGISSOLO'])])
+   ('E1', 'BDSolos|598|5808|Perfil no 9', ['CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO'], [('t', ['ARGISSOLO'])])
+   ('E1', 'BDSolos|763|11253|36', ['CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO', 'LUVISSOLO'], [('t', ['ARGISSOLO'])])
+   ('E1', 'BDSolos|779|12103|PERFIL 9 - RJ', ['ARGISSOLO', 'CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO', 'NITOSSOLO'], [('tt', ['LUVISSOLO']), ('tw', ['LUVISSOLO']), ('ti', ['LUVISSOLO'])])

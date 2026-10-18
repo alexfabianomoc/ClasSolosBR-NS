@@ -484,6 +484,33 @@ que usa o analisador de símbolos.
   `dropDuplicates` não garante qual linha sobrevive, a escolha é feita por
   `row_number()` sobre o hash da linha — determinístico entre execuções.
 
+## Integração do Inferidor ao fluxo (1º nível, 5ª edição) — 2026-10-18
+
+> Consolidada a partir de uma cópia experimental isolada do projeto (rodadas v1, v2 e auditoria v3, 2026-10-18). Registro completo em `experimento_integracao/` (comece por `experimento_integracao/auditoria-v3-2026-10-18/relatorio/08-encerramento-da-etapa.md`, que prevalece sobre formulações anteriores).
+
+`integracao/` coordena os seis componentes num fluxo único (`integracao.fluxo.executar`, comando `python -m integracao.cli executar PERFIL.json --variante A|B|C`):
+
+1. validação e cópia da entrada (o original nunca é alterado);
+2. Sentinela — sinaliza, não decide;
+3. Núcleo, **resposta observacional** — antes de qualquer inferência e invariante a ela;
+4. Camada de Versão — 5ª × 6ª, com categorias de divergência (edições anteriores à 5ª nunca excluídas);
+5. Inferidor — só em horizonte sem símbolo, B sem sufixo de tipo ou símbolo antigo de leituras discordantes; propõe **símbolos** (rede ou árvores, mesma interface) ou se abstém, com motivo;
+6. Núcleo, **cenários condicionais** — até 8 por perfil; a árvore de prova marca símbolo inferido, modelo, confiança e cenário; cenário vetado pelo dado ou fora do alcançável observacional é rejeitado; robustez só com enumeração completa;
+7. conflitos anotado × proposto — hipóteses de anotação, que não alteram símbolo nem classe;
+8. Explicador — hipóteses numéricas e de anotação em listas separadas, todas verificadas por reexecução; correção de anotação é avaliada à parte do preenchimento compatível;
+9. Avaliador Parcial — próxima determinação sobre a resposta observacional.
+
+**Correções do núcleo C1–C5** (`nucleo/avaliador.py`, interruptor `CORRECOES_INTEGRACAO`; desligado = comportamento anterior): símbolo ausente por supervalorização sobre `nucleo/dados/catalogo_simbolo_ausente.json` (C1); truncamento de leituras vira indeterminado (C2); pendentes nas agregações por tipo (C3) e, para B sem tipo, nos predicados derivados (C4); seletor "B diagnóstico" no contexto do perfil (C5). ⚠️ **Não implementado:** proteção estrutural para veto pendente nos predicados derivados — hoje tratada predicado a predicado, sem defeito demonstrado.
+
+```bash
+python -m integracao.testes                 # 83 verificações
+python -m integracao.modelos treinar        # artefatos (determinístico; mesma configuração de inferidor.selecao)
+python -m integracao.experimento rodar E1   # E1, E2, E3, E3b, E4
+python -m integracao.experimento agregar
+```
+
+**Resultado (exploratório, dados já examinados).** A integração preservou a resposta observacional e apresentou consistência nos cenários examinados. A inferência de símbolos ampliou a resolução condicional, com erros adicionais (E1: rede 132 resoluções, 112 concordantes, 20 discordantes; árvores 121, 109, 12). Não foi demonstrada vantagem específica da rede sobre as árvores (+0,008 por perfil, IC [−0,035; +0,063]). As concordâncias de E1 medem recuperação da classe que o núcleo deriva dos símbolos originais antes da remoção, não correção pedológica independente; houve confiança ≈ 0,75 em símbolos errados. Calibração e validação independente são necessárias antes de uso automático.
+
 ## Pendências
 
 - [ ] Conferir a tag `apache/airflow:2.10.5-python3.11` e subir se houver

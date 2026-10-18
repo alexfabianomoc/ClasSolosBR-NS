@@ -1,0 +1,13 @@
+correções False | perfis 94 | tempo 5s
+  símbolo '': 92/168 apagamentos tiram a classe derivada do alcançável
+  símbolo 'B': 3/168 apagamentos tiram a classe derivada do alcançável
+    ('GeoTab_PE_001_Lagoa_dos_Gatos', 'Bt1', '', 'ARGISSOLO', 'nenhuma classe do recorte se aplica')
+    ('GeoTab_PE_002_Goiana', 'BE', '', 'ARGISSOLO', 'indeterminado — alcançáveis: ORGANOSSOLO')
+    ('GeoTab_PE_002_Goiana', 'Bt1', '', 'ARGISSOLO', 'indeterminado — alcançáveis: ORGANOSSOLO')
+    ('GeoTab_PE_003_Camocim_de_Sao_Felix', 'Bt1', '', 'ARGISSOLO', 'nenhuma classe do recorte se aplica')
+    ('GeoTab_PE_004_Igarassu', 'Bt1', '', 'ARGISSOLO', 'nenhuma classe do recorte se aplica')
+    ('GeoTab_PE_005_Sao_Benedito_do_Sul', 'BA', '', 'ARGISSOLO', 'nenhuma classe do recorte se aplica')
+    ('GeoTab_PE_005_Sao_Benedito_do_Sul', 'Bt1', '', 'ARGISSOLO', 'nenhuma classe do recorte se aplica')
+    ('GeoTab_PE_006_Escada', 'B/A', '', 'ARGISSOLO', 'nenhuma classe do recorte se aplica')
+    ('GeoTab_PE_006_Escada', 'Bt1', '', 'ARGISSOLO', 'nenhuma classe do recorte se aplica')
+    ('GeoTab_PE_007_Escada', 'BA', '', 'ARGISSOLO', 'nenhuma classe do recorte se aplica')

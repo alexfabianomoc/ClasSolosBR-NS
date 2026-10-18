@@ -1,0 +1,15 @@
+{
+  "_registro": "Configuração da rodada v3 (auditoria), escrita ANTES de executá-la. NÃO é confirmação independente: os mesmos perfis, modelos e resultados (v1 parcial e v2) já foram examinados, inclusive por este agente durante a auditoria.",
+  "data": "2026-10-18",
+  "rodada": "v3",
+  "base": "pré-registro config/experimento.json (com as emendas 1–6), sem alteração de perguntas, conjuntos, corrupções, modelos, limiares (θ = 0,5; τ da validação), orçamento ou métricas",
+  "mudancas_em_relacao_a_v2": [
+    {"id": "C5", "onde": "nucleo/avaliador.py::_selecionar", "o_que": "seletor 'B diagnóstico' julgado nas identificações do perfil inteiro, não num perfil de um horizonte só", "por_que": "caso mínimo A / Bwg1 15-40 / Bw2 40-80 / C concluía GLEISSOLO com 65 cm de B latossólico válido (defeito de implementação; a regra implementada declara proibir B diagnóstico em todo o perfil)", "aplicada_a": "A, B e C (mesma base)"},
+    {"id": "orcamento-robustez", "onde": "integracao/fluxo.py::cenarios", "o_que": "'condicional_robusta' só quando todas as combinações foram avaliadas; campos avaliacao_completa, aviso_orcamento e união dos alcançáveis dos cenários compatíveis", "por_que": "antes, a robustez era afirmada sobre os 8 cenários avaliados mesmo com mais combinações", "aplicada_a": "B e C (A não tem cenários)"},
+    {"id": "registro", "onde": "integracao/experimento.py", "o_que": "registros por perfil passam a guardar todos os cenários (classe, conclusão, alcançáveis, símbolos) e as propostas com κ e probabilidades de tipo; saída em diretório próprio (CLASSOLOSBR_SAIDA_EXPERIMENTO)", "por_que": "reconciliação por perfil e agregação dos cenários exigidas pela auditoria"}
+  ],
+  "nao_muda": ["modelos (artefatos de experimento_integracao/modelos, não retreinados)", "política de candidatos (emenda 6)", "θ, τ", "conjuntos E1–E4 e corrupções", "sementes", "orçamento (3 candidatos, 6 horizontes, 8 cenários, 30 hipóteses)", "recomendação só na variante A em E3/E4"],
+  "saida": "experimento_integracao/auditoria-v3-2026-10-18/resultados/",
+  "comparacao": "v2 × v3 por perfil e por métrica; o efeito de C5 sobre a resposta observacional é separado do efeito da integração pela coluna A0 (núcleo original) e pela comparação A(v2) × A(v3)",
+  "terminologia": "classe de referência = classe que o núcleo corrigido deriva dos símbolos originais antes da remoção (E1, E3, E3b) ou ORDEM registrada na ficha (E2, E4); 'classe verdadeira' não é usada"
+}

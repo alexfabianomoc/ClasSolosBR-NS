@@ -1,0 +1,1 @@
+{"correcoes": true, "segundos": 2618, "E1": {"perfis": 373, "combinacoes": 26045, "perfis_com_violacao": 0}, "E3": {"perfis": 67, "combinacoes": 5555, "perfis_com_violacao": 0}}

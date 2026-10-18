@@ -1,0 +1,268 @@
+
+lógica de três valores (Kleene forte)
+  ok   um falso refuta a conjunção, mesmo com indeterminado
+  ok   verdadeiro com indeterminado é indeterminado
+  ok   só verdadeiros satisfazem
+  ok   um verdadeiro satisfaz a disjunção
+  ok   falso com indeterminado é indeterminado
+  ok   só falsos refutam a disjunção
+  ok   o indeterminado é seu próprio complemento
+
+atributos derivados do complexo sortivo
+  ok   S = Ca + Mg + K + Na
+  ok   T = S + H + Al
+  ok   V% = 100·S/T
+  ok   Ta = 1000·T/argila
+  ok   parcela ausente propaga None, e não zero
+
+relação textural B/A — exemplos da Tabela 1.1 da norma
+  ok   exemplo 1: A < 15 cm → seção de 30 cm, exclui Bt2 → 1,92 (obtido 1.92)
+  ok   exemplo 2: A inclui AB; Bt2 começa dentro da seção e entra inteiro → 1,80 (obtido 1.80)
+  ok   exemplo 3: BC fica de fora mesmo dentro da seção → 2,33 (obtido 2.33)
+  ok   PE_032: 1,40 pela fórmula da norma — a aproximação anterior dava 1,53 e vetava um B latossólico legítimo
+
+adjacência tolera horizontes transicionais
+  ok   PE_031 (A1..A4 A/B B/A Bw): o Bw continua 'imediatamente abaixo do A' com transicionais interpostos
+
+lacuna na descrição não refuta
+  ok   PE_025 (Ap 0-15, Cg1 30-50): os 15 cm não descritos deixam o Gleissolo alcançável, em vez de refutado
+
+A chernozêmico exige evidência conjugada
+  ok   PE_039 (Luvissolo real) não é afirmado Chernossolo — critério frouxo produzia falso positivo
+  ok   PE_040 (Luvissolo real) não é afirmado Chernossolo — critério frouxo produzia falso positivo
+
+plíntico não se afirma pelo sufixo f
+  ok   RN_043_Pedro_Avelino Btfn1: plíntico vetado — matriz 2.5YR 4/8 sem mosqueado claro — sem o arranjo de cores
+  ok   RN_003_Pedra_Grande Btf: plíntico vetado — 10 cm de espessura, abaixo dos 15 cm mínimos
+  ok   RN_005_Macau Btf: plíntico vetado — matriz 7.5YR 6/6 — croma acima do admitido para cor clara
+  ok   PE_048_Goiana 2Btf: plíntico afirmado — mosqueados 10YR 6/3 e 2.5YR 3/6 — o arranjo da norma, sem matriz
+  ok   RN_044_Mossoro Btf: plíntico afirmado — mosqueados 2.5YR 5/8 e 10YR 6/3 — o arranjo da norma, sem matriz
+  ok   RN_042_Santo_Antonio Btf: plíntico afirmado — matriz 10YR 6/3 é cor clara — falta o registro do mosqueado, e falta de registro não refuta
+  ok   RN_043: o Luvissolo registrado volta ao conjunto alcançável
+  ok   RN_043: o núcleo não afirma mais o Plintossolo que a curadoria havia retirado
+
+caso-testemunha: a lacuna da norma reproduzida como indeterminação
+  ok   RN_007_Acu: a regra do Luvissolo é indeterminada, não falsa
+  ok   o empate de 50/50 na seção de controle de 100 cm é detectado
+  ok   e a saída diz que a norma não decide — não é um 'unknown' mudo
+  ok   o Luvissolo permanece alcançável, preservando a contenção
+
+comparabilidade entre as bases das duas edições
+  ok   a chave da 5ª edição tem as treze ordens
+  ok   a sequência de precedência é a publicada na 5ª edição (Cap. 4)
+  ok   o recorte implementado a fundo é o mesmo nas duas bases
+  ok   nenhuma assimetria de modelagem não intencional entre as bases
+  ok   toda diferença entre as bases está documentada, com a passagem da norma, e todo registro corresponde a uma diferença real
+
+divergência de edição: Cambissolo × Argissolo
+  ok   sob a 5ª edição o perfil é CAMBISSOLO, como devolve a API
+  ok   sob a 6ª edição o perfil fica indeterminado entre ARGISSOLO e CAMBISSOLO — a norma vigente não decide (obtido CAMBISSOLO, alcançáveis ['LUVISSOLO', 'ARGISSOLO'])
+  ok   o cotejo registra a diferença, marcada como não conclusiva
+
+condição (b) dos Plintossolos, pela norma de cada edição
+  ok   RN_042: Btf a 110 cm sob Bt 10YR 6/3 satisfaz a condição (b) — pálido pelo item (b) da norma, não por croma inventado
+  ok   RN_042: satisfaz também pela 6ª edição, cujo item (b) exige valor >= 5 (o Bt tem valor 6)
+  ok   RN_042: o Plintossolo registrado volta ao conjunto alcançável
+  ok   PE_048: 2Btf a 93 cm sob 2Bt sem matriz e com duas cores, uma pálida — é coloração variegada, não o caso do mosqueado abundante
+  ok   10YR 6/3 é pálido nas duas edições
+  ok   10YR 4/3 é pálido só na 5ª — a 6ª exige valor >= 5
+  ok   matiz 5Y é pálido por si, sem restrição de croma (item a)
+  ok   matiz esverdeado é pálido só na 6ª, que estendeu o item (a)
+  ok   2.5YR 4/8 não é pálido — matiz avermelhado
+  ok   '10 YR' com espaço interno é reconhecido — o acervo registra assim em doze horizontes
+  ok   matiz com erro de digitação é indeterminado, nunca refutação
+
+RN_021: notação romana transcrita e exclusão textural
+  ok   '11C1g' é lido como 'IIC1g' e modernizado para '2CBg'
+  ok   '111C2' é lido como 'IIIC2' e modernizado para '3C2'
+  ok   um '1' isolado não é modernizado — seria adivinhação
+  ok   o sentinela sinaliza a corrupção do numeral na transcrição
+  ok   o horizonte glei é identificado pelo símbolo modernizado
+  ok   a exclusão textural não se aplica: o AP não é arenoso, logo a textura não é exclusivamente areia
+  ok   RN_021 é classificado GLEISSOLO, como a ficha registra
+  ok   a seção da exclusão textural é 150 cm na 5ª edição e 200 cm na 6ª
+
+exigência dos 30 cm do glei: só na 6ª edição
+  ok   PE_025: pela 5ª, glei iniciando nos primeiros 50 cm basta — sem medir ocupação
+  ok   PE_025: pela 6ª, a ocupação dos 30 cm não é mensurável (15 cm não descritos) — indeterminado, não falso
+  ok   PE_025: a base de produção conclui GLEISSOLO, como a ficha
+  ok   PE_026: pela 5ª, glei iniciando nos primeiros 50 cm basta — sem medir ocupação
+  ok   PE_026: pela 6ª, a ocupação dos 30 cm não é mensurável (15 cm não descritos) — indeterminado, não falso
+  ok   PE_026: a base de produção conclui GLEISSOLO, como a ficha
+  ok   nenhuma regra da base da 5ª usa predicado marcado como da 6ª
+
+condição (b) — glei precedente, A e E imediatos (oitavo defeito)
+  ok   5ª ed.: Cf a 90 cm com glei (Cg) dois horizontes acima satisfaz a condição (b) — 'precedidos' não é 'imediatamente' (obtido V: Cf a 90 cm, precedido do horizonte glei Cg)
+  ok   6ª ed.: Cf a 90 cm com glei (Cg) dois horizontes acima satisfaz a condição (b) — 'precedidos' não é 'imediatamente' (obtido V: Cf a 90 cm, precedido do horizonte glei Cg)
+  ok   5ª ed.: Btf sob Bt avermelhado, com o A dois horizontes acima, NÃO satisfaz pelo A — o A tem de estar imediatamente acima (obtido F: nenhum horizonte plíntico/concrecionário nessa posição)
+  ok   6ª ed.: Btf sob Bt avermelhado, com o A dois horizontes acima, NÃO satisfaz pelo A — o A tem de estar imediatamente acima (obtido F: nenhum horizonte plíntico/concrecionário nessa posição)
+
+A chernozêmico — estrutura ao menos moderada (nono defeito)
+  ok   estrutura fraca (grau 2) → F (obtido F: nenhum A reúne cor escura, C orgânico, estrutura e saturação por bases nos patamares do A chernozêmico)
+  ok   estrutura moderada (grau 3) → V (obtido V: A 30 cm atendem cor, V, C orgânico e estrutura; 30 cm (sem B, A+C de 75 cm ou mais ou de base aberta (a norma não tem ramo para o caso): entre 18 e 25 cm))
+  ok   estrutura forte (grau 4) → V (obtido V: A 30 cm atendem cor, V, C orgânico e estrutura; 30 cm (sem B, A+C de 75 cm ou mais ou de base aberta (a norma não tem ramo para o caso): entre 18 e 25 cm))
+  ok   estrutura ausente (grau 1) → F (obtido F: nenhum A reúne cor escura, C orgânico, estrutura e saturação por bases nos patamares do A chernozêmico)
+
+Neossolos: exclusão do plíntico pelo capítulo (décimo defeito)
+  ok   plíntico a 50 cm sob o A → PLINTOSSOLO nas duas edições (5ª: PLINTOSSOLO, 6ª: PLINTOSSOLO; predicado V: Cf a 50 cm, imediatamente abaixo de A — Cap. 3, requisito (c), até 150 cm)
+  ok   plíntico a 140 cm sob o A → PLINTOSSOLO nas duas edições (5ª: PLINTOSSOLO, 6ª: PLINTOSSOLO; predicado V: Cf a 140 cm, imediatamente abaixo de A — Cap. 3, requisito (c), até 150 cm)
+  ok   plíntico a 250 cm sob o A → NEOSSOLO nas duas edições (5ª: NEOSSOLO, 6ª: NEOSSOLO; predicado F: nenhum horizonte plíntico em posição que exclua o Neossolo)
+  ok   plíntico a 170 cm sob o A → indeterminado na 5ª: o Cap. 3 não exclui, o Cap. 12 exclui, e a norma não decide (predicado I; 5ª: PLINTOSSOLO, alcançáveis ['NEOSSOLO'])
+  ok   controle: plíntico a 100 cm sob C avermelhado não exclui o Neossolo — a correção não afrouxa a posição (F: nenhum horizonte plíntico em posição que exclua o Neossolo)
+
+identificação monotônica: ausência de dado não afirma (11º defeito)
+  ok   Btf sem cor: não conclui — PLINTOSSOLO fica alcançável, não afirmado (obtido None, alcançáveis ['PLANOSSOLO', 'PLINTOSSOLO', 'ARGISSOLO'])
+  ok   cor medida avermelhada sem mosqueado → ARGISSOLO, que estava no conjunto alcançável inicial ['ARGISSOLO', 'PLANOSSOLO', 'PLINTOSSOLO']
+  ok   cor medida clara → PLINTOSSOLO, que estava no conjunto alcançável inicial ['ARGISSOLO', 'PLANOSSOLO', 'PLINTOSSOLO']
+  ok   RN_042_Santo_Antonio: Btf aberto com 40 cm observados na ficha mantém o plíntico (espessura mínima 40.0)
+  ok   RN_044_Mossoro: Btf aberto com 15 cm observados na ficha mantém o plíntico (espessura mínima 15.0)
+  ok   Btf aberto com só 10 cm observados: plíntico pendente, nem afirmado nem vetado — o horizonte continua
+
+Argissolos: requisitos da Definição; Luvissolos da 6ª: posição do Bt
+  ok   plíntico acima do Bt: 5ª F, 6ª F (obtido F, F)
+  ok   plíntico abaixo do topo do Bt: 5ª V, 6ª V (obtido V, V)
+  ok   concrecionário acima do Bt (só a 6ª o lista): 5ª V, 6ª F (obtido V, F)
+  ok   glei acima do Bt: 5ª F, 6ª F (obtido F, F)
+  ok   Luvissolo, Bt imediatamente abaixo do A: 6ª V, 5ª V (obtido V, V)
+  ok   Luvissolo, A–Bi–Bt, Bt a 60 cm: 6ª I, 5ª F (obtido I, F)
+  ok   Luvissolo, A–Bi–Bt, Bt a 250 cm: 6ª F, 5ª F (obtido F, F)
+
+propriedade de contenção sobre o conjunto curado
+  ok   94 perfis avaliados; 1 classes registradas fora do conjunto alcançável
+       ⚠️ GeoTab_RN_019_Apodi: registrado CHERNOSSOLO, derivado NEOSSOLO
+
+propriedade de contenção sob a 5ª edição (base de produção)
+  ok   94 perfis avaliados; 1 classes registradas fora do conjunto alcançável
+       ⚠️ GeoTab_RN_019_Apodi: registrado CHERNOSSOLO, derivado NEOSSOLO
+
+explicador de divergências (abdução contrastiva, §4.3)
+  ok   predicado não estrito é satisfeito na fronteira
+  ok   predicado estrito recebe o menor passo acima do limiar
+  ok   predicado estrito de menor recebe o passo abaixo do limiar
+  ok   dos 94 perfis curados, só RN_019 é divergente (leitura do SmartSolos sobre a espessura do A chernozêmico); obtido ['GeoTab_RN_019_Apodi']
+  ok   injeção em ARGILA(Bt1) de GeoTab_PE_001_Lagoa_dos_Gatos produz divergência explicável
+  ok   a hipótese sobre o atributo injetado está na lista e é típica
+  ok   toda hipótese listada restabelece a classe ao ser reexecutada
+
+contenção sob ablação de atributo (Avaliador Parcial, §4.2.4)
+  ok   PE_020 sem COR_UMIDA_CROMA mantém CHERNOSSOLO alcançável
+  ok   1142 remoções de atributo isolado; contenção violada em 0 []
+
+B sem sufixo legível (notação anterior a 1988, decisão de 2026-10-15)
+  ok   B, B1, B21, 2B e BW2 não dizem o tipo de B
+  ok   transicionais, mesclados e B com sufixo ficam de fora
+  ok   A1–B21: Latossolo alcançável e Neossolo não afirmado (indeterminado — alcançáveis: NEOSSOLO, ESPODOSSOLO, LATOSSOLO, CAMBISSOLO, LUVISSOLO, ARGISSOLO)
+  ok   A1–B21: 'sem B diagnóstico' é indeterminado, e não verdadeiro
+  ok   A1–Bw continua identificando B latossólico
+
+prefixo de descontinuidade em algarismo romano (14º defeito)
+  ok   IIBt1 tem principal B (leu 'B')
+  ok   IIBt1 propõe B textural, como 2Bt1
+
+2º e 3º níveis das cinco ordens (SiBCS 5ª ed.)
+  ok   matiz Munsell vira número na escala R < YR < Y
+  ok   comparação de rótulo tolera grafia, não troca de classe
+  ok   sem horizonte O, a subordem Hístico é refutada, e não indeterminada
+  ok   nenhum perfil curado diverge nos níveis 1 a 3 []
+  ok   nenhum perfil curado tem rótulo fora até o 3º nível: []
+  ok   as 100 definições de subgrupo batem com a tradução; 448 subgrupos
+  ok   no 4º nível, só os três casos de fronteira registrados: [('GeoTab_PE_017_Barreiros', 'não conclui, rótulo fora'), ('GeoTab_PE_034_Abreu_e_Lima', 'diverge'), ('GeoTab_PE_037_Ipojuca', 'diverge')]
+
+textura arenosa pela definição da norma (p. 46)
+  ok   areia 700, argila 150 (diferença 550): não é arenosa — a aproximação antiga aceitava
+  ok   areia 850, argila 150 (diferença 700, não maior): não é arenosa
+  ok   areia 860, argila 140 (diferença 720): é arenosa
+  ok   sem areia, indeterminado — nunca falso
+  ok   1º nível e subgrupos (ARENOSA) usam a mesma fórmula
+
+símbolo antigo com mais de uma leitura (opção b)
+  ok   B1t: o sentinela não traduz; as leituras BAt/BEt concordam e a primeira é usada
+  ok   A3g: as leituras ABg/EBg discordam na letra principal — sem leitura
+  ok   símbolo de tradução única e símbolo atual não mudam
+  ok   B1t é B textural válido, e sua letra principal é B
+  ok   A3g: o glei que as leituras propõem fica pendente, nunca afirmado
+  ok   A3g admite A ou E como letra principal
+  ok   A3g é transicional nas duas leituras e é saltado: o Bg fica imediatamente abaixo do A1
+  ok   A3g: 'existe horizonte E' é falso numa leitura (ABg) e verdadeiro na outra (EBg) — indeterminado, nunca afirmado
+  ok   perfil sem leituras discordantes é avaliado uma vez, como antes
+  ok   RN_005 pela ficha original (A1, B1t, B2t, B22t) conclui ARGISSOLO, como registrado
+
+soma Ca + Mg do acervo (fora do contrato)
+  ok   só a soma: S, T e V% calculados a partir dela
+  ok   Ca e Mg separados têm precedência sobre a soma
+  ok   sem Ca, Mg nem soma: S não é calculada
+  ok   a soma nunca é repartida entre Ca e Mg
+  ok   o envio à API descarta os campos fora do contrato
+
+A chernozêmico pela regra de Kleene (15º defeito)
+  ok   todos os componentes aprovam: A chernozêmico
+  ok   só falta a estrutura: indeterminado, e a pendência a nomeia
+  ok   falta a estrutura, mas o croma 6 já reprova: falso, e não indeterminado
+  ok   falta o carbono, mas V de 40% já reprova: falso
+
+A chernozêmico: espessura pelo item (e) (16º defeito)
+  ok   Ap 13 + AB 9 = 22 cm, solum 50 (> 16,7 e ≥ 18): soma aprova
+  ok   Ap fraco fora da soma; A2 + A3 = 36 cm > 23,3 (PE_020)
+  ok   sem B, A+C de 65 cm: 18 cm não passa de 21,7 (ramo 3)
+  ok   A de 12 cm seguido de R: ramo 1, 10 cm
+  ok   sem B e C aberto: a norma não decide entre 18 e 25 cm
+
+V do boletim: complemento e árbitro (decisão 2, opção c)
+  ok   sem H e Al, vale o V informado no boletim (80%)
+  ok   cálculo e boletim do mesmo lado de 65%: decide como antes
+  ok   63,4% calculado e 65% no boletim: A chernozêmico indeterminado, nunca refutado
+  ok   sem V no boletim, o calculado (63,4%) decide: falso
+
+Neossolos da 5ª: concrecionário sem B diagnóstico (decisão 3)
+  ok   Cc a 20 cm: a exclusão pelo Conceito fica indeterminada, nunca afirmada
+  ok   5ª: Neossolo e Plintossolo alcançáveis (obtido PLINTOSSOLO, ['NEOSSOLO'])
+  ok   6ª: a exclusão está no texto (p. 227) e o perfil é Plintossolo
+  ok   sem o sufixo c, a 5ª conclui Neossolo como antes
+
+Plíntico: mosqueado com cor incompleta não veta (18º defeito)
+  ok   mosqueado 10YR 7/2 claro: plíntico identificado
+  ok   mosqueado sem croma: identificação pendente, nunca refutada
+  ok   sem mosqueado registrado: ausência observada, o veto vale
+
+Horizonte orgânico acima da superfície mineral (19º defeito)
+  ok   O 3-0 passa a ocupar de -3 a 0 cm, antes do A
+  ok   o Bw fica imediatamente abaixo do A (o BA é transicional)
+
+Espessura mínima do B latossólico (20º defeito)
+  ok   Bw de 50 cm fechado por C: B latossólico
+  ok   Bw de 49 cm fechado por C: vetado
+  ok   Bw1 + Bw2 somam 55 cm: B latossólico
+  ok   Bw de 35 cm com BA de 20 cm: pendente (a norma não diz se o BA conta)
+  ok   Bw de 30 cm como último horizonte: pendente (base = coleta)
+  ok   Bw de 30 cm com lacuna abaixo: pendente
+
+B nítico em três valores (22º defeito)
+  ok   Bt argiloso com cerosidade comum e moderada e RT 1,1: B nítico
+  ok   argila do Bt não registrada: pendente, e não refutado
+  ok   cerosidade não registrada: ausência observada, não identifica (SiBCS 5ª, p. 44)
+  ok   relação textural com argila faltando na seção de controle: pendente
+  ok   relação textural sem limite superior em nenhum B: None, sem erro
+
+cotejo entre edições: causas da não conclusão (I-1)
+  ok   PE_025: a 6ª não conclui por critério em que as bases diferem (obtido {'GLEISSOLO': 'critério em que as bases diferem'})
+  ok   PE_025: rótulo válido sob a 5ª, não confirmado sob a 6ª, sem 'cobertura'
+  ok   RN_045: Vertissolo apenas triado — cobertura, não critério novo
+  ok   nenhum perfil curado recebe o veredito antigo 'NÃO se explica por edição' (0)
+  ok   as saídas diferem em 5 dos 94 perfis (§5.4; obtido 5)
+
+fator de tipicidade: plausibilidade e direção (I-2)
+  ok   Mg do Bt 17 → 1,7: deslocamento decimal típico (÷10)
+  ok   argila do Bt: ×10 daria 4.000 g/kg, fora da faixa física — sem τ (obtido None)
+  ok   H do Bt 3,1 → 31: possível e na direção da fronteira (×10)
+
+registro de curadoria classificado à mão (Acerto@k estrito, D-2)
+  ok   os 41 perfis com atributo corrigido estão classificados
+  ok   todo erro descrito é um atributo de fato corrigido
+  ok   PE_007: a nota descreve o Mg do Bt como erro
+
+Neossolos da 5ª: glei em solo arenoso (21º defeito)
+  ok   glei em solo arenoso: a 5ª chega ao Neossolo, como a 6ª (obtido NEOSSOLO)
+  ok   glei em solo argiloso: Gleissolo, e o Neossolo segue refutado (obtido GLEISSOLO)
+
+tudo passou
+saida 0

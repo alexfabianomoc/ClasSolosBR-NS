@@ -8,3 +8,14 @@ __pycache__/
 work/classolosbr-ns/resultados/
 # Texto da norma (SiBCS 5ª ed., © Embrapa, todos os direitos reservados): gerar localmente, ver README
 work/classolosbr-ns/nucleo/dados/subgrupos5.json
+# Integração (2026-10-18): registros por perfil, modelos treinados e exemplos contêm valores
+# derivados dos dados da Embrapa — ficam locais; são regenerados pelos comandos do LEIA-ME.
+work/classolosbr-ns/experimento_integracao/**/*.jsonl
+work/classolosbr-ns/experimento_integracao/**/*.csv
+work/classolosbr-ns/experimento_integracao/**/*.joblib
+work/classolosbr-ns/experimento_integracao/**/log-*.txt
+work/classolosbr-ns/experimento_integracao/exemplos/
+work/classolosbr-ns/experimento_integracao/**/codigo_v2/
+work/classolosbr-ns/experimento_integracao/**/manifestos/
+work/classolosbr-ns/experimento_integracao/**/latossolo/casos.json
+work/classolosbr-ns/experimento_integracao/diagnostico/mede_truncamento_e_assinaturas.json

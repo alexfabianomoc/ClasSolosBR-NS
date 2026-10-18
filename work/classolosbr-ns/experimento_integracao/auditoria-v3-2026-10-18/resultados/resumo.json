@@ -1,0 +1,2032 @@
+{
+ "E1": {
+  "perfis": 373,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 373,
+  "grupos": 35,
+  "M8_invariancia_observacional": 373,
+  "M8_invariancia_versao": 373,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 26,
+   "exemplos": [
+    [
+     "BDSolos|574|5491|GB 27",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|579|5538|ÁguasFrias nº22",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|643|7218|Perfil 08",
+     null,
+     [
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "PLANOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "PLANOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|676|8874|PC-4",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|758|10956|14",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|801|12813|1593",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|801|12821|1598",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|574|5446|GB 10",
+     null,
+     [
+      "ARGISSOLO",
+      "ESPODOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ]
+   ]
+  },
+  "M5_ref_no_alcancavel_A": [
+   359,
+   359
+  ],
+  "M5_ref_no_alcancavel_A0": [
+   355,
+   359
+  ],
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 658,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 371,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 359,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 23,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 0.865485254691689,
+    "tempo_mediano_s": 0.1757,
+    "tempo_p95_s": 4.1415
+   },
+   "B": {
+    "horizontes_acionados": 658,
+    "propostas": 658,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 226,
+     "confiança de tipo": 22,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 3
+    },
+    "horizontes_com_proposta": 407,
+    "candidatos": 1974,
+    "candidatos_bem_formados": 1935,
+    "cenarios": 1335,
+    "cenarios_compativeis": 1335,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 371,
+    "M3_resolvidos_cond_cenario1": 132,
+    "M3_resolvidos_cond_robusta": 2,
+    "M4_cond_concordantes": 112,
+    "M4_cond_discordantes": 20,
+    "M4_robusta_concordantes": 2,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 333,
+    "conflitos_sinalizados": 107,
+    "divergentes_explicador": 23,
+    "hip_anotacao_geradas": 111,
+    "hip_anotacao_verificadas": 2,
+    "perfis_com_hip_anotacao_verificada": 2,
+    "tempo_medio_s": 1.3026016085790886,
+    "tempo_mediano_s": 0.4186,
+    "tempo_p95_s": 5.2324
+   },
+   "C": {
+    "horizontes_acionados": 658,
+    "propostas": 658,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 292,
+     "confiança de tipo": 13
+    },
+    "horizontes_com_proposta": 353,
+    "candidatos": 1974,
+    "candidatos_bem_formados": 1927,
+    "cenarios": 1149,
+    "cenarios_compativeis": 1149,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 371,
+    "M3_resolvidos_cond_cenario1": 121,
+    "M3_resolvidos_cond_robusta": 3,
+    "M4_cond_concordantes": 109,
+    "M4_cond_discordantes": 12,
+    "M4_robusta_concordantes": 3,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 344,
+    "conflitos_sinalizados": 143,
+    "divergentes_explicador": 23,
+    "hip_anotacao_geradas": 105,
+    "hip_anotacao_verificadas": 1,
+    "perfis_com_hip_anotacao_verificada": 1,
+    "tempo_medio_s": 2.640472654155496,
+    "tempo_mediano_s": 0.8533,
+    "tempo_p95_s": 8.0707
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 359,
+     "B": 114,
+     "A": 2,
+     "diferenca": 112,
+     "diferenca_por_perfil": 0.31197771587743733,
+     "ic95_por_grupo": [
+      0.2544642857142857,
+      0.35826771653543305
+     ],
+     "discordantes": [
+      112,
+      0
+     ],
+     "mcnemar_p": 3.851859888774472e-34
+    },
+    "errada": {
+     "n": 359,
+     "B": 20,
+     "A": 0,
+     "diferenca": 20,
+     "diferenca_por_perfil": 0.055710306406685235,
+     "ic95_por_grupo": [
+      0.029850746268656716,
+      0.08053691275167785
+     ],
+     "discordantes": [
+      20,
+      0
+     ],
+     "mcnemar_p": 1.9073486328125e-06
+    },
+    "resolvida": {
+     "n": 359,
+     "B": 134,
+     "A": 2,
+     "diferenca": 132,
+     "diferenca_por_perfil": 0.36768802228412256,
+     "ic95_por_grupo": [
+      0.3076923076923077,
+      0.4126506024096386
+     ],
+     "discordantes": [
+      132,
+      0
+     ],
+     "mcnemar_p": 3.6734198463196485e-40
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 359,
+     "C": 111,
+     "A": 2,
+     "diferenca": 109,
+     "diferenca_por_perfil": 0.30362116991643456,
+     "ic95_por_grupo": [
+      0.22082018927444794,
+      0.36809815950920244
+     ],
+     "discordantes": [
+      109,
+      0
+     ],
+     "mcnemar_p": 3.0814879110195774e-33
+    },
+    "errada": {
+     "n": 359,
+     "C": 12,
+     "A": 0,
+     "diferenca": 12,
+     "diferenca_por_perfil": 0.033426183844011144,
+     "ic95_por_grupo": [
+      0.012738853503184714,
+      0.0611353711790393
+     ],
+     "discordantes": [
+      12,
+      0
+     ],
+     "mcnemar_p": 0.00048828125
+    },
+    "resolvida": {
+     "n": 359,
+     "C": 123,
+     "A": 2,
+     "diferenca": 121,
+     "diferenca_por_perfil": 0.3370473537604457,
+     "ic95_por_grupo": [
+      0.2591362126245847,
+      0.40081799591002043
+     ],
+     "discordantes": [
+      121,
+      0
+     ],
+     "mcnemar_p": 7.52316384526264e-37
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 359,
+     "B": 114,
+     "C": 111,
+     "diferenca": 3,
+     "diferenca_por_perfil": 0.008356545961002786,
+     "ic95_por_grupo": [
+      -0.035211267605633804,
+      0.06267029972752043
+     ],
+     "discordantes": [
+      28,
+      25
+     ],
+     "mcnemar_p": 0.7838463022094988
+    },
+    "errada": {
+     "n": 359,
+     "B": 20,
+     "C": 12,
+     "diferenca": 8,
+     "diferenca_por_perfil": 0.022284122562674095,
+     "ic95_por_grupo": [
+      -0.010638297872340425,
+      0.04643962848297214
+     ],
+     "discordantes": [
+      14,
+      6
+     ],
+     "mcnemar_p": 0.11531829833984375
+    },
+    "resolvida": {
+     "n": 359,
+     "B": 134,
+     "C": 123,
+     "diferenca": 11,
+     "diferenca_por_perfil": 0.03064066852367688,
+     "ic95_por_grupo": [
+      -0.025806451612903226,
+      0.08896797153024912
+     ],
+     "discordantes": [
+      33,
+      22
+     ],
+     "mcnemar_p": 0.17700136477035816
+    }
+   }
+  },
+  "comparacoes_referencia": "classe com os símbolos verdadeiros"
+ },
+ "E2": {
+  "perfis": 483,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 483,
+  "grupos": 26,
+  "M8_invariancia_observacional": 483,
+  "M8_invariancia_versao": 483,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 91,
+   "exemplos": [
+    [
+     "BDSolos|647|7969|Perfil nº 4",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|647|7976|Perfil nº 5",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|669|8437|Perfil 6",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|669|8706|Perfil 14",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|697|9817|2",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|705|10061|5",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|713|10277|34",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "BDSolos|713|10282|48",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "NITOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ]
+   ]
+  },
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 1176,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 473,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 447,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 35,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 0.9864708074534161,
+    "tempo_mediano_s": 0.2429,
+    "tempo_p95_s": 3.6336
+   },
+   "B": {
+    "horizontes_acionados": 1176,
+    "propostas": 1176,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 671,
+     "confiança de tipo": 36,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 8
+    },
+    "horizontes_com_proposta": 461,
+    "candidatos": 3512,
+    "candidatos_bem_formados": 3407,
+    "cenarios": 1484,
+    "cenarios_compativeis": 1480,
+    "incompatibilidades": [
+     [
+      "Btw",
+      4
+     ]
+    ],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 473,
+    "M3_resolvidos_cond_cenario1": 80,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 34,
+    "M4_cond_discordantes": 46,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 383,
+    "conflitos_sinalizados": 86,
+    "divergentes_explicador": 35,
+    "hip_anotacao_geradas": 95,
+    "hip_anotacao_verificadas": 1,
+    "perfis_com_hip_anotacao_verificada": 1,
+    "tempo_medio_s": 1.7432623188405796,
+    "tempo_mediano_s": 0.7125,
+    "tempo_p95_s": 5.5106
+   },
+   "C": {
+    "horizontes_acionados": 1176,
+    "propostas": 1176,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 768,
+     "confiança de tipo": 19,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 7
+    },
+    "horizontes_com_proposta": 382,
+    "candidatos": 3512,
+    "candidatos_bem_formados": 3381,
+    "cenarios": 1232,
+    "cenarios_compativeis": 1231,
+    "incompatibilidades": [
+     [
+      "Btw",
+      1
+     ]
+    ],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 473,
+    "M3_resolvidos_cond_cenario1": 52,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 17,
+    "M4_cond_discordantes": 35,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 392,
+    "conflitos_sinalizados": 98,
+    "divergentes_explicador": 35,
+    "hip_anotacao_geradas": 86,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 2.5243540372670807,
+    "tempo_mediano_s": 1.1628,
+    "tempo_p95_s": 7.4542
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 482,
+     "B": 42,
+     "A": 8,
+     "diferenca": 34,
+     "diferenca_por_perfil": 0.07053941908713693,
+     "ic95_por_grupo": [
+      0.04833836858006042,
+      0.09221902017291066
+     ],
+     "discordantes": [
+      34,
+      0
+     ],
+     "mcnemar_p": 1.1641532182693481e-10
+    },
+    "errada": {
+     "n": 482,
+     "B": 48,
+     "A": 2,
+     "diferenca": 46,
+     "diferenca_por_perfil": 0.0954356846473029,
+     "ic95_por_grupo": [
+      0.04748603351955307,
+      0.1617933723196881
+     ],
+     "discordantes": [
+      46,
+      0
+     ],
+     "mcnemar_p": 2.842170943040401e-14
+    },
+    "resolvida": {
+     "n": 482,
+     "B": 90,
+     "A": 10,
+     "diferenca": 80,
+     "diferenca_por_perfil": 0.16597510373443983,
+     "ic95_por_grupo": [
+      0.11440677966101695,
+      0.23030303030303031
+     ],
+     "discordantes": [
+      80,
+      0
+     ],
+     "mcnemar_p": 1.6543612251060553e-24
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 482,
+     "C": 25,
+     "A": 8,
+     "diferenca": 17,
+     "diferenca_por_perfil": 0.035269709543568464,
+     "ic95_por_grupo": [
+      0.015909090909090907,
+      0.060324825986078884
+     ],
+     "discordantes": [
+      17,
+      0
+     ],
+     "mcnemar_p": 1.52587890625e-05
+    },
+    "errada": {
+     "n": 482,
+     "C": 37,
+     "A": 2,
+     "diferenca": 35,
+     "diferenca_por_perfil": 0.07261410788381743,
+     "ic95_por_grupo": [
+      0.019736842105263157,
+      0.14338235294117646
+     ],
+     "discordantes": [
+      35,
+      0
+     ],
+     "mcnemar_p": 5.820766091346741e-11
+    },
+    "resolvida": {
+     "n": 482,
+     "C": 62,
+     "A": 10,
+     "diferenca": 52,
+     "diferenca_por_perfil": 0.1078838174273859,
+     "ic95_por_grupo": [
+      0.04576271186440678,
+      0.18689320388349515
+     ],
+     "discordantes": [
+      52,
+      0
+     ],
+     "mcnemar_p": 4.440892098500626e-16
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 482,
+     "B": 42,
+     "C": 25,
+     "diferenca": 17,
+     "diferenca_por_perfil": 0.035269709543568464,
+     "ic95_por_grupo": [
+      0.01485148514851485,
+      0.053488372093023255
+     ],
+     "discordantes": [
+      20,
+      3
+     ],
+     "mcnemar_p": 0.00048828125
+    },
+    "errada": {
+     "n": 482,
+     "B": 48,
+     "C": 37,
+     "diferenca": 11,
+     "diferenca_por_perfil": 0.022821576763485476,
+     "ic95_por_grupo": [
+      0.010752688172043012,
+      0.03466204506065858
+     ],
+     "discordantes": [
+      19,
+      8
+     ],
+     "mcnemar_p": 0.052238985896110535
+    },
+    "resolvida": {
+     "n": 482,
+     "B": 90,
+     "C": 62,
+     "diferenca": 28,
+     "diferenca_por_perfil": 0.058091286307053944,
+     "ic95_por_grupo": [
+      0.031746031746031744,
+      0.08396946564885496
+     ],
+     "discordantes": [
+      38,
+      10
+     ],
+     "mcnemar_p": 6.169640777642371e-05
+    }
+   }
+  },
+  "comparacoes_referencia": "ORDEM registrada (referência fraca)"
+ },
+ "E3": {
+  "perfis": 67,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 67,
+  "grupos": 67,
+  "M8_invariancia_observacional": 67,
+  "M8_invariancia_versao": 67,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 1,
+   "exemplos": [
+    [
+     "GeoTab_RN_007_Acu",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ]
+   ]
+  },
+  "M5_ref_no_alcancavel_A": [
+   66,
+   66
+  ],
+  "M5_ref_no_alcancavel_A0": [
+   66,
+   66
+  ],
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 124,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 67,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 66,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 20.770398507462687,
+    "tempo_mediano_s": 7.1471,
+    "tempo_p95_s": 74.814
+   },
+   "B": {
+    "horizontes_acionados": 124,
+    "propostas": 124,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 47,
+     "confiança de tipo": 1,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 1
+    },
+    "horizontes_com_proposta": 75,
+    "candidatos": 372,
+    "candidatos_bem_formados": 364,
+    "cenarios": 232,
+    "cenarios_compativeis": 232,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 67,
+    "M3_resolvidos_cond_cenario1": 25,
+    "M3_resolvidos_cond_robusta": 2,
+    "M4_cond_concordantes": 22,
+    "M4_cond_discordantes": 3,
+    "M4_robusta_concordantes": 2,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 62,
+    "conflitos_sinalizados": 41,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 1.3389164179104478,
+    "tempo_mediano_s": 0.653,
+    "tempo_p95_s": 4.5705
+   },
+   "C": {
+    "horizontes_acionados": 124,
+    "propostas": 124,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 38,
+     "confiança de tipo": 1,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 1
+    },
+    "horizontes_com_proposta": 84,
+    "candidatos": 372,
+    "candidatos_bem_formados": 355,
+    "cenarios": 284,
+    "cenarios_compativeis": 284,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 67,
+    "M3_resolvidos_cond_cenario1": 19,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 17,
+    "M4_cond_discordantes": 2,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 62,
+    "conflitos_sinalizados": 50,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 3.083902985074627,
+    "tempo_mediano_s": 1.1212,
+    "tempo_p95_s": 8.8547
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 66,
+     "B": 22,
+     "A": 0,
+     "diferenca": 22,
+     "diferenca_por_perfil": 0.3333333333333333,
+     "ic95_por_grupo": [
+      0.21212121212121213,
+      0.4393939393939394
+     ],
+     "discordantes": [
+      22,
+      0
+     ],
+     "mcnemar_p": 4.76837158203125e-07
+    },
+    "errada": {
+     "n": 66,
+     "B": 3,
+     "A": 0,
+     "diferenca": 3,
+     "diferenca_por_perfil": 0.045454545454545456,
+     "ic95_por_grupo": [
+      0.0,
+      0.10606060606060606
+     ],
+     "discordantes": [
+      3,
+      0
+     ],
+     "mcnemar_p": 0.25
+    },
+    "resolvida": {
+     "n": 66,
+     "B": 25,
+     "A": 0,
+     "diferenca": 25,
+     "diferenca_por_perfil": 0.3787878787878788,
+     "ic95_por_grupo": [
+      0.25757575757575757,
+      0.5
+     ],
+     "discordantes": [
+      25,
+      0
+     ],
+     "mcnemar_p": 5.960464477539063e-08
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 66,
+     "C": 17,
+     "A": 0,
+     "diferenca": 17,
+     "diferenca_por_perfil": 0.25757575757575757,
+     "ic95_por_grupo": [
+      0.15151515151515152,
+      0.36363636363636365
+     ],
+     "discordantes": [
+      17,
+      0
+     ],
+     "mcnemar_p": 1.52587890625e-05
+    },
+    "errada": {
+     "n": 66,
+     "C": 2,
+     "A": 0,
+     "diferenca": 2,
+     "diferenca_por_perfil": 0.030303030303030304,
+     "ic95_por_grupo": [
+      0.0,
+      0.07575757575757576
+     ],
+     "discordantes": [
+      2,
+      0
+     ],
+     "mcnemar_p": 0.5
+    },
+    "resolvida": {
+     "n": 66,
+     "C": 19,
+     "A": 0,
+     "diferenca": 19,
+     "diferenca_por_perfil": 0.2878787878787879,
+     "ic95_por_grupo": [
+      0.18181818181818182,
+      0.3939393939393939
+     ],
+     "discordantes": [
+      19,
+      0
+     ],
+     "mcnemar_p": 3.814697265625e-06
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 66,
+     "B": 22,
+     "C": 17,
+     "diferenca": 5,
+     "diferenca_por_perfil": 0.07575757575757576,
+     "ic95_por_grupo": [
+      -0.015151515151515152,
+      0.16666666666666666
+     ],
+     "discordantes": [
+      8,
+      3
+     ],
+     "mcnemar_p": 0.2265625
+    },
+    "errada": {
+     "n": 66,
+     "B": 3,
+     "C": 2,
+     "diferenca": 1,
+     "diferenca_por_perfil": 0.015151515151515152,
+     "ic95_por_grupo": [
+      -0.045454545454545456,
+      0.07575757575757576
+     ],
+     "discordantes": [
+      3,
+      2
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 66,
+     "B": 25,
+     "C": 19,
+     "diferenca": 6,
+     "diferenca_por_perfil": 0.09090909090909091,
+     "ic95_por_grupo": [
+      0.0,
+      0.18181818181818182
+     ],
+     "discordantes": [
+      9,
+      3
+     ],
+     "mcnemar_p": 0.14599609375
+    }
+   }
+  },
+  "comparacoes_referencia": "classe com os símbolos verdadeiros"
+ },
+ "E3b": {
+  "perfis": 67,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 67,
+  "grupos": 67,
+  "M8_invariancia_observacional": 67,
+  "M8_invariancia_versao": 67,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 67,
+   "exemplos": [
+    [
+     "GeoTab_PE_001_Lagoa_dos_Gatos",
+     null,
+     [],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "ORGANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "GeoTab_PE_002_Goiana",
+     null,
+     [
+      "ORGANOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "ESPODOSSOLO",
+      "ORGANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "GeoTab_PE_003_Camocim_de_Sao_Felix",
+     null,
+     [],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "NITOSSOLO",
+      "ORGANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "GeoTab_PE_004_Igarassu",
+     null,
+     [],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "ORGANOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "GeoTab_PE_005_Sao_Benedito_do_Sul",
+     null,
+     [],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "ORGANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "GeoTab_PE_006_Escada",
+     null,
+     [],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "NITOSSOLO",
+      "ORGANOSSOLO",
+      "VERTISSOLO"
+     ]
+    ],
+    [
+     "GeoTab_PE_007_Escada",
+     "NEOSSOLO",
+     [
+      "NEOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "ORGANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ],
+    [
+     "GeoTab_PE_008_Itambe",
+     "NEOSSOLO",
+     [
+      "NEOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "ORGANOSSOLO"
+     ]
+    ]
+   ]
+  },
+  "M5_ref_no_alcancavel_A": [
+   66,
+   66
+  ],
+  "M5_ref_no_alcancavel_A0": [
+   3,
+   66
+  ],
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 67,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 67,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 66,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 7.750395522388059,
+    "tempo_mediano_s": 6.5177,
+    "tempo_p95_s": 15.827
+   },
+   "B": {
+    "horizontes_acionados": 67,
+    "propostas": 67,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 12,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 3
+    },
+    "horizontes_com_proposta": 52,
+    "candidatos": 201,
+    "candidatos_bem_formados": 173,
+    "cenarios": 139,
+    "cenarios_compativeis": 137,
+    "incompatibilidades": [
+     [
+      "Af",
+      2
+     ]
+    ],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 67,
+    "M3_resolvidos_cond_cenario1": 30,
+    "M3_resolvidos_cond_robusta": 5,
+    "M4_cond_concordantes": 26,
+    "M4_cond_discordantes": 4,
+    "M4_robusta_concordantes": 4,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 58,
+    "conflitos_sinalizados": 50,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 7.861762686567165,
+    "tempo_mediano_s": 6.7475,
+    "tempo_p95_s": 15.9255
+   },
+   "C": {
+    "horizontes_acionados": 67,
+    "propostas": 67,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 13,
+     "confiança de tipo": 2,
+     "nenhum candidato bem-formado pela gramática do Sentinela": 2
+    },
+    "horizontes_com_proposta": 50,
+    "candidatos": 201,
+    "candidatos_bem_formados": 151,
+    "cenarios": 110,
+    "cenarios_compativeis": 110,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 67,
+    "M3_resolvidos_cond_cenario1": 25,
+    "M3_resolvidos_cond_robusta": 8,
+    "M4_cond_concordantes": 22,
+    "M4_cond_discordantes": 3,
+    "M4_robusta_concordantes": 8,
+    "M4_referencia": "classe com os símbolos verdadeiros",
+    "M4_ref_alcancavel_cond": 60,
+    "conflitos_sinalizados": 56,
+    "divergentes_explicador": 0,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 9.780411940298507,
+    "tempo_mediano_s": 7.1277,
+    "tempo_p95_s": 20.9837
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 66,
+     "B": 26,
+     "A": 0,
+     "diferenca": 26,
+     "diferenca_por_perfil": 0.3939393939393939,
+     "ic95_por_grupo": [
+      0.2727272727272727,
+      0.5151515151515151
+     ],
+     "discordantes": [
+      26,
+      0
+     ],
+     "mcnemar_p": 2.9802322387695312e-08
+    },
+    "errada": {
+     "n": 66,
+     "B": 4,
+     "A": 0,
+     "diferenca": 4,
+     "diferenca_por_perfil": 0.06060606060606061,
+     "ic95_por_grupo": [
+      0.015151515151515152,
+      0.12121212121212122
+     ],
+     "discordantes": [
+      4,
+      0
+     ],
+     "mcnemar_p": 0.125
+    },
+    "resolvida": {
+     "n": 66,
+     "B": 30,
+     "A": 0,
+     "diferenca": 30,
+     "diferenca_por_perfil": 0.45454545454545453,
+     "ic95_por_grupo": [
+      0.3333333333333333,
+      0.5757575757575758
+     ],
+     "discordantes": [
+      30,
+      0
+     ],
+     "mcnemar_p": 1.862645149230957e-09
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 66,
+     "C": 22,
+     "A": 0,
+     "diferenca": 22,
+     "diferenca_por_perfil": 0.3333333333333333,
+     "ic95_por_grupo": [
+      0.22727272727272727,
+      0.45454545454545453
+     ],
+     "discordantes": [
+      22,
+      0
+     ],
+     "mcnemar_p": 4.76837158203125e-07
+    },
+    "errada": {
+     "n": 66,
+     "C": 3,
+     "A": 0,
+     "diferenca": 3,
+     "diferenca_por_perfil": 0.045454545454545456,
+     "ic95_por_grupo": [
+      0.0,
+      0.10606060606060606
+     ],
+     "discordantes": [
+      3,
+      0
+     ],
+     "mcnemar_p": 0.25
+    },
+    "resolvida": {
+     "n": 66,
+     "C": 25,
+     "A": 0,
+     "diferenca": 25,
+     "diferenca_por_perfil": 0.3787878787878788,
+     "ic95_por_grupo": [
+      0.25757575757575757,
+      0.5
+     ],
+     "discordantes": [
+      25,
+      0
+     ],
+     "mcnemar_p": 5.960464477539063e-08
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 66,
+     "B": 26,
+     "C": 22,
+     "diferenca": 4,
+     "diferenca_por_perfil": 0.06060606060606061,
+     "ic95_por_grupo": [
+      -0.030303030303030304,
+      0.16666666666666666
+     ],
+     "discordantes": [
+      8,
+      4
+     ],
+     "mcnemar_p": 0.3876953125
+    },
+    "errada": {
+     "n": 66,
+     "B": 4,
+     "C": 3,
+     "diferenca": 1,
+     "diferenca_por_perfil": 0.015151515151515152,
+     "ic95_por_grupo": [
+      -0.045454545454545456,
+      0.07575757575757576
+     ],
+     "discordantes": [
+      3,
+      2
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 66,
+     "B": 30,
+     "C": 25,
+     "diferenca": 5,
+     "diferenca_por_perfil": 0.07575757575757576,
+     "ic95_por_grupo": [
+      -0.030303030303030304,
+      0.18181818181818182
+     ],
+     "discordantes": [
+      9,
+      4
+     ],
+     "mcnemar_p": 0.266845703125
+    }
+   }
+  },
+  "comparacoes_referencia": "classe com os símbolos verdadeiros"
+ },
+ "E4": {
+  "perfis": 94,
+  "falhas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "avaliados": 94,
+  "grupos": 94,
+  "M8_invariancia_observacional": 94,
+  "M8_invariancia_versao": 94,
+  "verificacoes_violadas": {
+   "A": 0,
+   "B": 0,
+   "C": 0
+  },
+  "efeito_correcoes_A0_x_A": {
+   "perfis_com_saida_diferente": 1,
+   "exemplos": [
+    [
+     "GeoTab_RN_001_Ceara_Mirim",
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "ESPODOSSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO"
+     ],
+     null,
+     [
+      "ARGISSOLO",
+      "CAMBISSOLO",
+      "CHERNOSSOLO",
+      "ESPODOSSOLO",
+      "GLEISSOLO",
+      "LATOSSOLO",
+      "LUVISSOLO",
+      "NEOSSOLO",
+      "PLANOSSOLO",
+      "PLINTOSSOLO"
+     ]
+    ]
+   ]
+  },
+  "variantes": {
+   "A": {
+    "horizontes_acionados": 18,
+    "propostas": 0,
+    "abstencoes": {},
+    "horizontes_com_proposta": 0,
+    "candidatos": 0,
+    "candidatos_bem_formados": 0,
+    "cenarios": 0,
+    "cenarios_compativeis": 0,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 42,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 85,
+    "conflitos_sinalizados": 0,
+    "divergentes_explicador": 8,
+    "hip_anotacao_geradas": 0,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 4.813189361702128,
+    "tempo_mediano_s": 0.2147,
+    "tempo_p95_s": 11.8326
+   },
+   "B": {
+    "horizontes_acionados": 18,
+    "propostas": 18,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 10,
+     "confiança de tipo": 1
+    },
+    "horizontes_com_proposta": 7,
+    "candidatos": 54,
+    "candidatos_bem_formados": 54,
+    "cenarios": 23,
+    "cenarios_compativeis": 23,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 42,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 84,
+    "conflitos_sinalizados": 61,
+    "divergentes_explicador": 8,
+    "hip_anotacao_geradas": 16,
+    "hip_anotacao_verificadas": 2,
+    "perfis_com_hip_anotacao_verificada": 1,
+    "tempo_medio_s": 0.797418085106383,
+    "tempo_mediano_s": 0.1118,
+    "tempo_p95_s": 4.4928
+   },
+   "C": {
+    "horizontes_acionados": 18,
+    "propostas": 18,
+    "abstencoes": {
+     "o candidato principal não informa o tipo do horizonte": 7
+    },
+    "horizontes_com_proposta": 11,
+    "candidatos": 54,
+    "candidatos_bem_formados": 52,
+    "cenarios": 38,
+    "cenarios_compativeis": 38,
+    "incompatibilidades": [],
+    "violacoes_contencao": 0,
+    "obs_nao_conclusivos": 42,
+    "M3_resolvidos_cond_cenario1": 0,
+    "M3_resolvidos_cond_robusta": 0,
+    "M4_cond_concordantes": 0,
+    "M4_cond_discordantes": 0,
+    "M4_robusta_concordantes": 0,
+    "M4_referencia": "ORDEM registrada (referência fraca)",
+    "M4_ref_alcancavel_cond": 85,
+    "conflitos_sinalizados": 69,
+    "divergentes_explicador": 8,
+    "hip_anotacao_geradas": 11,
+    "hip_anotacao_verificadas": 0,
+    "perfis_com_hip_anotacao_verificada": 0,
+    "tempo_medio_s": 3.7639021276595748,
+    "tempo_mediano_s": 1.7057,
+    "tempo_p95_s": 14.7492
+   }
+  },
+  "comparacoes_pareadas": {
+   "B_vs_A": {
+    "certa": {
+     "n": 94,
+     "B": 47,
+     "A": 47,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 94,
+     "B": 5,
+     "A": 5,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 94,
+     "B": 52,
+     "A": 52,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   },
+   "C_vs_A": {
+    "certa": {
+     "n": 94,
+     "C": 47,
+     "A": 47,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 94,
+     "C": 5,
+     "A": 5,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 94,
+     "C": 52,
+     "A": 52,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   },
+   "B_vs_C": {
+    "certa": {
+     "n": 94,
+     "B": 47,
+     "C": 47,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "errada": {
+     "n": 94,
+     "B": 5,
+     "C": 5,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    },
+    "resolvida": {
+     "n": 94,
+     "B": 52,
+     "C": 52,
+     "diferenca": 0,
+     "diferenca_por_perfil": 0.0,
+     "ic95_por_grupo": [
+      0.0,
+      0.0
+     ],
+     "discordantes": [
+      0,
+      0
+     ],
+     "mcnemar_p": 1.0
+    }
+   }
+  },
+  "comparacoes_referencia": "ORDEM registrada (referência fraca)",
+  "E4": {
+   "B": {
+    "conflito_tp": [
+     14,
+     50
+    ],
+    "conflito_falso_alerta": [
+     36,
+     362
+    ],
+    "falso_alerta_wilson": [
+     0.09944751381215469,
+     0.07270064663303229,
+     0.1346062536433124
+    ],
+    "propostas_em_horizontes_acionados_com_troca": {
+     "n": 18,
+     "abstencoes": 11,
+     "assinatura_igual_a_curada": 3
+    },
+    "acerto_at_k": {
+     "casos_de_referencia": 6,
+     "horizonte_e_assinatura": {
+      "1": 0,
+      "3": 1
+     },
+     "so_horizonte": {
+      "1": 1,
+      "3": 1
+     }
+    }
+   },
+   "C": {
+    "conflito_tp": [
+     6,
+     50
+    ],
+    "conflito_falso_alerta": [
+     51,
+     362
+    ],
+    "falso_alerta_wilson": [
+     0.1408839779005525,
+     0.10880604111959824,
+     0.18050359361091772
+    ],
+    "propostas_em_horizontes_acionados_com_troca": {
+     "n": 18,
+     "abstencoes": 7,
+     "assinatura_igual_a_curada": 6
+    },
+    "acerto_at_k": {
+     "casos_de_referencia": 6,
+     "horizonte_e_assinatura": {
+      "1": 0,
+      "3": 0
+     },
+     "so_horizonte": {
+      "1": 0,
+      "3": 0
+     }
+    }
+   },
+   "numericas_identicas_entre_variantes": 94
+  }
+ }
+}

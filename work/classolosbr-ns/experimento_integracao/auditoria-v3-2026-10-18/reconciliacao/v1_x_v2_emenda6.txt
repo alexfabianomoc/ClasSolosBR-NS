@@ -1,0 +1,25 @@
+Efeito da emenda 6 (política + C4) nos perfis presentes na v1 parcial e na v2
+
+E1: 251 perfis em comum
+  B v1: resolvidos 97, concordantes 85, discordantes 12, cenários fora do alcançável 18
+  B v2: resolvidos 95, concordantes 85, discordantes 10, cenários fora do alcançável 0
+  C v1: resolvidos 85, concordantes 75, discordantes 10, cenários fora do alcançável 9
+  C v2: resolvidos 84, concordantes 76, discordantes 8, cenários fora do alcançável 0
+
+E2: 87 perfis em comum
+  B v1: resolvidos 17, concordantes 8, discordantes 9, cenários fora do alcançável 14
+  B v2: resolvidos 17, concordantes 8, discordantes 9, cenários fora do alcançável 0
+  C v1: resolvidos 9, concordantes 4, discordantes 5, cenários fora do alcançável 2
+  C v2: resolvidos 9, concordantes 4, discordantes 5, cenários fora do alcançável 0
+
+E3: 54 perfis em comum
+  B v1: resolvidos 24, concordantes 21, discordantes 3, cenários fora do alcançável 6
+  B v2: resolvidos 24, concordantes 21, discordantes 3, cenários fora do alcançável 0
+  C v1: resolvidos 19, concordantes 17, discordantes 2, cenários fora do alcançável 1
+  C v2: resolvidos 19, concordantes 17, discordantes 2, cenários fora do alcançável 0
+
+E4: 61 perfis em comum
+  B v1: resolvidos 0, concordantes 0, discordantes 0, cenários fora do alcançável 0
+  B v2: resolvidos 0, concordantes 0, discordantes 0, cenários fora do alcançável 0
+  C v1: resolvidos 0, concordantes 0, discordantes 0, cenários fora do alcançável 0
+  C v2: resolvidos 0, concordantes 0, discordantes 0, cenários fora do alcançável 0

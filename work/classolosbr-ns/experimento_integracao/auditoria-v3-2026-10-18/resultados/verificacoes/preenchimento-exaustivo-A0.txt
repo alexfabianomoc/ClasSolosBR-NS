@@ -1,0 +1,6 @@
+{"correcoes": false, "segundos": 825, "E1": {"perfis": 373, "combinacoes": 26045, "perfis_com_violacao": 5}, "E3": {"perfis": 67, "combinacoes": 5555, "perfis_com_violacao": 0}}
+   ('E1', 'BDSolos|643|7218|Perfil 08', ['CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO', 'LUVISSOLO', 'PLANOSSOLO'], [('∅t', ['ARGISSOLO'])])
+   ('E1', 'BDSolos|598|5818|Perfil no 11', ['CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO'], [('∅t', ['ARGISSOLO']), ('t∅', ['ARGISSOLO']), ('tt', ['ARGISSOLO'])])
+   ('E1', 'BDSolos|598|5808|Perfil no 9', ['CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO'], [('t', ['ARGISSOLO'])])
+   ('E1', 'BDSolos|763|11253|36', ['CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO', 'LUVISSOLO'], [('t', ['ARGISSOLO'])])
+   ('E1', 'BDSolos|779|12103|PERFIL 9 - RJ', ['ARGISSOLO', 'CAMBISSOLO', 'ESPODOSSOLO', 'LATOSSOLO', 'NITOSSOLO'], [('t∅', ['LUVISSOLO']), ('tt', ['LUVISSOLO']), ('tw', ['LUVISSOLO'])])

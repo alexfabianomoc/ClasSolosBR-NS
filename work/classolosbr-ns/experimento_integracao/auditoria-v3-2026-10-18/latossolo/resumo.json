@@ -1,0 +1,57 @@
+{
+ "perfis": 33,
+ "por_conjunto": {
+  "E1": 7,
+  "E2": 26
+ },
+ "erro_em": {
+  "B+C": 22,
+  "B": 6,
+  "C": 5
+ },
+ "B": {
+  "bw_entre_candidatos": 15,
+  "kappa_medio_topo": 0.723,
+  "p_t_medio_topo": 0.749,
+  "p_w_medio_topo": 0.169,
+  "algum_cenario_latossolo": 4
+ },
+ "C": {
+  "bw_entre_candidatos": 22,
+  "kappa_medio_topo": 0.747,
+  "p_t_medio_topo": 0.739,
+  "p_w_medio_topo": 0.125,
+  "algum_cenario_latossolo": 4
+ },
+ "nucleo_com_todos_Bw_latossolo": 15,
+ "nucleo_com_todos_Bw": {
+  "LATOSSOLO": 15,
+  "indeterminado — alcançáveis: NEOSSOLO, LATOSSOLO": 18
+ },
+ "nucleo_com_todos_Bt": {
+  "ARGISSOLO": 33
+ },
+ "originais_E1": {
+  "Bw1": 6,
+  "Bw2": 6,
+  "Bw3": 4,
+  "Bw4": 1,
+  "Bw": 1
+ },
+ "anotados_E2": {
+  "B": 21,
+  "B1": 4,
+  "B21": 5,
+  "B22": 5,
+  "B23": 1
+ },
+ "relacao_textural": {
+  "n": 33,
+  "mediana": 1.333,
+  ">=1.5": 9
+ },
+ "cerosidade_grau_nos_acionados": {
+  "null": 48,
+  "2": 6
+ }
+}

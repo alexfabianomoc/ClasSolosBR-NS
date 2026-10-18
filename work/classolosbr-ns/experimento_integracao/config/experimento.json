@@ -1,0 +1,197 @@
+{
+  "_registro": "Pré-registro do experimento de integração do Inferidor (ClasSolosBR-NS, cópia experimental). Escrito em 2026-10-18, ANTES de qualquer execução do fluxo integrado sobre os conjuntos de avaliação. Alterações posteriores vão para 'emendas', com data e motivo; nada aqui é editado em silêncio.",
+  "versao": "1.0",
+  "data": "2026-10-18",
+  "perguntas": {
+    "Q1": "A integração completa (Sentinela → Núcleo → Versão → Inferidor condicional → Explicador → Avaliador Parcial) executa de ponta a ponta, preservando os invariantes?",
+    "Q2": "A inferência aprendida de símbolos (B ou C) aumenta a resolução condicional sobre a resposta observacional (A), e com que concordância?",
+    "Q3": "A rede (B) traz benefício sobre o classificador não neural (C) nas mesmas condições?",
+    "Q4": "Que erros e custos (classes condicionais discordantes, propostas incompatíveis, falsos alertas, tempo, cenários) a integração introduz?",
+    "Q5": "As hipóteses de anotação geradas a partir do conflito anotado × proposto, verificadas pelo núcleo, recuperam as trocas de símbolo documentadas pela curadoria (Acerto@k)?"
+  },
+  "variantes": {
+    "A0": "núcleo original, sem as correções C1/C2 (só para isolar o efeito das correções na resposta observacional)",
+    "A": "núcleo corrigido (C1/C2), fluxo integrado, sem inferência aprendida de símbolos",
+    "B": "A + Inferidor neural (MLP (256,128), alfa 1e-4 — configuração escolhida por inferidor.selecao)",
+    "C": "A + classificador não neural (HistGradientBoosting, taxa 0,05 — configuração escolhida por inferidor.selecao)"
+  },
+  "iguais_entre_variantes": [
+    "perfis",
+    "núcleo e base de regras (5ª ed., com C1/C2)",
+    "Camada de Versão",
+    "Sentinela",
+    "orçamento de candidatos e cenários",
+    "regra de escolha dos limiares",
+    "explicador numérico",
+    "recomendação da próxima determinação"
+  ],
+  "dados": {
+    "fonte_treino": "BDSolos (raw/bd_solos_para_redape.csv) sem os registros que repetem o conjunto curado (tools/dados/sobreposicao_pykka7_bdsolos.json), como em inferidor.dados.do_bdsolos",
+    "particionamento": "GroupShuffleSplit por levantamento (2º campo de ID_PONTO), test_size 0,2, semente 20261017 → treino/teste; dentro do treino, GroupShuffleSplit 0,2, semente 20261018 → ajuste/validação. Idêntico a inferidor.selecao: horizontes do mesmo perfil e perfis do mesmo levantamento ficam na mesma partição.",
+    "uso_das_particoes": {
+      "ajuste": "treino dos modelos usados para escolher limiares",
+      "validacao": "limiar por sufixo (F1), limiar de abstenção theta, limiar de conflito tau; nada mais",
+      "treino_completo": "modelos finais reajustados em ajuste+validação, com os limiares da validação (procedimento de inferidor.selecao)",
+      "teste": "avaliação do fluxo integrado (E1, E2); usada uma vez, com tudo fixado"
+    },
+    "ressalva_de_independencia": "O BDSolos inteiro e o conjunto curado já foram examinados no desenvolvimento do núcleo e em avaliações anteriores. A partição de teste é intocada pelos MODELOS, mas não pelo desenvolvimento das regras: a avaliação é exploratória, com separação rigorosa por grupos, e não constitui teste independente.",
+    "conjuntos_de_avaliacao": {
+      "E1": {
+        "nome": "BDSolos-teste, ablação artificial",
+        "perfis": "perfis dos levantamentos de teste com ao menos um horizonte B de símbolo bem-formado com sufixo de tipo, sem B sem tipo nem símbolo ausente ou de leituras discordantes",
+        "corrupcao": "uma por perfil: em todo horizonte B com sufixo de tipo, o símbolo é reduzido ao prefixo de descontinuidade + letra(s) principal(is) (ex.: '2Bt2' → '2B')",
+        "referencia": "classe derivada pelo núcleo corrigido com os símbolos verdadeiros; secundária: ORDEM registrada",
+        "tipo": "remoção artificial com alvo conhecido"
+      },
+      "E2": {
+        "nome": "BDSolos-teste, incompletude natural",
+        "perfis": "perfis dos levantamentos de teste com ao menos um horizonte de símbolo ausente, B sem tipo ou de leituras discordantes",
+        "referencia": "sem padrão-ouro; a ORDEM registrada é referência fraca (pode ter sido atribuída com informação que o sistema não tem)",
+        "tipo": "incompletude natural"
+      },
+      "E3": {
+        "nome": "curado PYKKA7, ablação artificial",
+        "perfis": "94 perfis curados (JSON atualizados), mesma corrupção de E1",
+        "referencia": "classe derivada com os símbolos verdadeiros; secundária: ORDEM registrada",
+        "ressalva": "o núcleo foi depurado nestes perfis; os modelos nunca os viram"
+      },
+      "E3b": {
+        "nome": "curado PYKKA7, símbolo ausente",
+        "perfis": "perfis curados com classe derivada; apaga-se ('') o símbolo do primeiro B com sufixo de tipo",
+        "referencia": "classe derivada com o símbolo verdadeiro"
+      },
+      "E4": {
+        "nome": "fichas originais pré-curadoria (transcricao/originais)",
+        "uso": "conflitos anotado × proposto como hipóteses de anotação; Explicador com hipóteses numéricas e de anotação; Camada de Versão; Acerto@k contra as trocas de símbolo documentadas pela curadoria (_ALTERACOES, campo SIMB_HORIZ)",
+        "referencia": "troca substantiva de símbolo pela curadoria (muda o principal ou algum dos 17 sufixos lidos, após modernizar a notação)"
+      }
+    },
+    "exclusoes": [
+      "registros do BDSolos que repetem o conjunto curado",
+      "perfis sem horizonte",
+      "em E1/E3, perfis cuja classe com símbolos verdadeiros não é derivada (sem classe) entram nas medidas de contenção mas não nas de concordância com a referência"
+    ],
+    "circularidade": "Nenhum preditor usa o símbolo do próprio horizonte, a ORDEM registrada ou a classe derivada: os 81 atributos de inferidor.dados.atributos são analíticos, morfológicos, de posição e dos vizinhos. A ORDEM registrada só entra como referência fraca e no Explicador."
+  },
+  "sementes": {
+    "particao": 20261017,
+    "validacao_interna": 20261018,
+    "modelos": 20261017,
+    "bootstrap": 20261019
+  },
+  "politica_inferidor": {
+    "acionamento": "horizonte com símbolo ausente, B sem sufixo que designe o tipo (horizontes.b_sem_sufixo_legivel) ou símbolo antigo de leituras discordantes",
+    "nao_aciona": "horizontes com símbolo que informa o tipo — para estes o modelo roda só para o conflito de anotação, que nunca entra na classe",
+    "construcao_dos_candidatos": {
+      "B_sem_tipo": "complementação: prefixo e principal anotados preservados + sufixos propostos (p_s >= limiar_s)",
+      "simbolo_ausente": "principal = argmax de P(principal) (abstém se 'outro') + sufixos propostos",
+      "leituras_discordantes": "seleção entre as leituras da norma, ordenadas pelo escore do modelo",
+      "alternativas": "até 2 alternativas por horizonte, invertendo os sufixos de tipo mais próximos do limiar"
+    },
+    "sufixos_de_tipo": [
+      "t",
+      "w",
+      "i",
+      "h",
+      "s",
+      "v",
+      "f",
+      "g",
+      "c"
+    ],
+    "escore_de_ordenacao": "P(principal) x prod_s [p_s se s no candidato, senão 1 - p_s]. É escore de ORDENAÇÃO sob independência entre as saídas, NÃO probabilidade conjunta calibrada; é reportado como tal e acompanhado das confianças componentes.",
+    "confianca_de_tipo_kappa": "para o candidato, a menor das confianças das decisões sobre os sufixos de tipo: min_s max(p_s, 1 - p_s) restrito aos sufixos de tipo aplicáveis ao principal",
+    "abstencao": [
+      "modelo indisponível",
+      "principal proposto 'outro' (símbolo ausente)",
+      "candidato principal não informa o tipo",
+      "kappa < theta",
+      "nenhum candidato bem-formado pela gramática do Sentinela (achado de gravidade 'erro' ou 'alerta')"
+    ],
+    "theta": "escolhido na validação, por modelo, pela mesma regra: o menor theta em {0,50; 0,55; ...; 0,95} cuja precisão seletiva (assinatura de tipo do 1º candidato = assinatura verdadeira) nos horizontes B de símbolo com tipo da validação, mascarados, seja >= 0,80; se nenhum atingir, theta = 1 (abstém sempre)",
+    "tau_conflito": "1 - escore(símbolo anotado), limiar fixado na validação para sinalizar 10% dos horizontes (regra de inferidor.selecao), por modelo",
+    "max_candidatos_por_horizonte": 3,
+    "max_horizontes_inferidos_por_perfil": 6,
+    "max_cenarios_por_perfil": 8,
+    "incompatibilidade": "cenário em que o núcleo veta pelo dado o tipo proposto, ou cuja saída sai do conjunto alcançável observacional, é marcado 'incompatível' e não conta como classe condicional"
+  },
+  "explicador": {
+    "divergencia": "classe registrada fora do conjunto alcançável observacional",
+    "hipoteses_numericas": "nucleo.explicador.explicar (alteração de um atributo, verificada por reexecução), ordenadas por s(h) com o Sentinela; inalteradas entre variantes",
+    "hipoteses_de_anotacao": "substituição do símbolo anotado pelo candidato proposto e complementação (anotado + sufixos de tipo propostos), em cópias do perfil, verificadas por reexecução: só contam as em que o núcleo deriva a classe registrada. Ordenadas pelo escore do modelo. Lista SEPARADA da numérica (escalas não comparáveis).",
+    "orcamento_anotacao": "até 3 candidatos x 2 formas por horizonte",
+    "camada_de_versao": "nucleo.edicoes.cotejar no perfil observado; categorias: alteração entre as edições comparadas, insuficiência dos dados, cobertura incompleta, possível erro de dado ou de formalização comum às bases. Defasagem em relação a edições anteriores à 5ª nunca é excluída (não implementadas)."
+  },
+  "metricas": {
+    "M1_inferencia": "acurácia do principal e F1 macro dos 17 sufixos no teste por levantamento (reprodução de inferidor.selecao), Wilson e bootstrap por levantamento",
+    "M2_propostas": "acionamentos, propostas, abstenções (por motivo), validade sintática, compatibilidade normativa (cenários não vetados), por horizonte acionado e por perfil",
+    "M3_resolucao": "perfis não conclusivos na resposta observacional que ficam conclusivos no cenário 1; e com todos os cenários compatíveis na mesma classe (condicional robusta). Nunca somados à resposta observacional.",
+    "M4_concordancia": "entre as classes condicionais conclusivas: concordantes × discordantes com a referência (E1/E3: classe com símbolos verdadeiros; E2: ORDEM registrada, fraca)",
+    "M5_contencao": "saídas condicionais dentro do conjunto alcançável observacional (esperado 100%); classe com símbolos verdadeiros dentro do alcançável observacional mascarado (esperado 100%)",
+    "M6_anotacao": "conflitos sinalizados, hipóteses de anotação geradas e verificadas, Acerto@1/@3 contra as trocas documentadas (E4), falso alerta (conflito em horizonte sem troca substantiva)",
+    "M7_custo": "tempo por perfil e número de cenários por variante",
+    "M8_invariancia": "resposta observacional idêntica com o Inferidor ligado e desligado (esperado 100%)"
+  },
+  "estatistica": {
+    "pareamento": "as três variantes nos mesmos perfis; diferenças por perfil",
+    "intervalos": "Wilson para proporções; bootstrap por levantamento (BDSolos) ou por perfil (curado) para diferenças pareadas, 2000 reamostragens",
+    "teste": "McNemar exato (binomial) nos discordantes pareados, apenas descritivo",
+    "unidade": "uma corrupção por perfil; nenhuma repetição do mesmo perfil conta como observação independente"
+  },
+  "criterios": {
+    "sucesso_Q1": "fluxo executa em 100% dos perfis de E1–E4 sem exceção; M5 = 100%; M8 = 100%; nenhuma classe condicional apresentada sem marca de condicional",
+    "sucesso_Q2": "em E1, B ou C resolve condicionalmente mais perfis que A (A resolve 0 por construção nos mascarados não conclusivos) com concordância >= 80% entre as condicionais conclusivas; abaixo de 80%, a inferência é declarada prejudicial ou inconclusiva, não benéfica",
+    "sucesso_Q3": "B > C exige diferença pareada no número de condicionais concordantes com IC95% por levantamento acima de zero E taxa de discordantes de B não maior que a de C; caso contrário, 'sem benefício da rede demonstrado'",
+    "falha": "qualquer violação de M5 ou M8; classe condicional sem rastreabilidade; Inferidor emitindo classe; símbolo anotado sobrescrito"
+  },
+  "orcamento": {
+    "recomendacao_proxima_determinacao": "medicao.recomendar com k = 15 doadores em E3, E3b e E4 e nos exemplos; desligada em E1/E2 (idêntica entre variantes e cara)",
+    "explicador_numerico": "ligado em E4; desligado em E1/E2 (idêntico entre variantes); as hipóteses de anotação rodam em todos",
+    "melhoria_da_rede": "opcional, só depois dos resultados da integração inicial; busca pequena registrada em emenda"
+  },
+  "emendas": [
+    {
+      "data": "2026-10-18T12:21:17-03:00",
+      "antes_de_executar_o_experimento": true,
+      "item": "conjuntos_de_avaliacao.E1/E3 (corrupção)",
+      "mudanca": "só se mascaram horizontes B cujos sufixos de tipo estão em {t,w,i,h,s} e que NÃO têm g, f, c, v ou m; perfis com qualquer horizonte já acionável (B sem tipo, símbolo ausente, leituras discordantes) ficam fora de E1/E3/E3b.",
+      "motivo": "diagnóstico no núcleo original (contencao_simbolo_apagado.py): reduzir '2Btf' a 'B' apaga também o plíntico, que o 'B' sem sufixo não deixa pendente por decisão de 2026-10-15 (só os tipos de B ficam pendentes). A corrupção estaria testando outra coisa que não a ausência do tipo do B."
+    },
+    {
+      "data": "2026-10-18T12:21:17-03:00",
+      "antes_de_executar_o_experimento": true,
+      "item": "variante A — correção C3",
+      "mudanca": "acrescentada a correção C3 (horizontes de identificação pendente nas agregações 'maior parte'/'todos'/'qualquer' por tipo: supervalorização sobre os subconjuntos, até 6 pendentes). A0 continua sendo o núcleo original, sem C1, C2 e C3.",
+      "motivo": "o mesmo diagnóstico achou RN_007 (Bt2→B) e RN_043 (Btfn2→B) com a classe derivada fora do conjunto alcançável: defeito de contenção do núcleo, não da integração."
+    },
+    {
+      "data": "2026-10-18T12:21:17-03:00",
+      "antes_de_executar_o_experimento": true,
+      "item": "orcamento.recomendacao_proxima_determinacao",
+      "mudanca": "a recomendação é calculada uma vez por perfil, na variante A; em B e C fica registrada como idêntica por construção (depende só da resposta observacional, conferida invariante) e testada em integracao.testes.teste_recomendacao.",
+      "motivo": "custo: a simulação com doadores é a operação mais cara do fluxo e não depende da variante."
+    },
+    {
+      "data": "2026-10-18T12:21:17-03:00",
+      "antes_de_executar_o_experimento": true,
+      "item": "politica_inferidor.theta (resultado da regra)",
+      "mudanca": "nenhuma; registra-se o valor que a regra produziu na validação: θ = 0,50 para os dois modelos (precisão seletiva 0,868 na rede e 0,902 nas árvores já no menor θ). Como κ ≥ 0,5 por definição, a abstenção por κ não opera; abstêm-se os horizontes cujo candidato não informa o tipo (cobertura na validação: 70,2% rede, 65,9% árvores).",
+      "motivo": "transparência: a regra foi fixada antes, o valor saiu dela."
+    },
+    {
+      "data": "2026-10-18T12:23:06-03:00",
+      "antes_de_executar_o_experimento": "durante: E3b interrompido antes do primeiro perfil gravado; E1, E2, E3 e E4 em curso, sem alteração",
+      "item": "orcamento.recomendacao_proxima_determinacao em E3b",
+      "mudanca": "recomendação desligada em E3b.",
+      "motivo": "com símbolo ausente, cada classificação percorre ~120 leituras do catálogo (C1), e a simulação com 15 doadores por unidade e horizonte multiplicava isso por centenas; nenhum perfil terminou em 2 min. A recomendação é exercitada em E3 e E4 e nos testes."
+    },
+    {
+      "data": "2026-10-18T12:28:34-03:00",
+      "antes_de_executar_o_experimento": "NÃO — depois de ver resultados parciais da rodada v1 (interrompida e preservada em resultados/etapa1_integracao/v1_interrompida/)",
+      "item": "politica_inferidor.construcao_dos_candidatos.B_sem_tipo e variante A (correção C4)",
+      "mudanca": "(a) a complementação de B sem tipo só acrescenta sufixos de tipo de B (t, w, i, h, s); g, f, c, v e m ficam fora, e as alternativas só invertem sufixos de tipo de B. κ continua calculado sobre os 9 sufixos de tipo; se o modelo dá p > 0,5 a g/f/c/v num B sem tipo, κ < 0,5 = θ e há abstenção. (b) correção C4 no núcleo: predicados derivados avaliados no perfil como está e nos completamentos do B sem tipo por t, w, i e h, com supervalorização (até 3 horizontes; acima, indeterminado).",
+      "motivo": "a rodada v1 produziu 17 cenários fora do conjunto alcançável observacional (critério de falha M5). 15 vinham da política (complemento com g/c contradiz o 'B' sem sufixo, que nega esses sufixos pela decisão de 2026-10-15); 2, de defeito do núcleo nos predicados derivados. As duas mudanças restauram a solidez; nenhuma foi escolhida por desempenho, e o efeito delas sobre a acurácia é reportado (v1 parcial × v2).",
+      "consequencia": "a rodada v2 é a válida; a v1 parcial é reportada como falha do critério M5 com a causa."
+    }
+  ]
+}

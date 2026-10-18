@@ -1,0 +1,6 @@
+correções True | perfis 94 | tempo 268s
+  símbolo '': 0/168 apagamentos tiram a classe derivada do alcançável
+  símbolo 'B': 3/168 apagamentos tiram a classe derivada do alcançável
+    ('GeoTab_PE_048_Goiana', '2Btf', 'B', 'PLINTOSSOLO', 'ARGISSOLO')
+    ('GeoTab_RN_007_Acu', 'Bt2', 'B', 'ARGISSOLO', 'LUVISSOLO (não conclusivo — também alcançável: PLANOSSOLO)')
+    ('GeoTab_RN_043_Pedro_Avelino', 'Btfn2', 'B', 'LUVISSOLO', 'ARGISSOLO')
