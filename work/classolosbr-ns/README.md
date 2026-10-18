@@ -486,7 +486,7 @@ que usa o analisador de símbolos.
 
 ## Integração do Inferidor ao fluxo (1º nível, 5ª edição) — 2026-10-18
 
-> Consolidada a partir de uma cópia experimental isolada do projeto (rodadas v1, v2 e auditoria v3, 2026-10-18). Registro completo em `experimento_integracao/` (comece por `experimento_integracao/auditoria-v3-2026-10-18/relatorio/08-encerramento-da-etapa.md`, que prevalece sobre formulações anteriores).
+> Consolidada a partir de uma cópia experimental isolada do projeto (rodadas v1, v2 e auditoria v3, 2026-10-18). Registro completo em `experimento_integracao/` (comece por `experimento_integracao/auditoria-v3-2026-10-18/relatorio/08-encerramento-da-etapa.md`, que prevalece sobre formulações anteriores). Escopo: edições do SiBCS anteriores à 5ª não são foco da pesquisa e não constam das pendências (`experimento_integracao/consolidacao-2026-10-18/NOTA-ESCOPO.md`).
 
 `integracao/` coordena os seis componentes num fluxo único (`integracao.fluxo.executar`, comando `python -m integracao.cli executar PERFIL.json --variante A|B|C`):
 
