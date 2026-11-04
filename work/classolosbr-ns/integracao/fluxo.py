@@ -201,8 +201,10 @@ def versao(perfil, reg) -> tuple[dict, object]:
         cat.append("insuficiência dos dados em critério em que as bases diferem")
     if COBERTURA in todas:
         cat.append("cobertura incompleta da formalização (ordem apenas triada)")
-    cat.append("defasagem em relação a edições anteriores à 5ª NÃO excluída: elas não estão "
-               "implementadas, e a concordância 5ª × 6ª nada diz sobre elas")
+    # Escopo (decisão de 2026-10-18): edições anteriores à 5ª estão fora do foco da
+    # pesquisa; permanece só a ressalva de que o cotejo 5ª × 6ª nada diz sobre elas.
+    cat.append("defasagem em relação a edições anteriores à 5ª NÃO excluída: estão fora do "
+               "escopo deste trabalho, e a concordância 5ª × 6ª nada diz sobre elas")
     return ({"procedencia": "Camada de Versão (nucleo.edicoes.cotejar)",
              "sob_5a": cot.sob_5a.resumo(), "sob_6a": cot.sob_6a.resumo(),
              "saidas_diferem": cot.divergem, "causas_da_nao_conclusao": causas,
