@@ -1,0 +1,41 @@
+{
+  "upload_type": "software",
+  "title": "ClasSolosBR-NS: uma arquitetura neuro-simbólica para explicação de divergências e diagnóstico de dados na classificação de solos pelo SiBCS",
+  "creators": [
+    {
+      "name": "Silva, Alex Fabiano",
+      "affiliation": "Afya Montes Claros Centro Universitário",
+      "orcid": "0009-0008-6755-9075"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Silva, Herbert Souza e",
+      "affiliation": "Afya Montes Claros Centro Universitário",
+      "type": "Supervisor"
+    },
+    {
+      "name": "Fortes, Délcio Pereira",
+      "affiliation": "Afya Montes Claros Centro Universitário",
+      "type": "Supervisor"
+    },
+    {
+      "name": "Fernandes, Luiz Arnaldo",
+      "affiliation": "Universidade Federal de Minas Gerais",
+      "type": "Supervisor"
+    }
+  ],
+  "description": "<p>Arquitetura neuro-simbólica para a classificação de solos pelo Sistema Brasileiro de Classificação de Solos (SiBCS). Uma base de regras da 5ª edição detém a decisão taxonômica; componentes orientados a dados diagnosticam a entrada, ordenam hipóteses e propõem símbolos de horizonte para inferências explicitamente condicionais.</p><p>Inclui um explicador por abdução contrastiva, um avaliador parcial em lógica de três valores, uma camada de versão que compara as bases da 5ª e da 6ª edições e um pipeline medallion (Bronze, Prata, Ouro) sobre o Banco de Dados de Solos do Brasil (BDSolos).</p><p>Código do Trabalho Final de Graduação em Engenharia de Computação, Afya Montes Claros Centro Universitário, 2026.</p>",
+  "keywords": [
+    "inteligência artificial neuro-simbólica",
+    "sistemas especialistas",
+    "classificação de solos",
+    "SiBCS",
+    "explicabilidade",
+    "neuro-symbolic artificial intelligence",
+    "soil classification"
+  ],
+  "language": "por",
+  "license": "polyform-noncommercial-1.0.0",
+  "access_right": "open"
+}
